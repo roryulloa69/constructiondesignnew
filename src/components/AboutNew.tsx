@@ -26,27 +26,31 @@ export const AboutNew = () => {
 
             {/* Heading */}
             <h2 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-light mb-8 leading-tight">
-              A Legacy of{" "}
-              <span className="italic text-gold">Craftsmanship</span>
+              A Unique{" "}
+              <span className="italic text-gold">Perspective</span>
             </h2>
 
             {/* Description */}
             <div className="space-y-6 text-white/70 font-inter leading-relaxed">
               <p>
-                Through my experience of 37 years as a Business, Design, and
-                Construction professional, I have found that exceptional results
-                come from exceptional teams.
+                Michael Chandler is a Strategic Construction Leader with over 37 years of experience 
+                steering multimillion-dollar developments from conception to handover. His expertise 
+                lies in navigating the complex challenges of modern construction — labor shortages, 
+                technological integration, and international logistics — while consistently delivering 
+                exceptional results for high-net-worth individuals and institutional developers.
               </p>
               <p>
-                My approach is simple: bring together the right people, create an
-                environment built on mutual respect, and stay closely attuned to
-                client feedback throughout every phase of a project.
+                With a Bachelor of Architecture from the University of Austin and decades of hands-on 
+                field experience, Michael possesses a rare ability to bridge high-level architectural 
+                design with rigorous P&L stewardship and construction execution. This dual expertise 
+                has made him the trusted advisor for clients who demand both aesthetic excellence and 
+                fiscal precision.
               </p>
               <p>
-                I've built my career on the universal business principle that
-                quality construction isn't just about meeting standards—it's
-                about exceeding them, by combining rigorous processes with
-                forward-thinking design.
+                Michael has successfully managed portfolios exceeding $500M across 12 US states and 
+                4 countries, including complex international developments in the Bahamas, Mexico, and 
+                Costa Rica. His native-level fluency in Spanish enables seamless communication with 
+                international workforces and stakeholders.
               </p>
             </div>
           </div>
@@ -75,7 +79,7 @@ export const AboutNew = () => {
                   Michael Chandler
                 </p>
                 <p className="font-inter text-xs tracking-[0.2em] text-gold uppercase">
-                  Founder & Master Builder
+                  Strategic Construction Executive
                 </p>
               </div>
             </div>
@@ -85,12 +89,20 @@ export const AboutNew = () => {
         {/* Stats Section */}
         <div
           ref={statsRef as React.RefObject<HTMLDivElement>}
-          className={`grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t border-white/10 transition-all duration-1000 ${
+          className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-20 pt-16 border-t border-white/10 transition-all duration-1000 ${
             statsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <div className="text-center">
-            <span className="block font-playfair text-4xl sm:text-5xl lg:text-6xl text-gold font-light mb-2">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              $500M+
+            </span>
+            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
+              Portfolio Managed
+            </span>
+          </div>
+          <div className="text-center">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
               37+
             </span>
             <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
@@ -98,27 +110,35 @@ export const AboutNew = () => {
             </span>
           </div>
           <div className="text-center">
-            <span className="block font-playfair text-4xl sm:text-5xl lg:text-6xl text-gold font-light mb-2">
-              500+
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              12
             </span>
             <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
-              Projects Completed
+              US States
             </span>
           </div>
           <div className="text-center">
-            <span className="block font-playfair text-4xl sm:text-5xl lg:text-6xl text-gold font-light mb-2">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              4
+            </span>
+            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
+              Countries
+            </span>
+          </div>
+          <div className="text-center">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              ±2%
+            </span>
+            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
+              Budget Accuracy
+            </span>
+          </div>
+          <div className="text-center">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
               100%
             </span>
             <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
-              Client Satisfaction
-            </span>
-          </div>
-          <div className="text-center">
-            <span className="block font-playfair text-4xl sm:text-5xl lg:text-6xl text-gold font-light mb-2">
-              25+
-            </span>
-            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
-              Awards Won
+              On-Time Delivery
             </span>
           </div>
         </div>

@@ -89,7 +89,7 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
       <div className="relative h-full flex flex-col items-center justify-center text-center z-10">
         {/* Subtitle */}
         <p className="font-inter text-xs sm:text-sm tracking-[0.4em] text-white/60 uppercase mb-6 animate-fade-in">
-          Master Builder & Designer
+          Strategic Construction Executive
         </p>
 
         {/* Main Name */}
@@ -109,10 +109,10 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
         <div className="flex items-center gap-12 sm:gap-20 mb-12">
           <div className="text-center">
             <span className="block font-playfair text-4xl sm:text-5xl md:text-6xl text-gold font-light">
-              $125M+
+              $500M+
             </span>
             <span className="font-inter text-[10px] sm:text-xs tracking-[0.3em] text-white/50 uppercase">
-              Largest Single Project
+              Portfolio Managed
             </span>
           </div>
           <div className="text-center">
@@ -120,7 +120,7 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
               37+
             </span>
             <span className="font-inter text-[10px] sm:text-xs tracking-[0.3em] text-white/50 uppercase">
-              Years Excellence
+              Years Experience
             </span>
           </div>
         </div>
