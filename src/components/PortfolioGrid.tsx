@@ -1,9 +1,9 @@
-import React, { useState, useMemo, useCallback } from "react";
-import { X, ArrowLeft } from "lucide-react";
+import React, { useState, useMemo, useCallback, useEffect } from "react";
+import { ArrowLeft, Home } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { projects, getProjectsByCategory, type ProjectCategory } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
-
 
 type Category = "All" | ProjectCategory;
 
@@ -25,14 +25,23 @@ interface PortfolioGridProps {
 export const PortfolioGrid: React.FC<PortfolioGridProps> = React.memo(({ onClose, initialCategory = "All" }) => {
   const [selectedCategory, setSelectedCategory] = useState<Category>(initialCategory as Category);
   const [isClosing, setIsClosing] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
+  // Track scroll for header styling
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  // Memoize filtered projects to prevent recalculation on every render
+  // Memoize filtered projects
   const filteredProjects = useMemo(() => {
     return getProjectsByCategory(selectedCategory);
   }, [selectedCategory]);
 
-  // Memoize handleClose to prevent recreation
+  // Memoize handleClose
   const handleClose = useCallback(() => {
     setIsClosing(true);
     setTimeout(() => {
@@ -40,7 +49,7 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = React.memo(({ onClose
     }, 600);
   }, [onClose]);
 
-  // Memoize getCategoryCount to prevent recreation
+  // Memoize getCategoryCount
   const getCategoryCount = useCallback((category: Category) => {
     if (category === "All") return projects.length;
     return getProjectsByCategory(category).length;
@@ -66,63 +75,88 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = React.memo(({ onClose
         }}
       />
 
-      {/* Close button */}
-      <Button
-        onClick={handleClose}
-        variant="ghost"
-        size="icon"
-        className="fixed top-4 md:top-6 right-4 md:right-6 z-50 h-10 w-10 md:h-11 md:w-11 text-charcoal hover:text-gold hover:bg-white/80 backdrop-blur-sm transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+      {/* Sticky Header with Logo and Navigation */}
+      <header 
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          scrolled 
+            ? 'bg-white/95 backdrop-blur-xl shadow-md border-b border-charcoal/5' 
+            : 'bg-white/80 backdrop-blur-sm'
+        }`}
       >
-        <X className="h-5 w-5 md:h-6 md:w-6" />
-      </Button>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Top bar with logo and back button */}
+          <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Logo */}
+            <Link to="/" className="flex items-center group">
+              <span className="font-playfair text-2xl sm:text-3xl font-semibold text-gold tracking-wider">
+                MC
+              </span>
+            </Link>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-16 md:py-20 lg:py-24">
-        {/* Back button - shows when category is selected */}
+            {/* Title */}
+            <h1 className="absolute left-1/2 -translate-x-1/2 font-playfair text-lg md:text-xl font-medium text-charcoal tracking-wide">
+              Portfolio
+            </h1>
+
+            {/* Back to Home */}
+            <Button
+              onClick={handleClose}
+              variant="ghost"
+              className="text-charcoal/70 hover:text-charcoal hover:bg-charcoal/5 font-inter text-sm gap-2"
+            >
+              <Home className="h-4 w-4" />
+              <span className="hidden sm:inline">Home</span>
+            </Button>
+          </div>
+
+          {/* Category Navigation */}
+          <nav className="pb-3 md:pb-4 border-b border-charcoal/10 -mx-4 px-4 overflow-x-auto scrollbar-hide">
+            <div className="flex justify-center gap-4 md:gap-8 min-w-max">
+              {categories.map((category) => {
+                const isActive = selectedCategory === category;
+                return (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`relative pb-2 font-inter text-[10px] md:text-xs tracking-[0.15em] uppercase transition-all duration-300 whitespace-nowrap ${
+                      isActive
+                        ? "text-gold font-medium"
+                        : "text-charcoal/50 hover:text-charcoal/80"
+                    }`}
+                  >
+                    <span>
+                      {category}
+                      <span className="ml-1.5 opacity-60">({getCategoryCount(category)})</span>
+                    </span>
+                    {isActive && (
+                      <span className="absolute inset-x-0 -bottom-[1px] h-[2px] bg-gold rounded-full" />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-8 md:py-12">
+        {/* Category breadcrumb - shows when specific category selected */}
         {selectedCategory !== "All" && (
-          <div className="mb-10 md:mb-12 opacity-0 animate-fade-in">
+          <div className="mb-6 md:mb-8">
             <Button
               onClick={() => setSelectedCategory("All")}
-              variant="outline"
-              className="bg-white/70 backdrop-blur-sm border-gold/25 text-charcoal hover:bg-white hover:border-gold/40 hover:shadow-md transition-all duration-300 font-medium text-sm"
+              variant="ghost"
+              size="sm"
+              className="text-charcoal/60 hover:text-charcoal hover:bg-charcoal/5 font-inter text-xs gap-1.5 -ml-2"
             >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to All Projects
+              <ArrowLeft className="h-3 w-3" />
+              All Projects
             </Button>
           </div>
         )}
 
-        {/* Hidden heading for accessibility and SEO */}
-        <h1 className="sr-only">Portfolio Projects</h1>
-
-        {/* Category filters - tab-style navigation matching original design */}
-        <div className="mb-10 md:mb-12 border-b border-charcoal/10">
-          <nav className="flex flex-wrap justify-center gap-6 md:gap-10 font-inter text-[10px] md:text-xs tracking-[0.18em] uppercase">
-            {categories.map((category) => {
-              const isActive = selectedCategory === category;
-              return (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`relative pb-3 transition-colors duration-200 ${
-                    isActive
-                      ? "text-gold"
-                      : "text-charcoal/40 hover:text-charcoal/70"
-                  }`}
-                >
-                  <span className="whitespace-nowrap font-medium">
-                    {category}{" "}
-                    <span className="opacity-70">({getCategoryCount(category)})</span>
-                  </span>
-                  {isActive && (
-                    <span className="pointer-events-none absolute inset-x-0 -bottom-[1px] mx-auto h-[2px] w-full max-w-[80px] bg-gold" />
-                  )}
-                </button>
-              );
-            })}
-          </nav>
-        </div>
-
-        {/* Projects grid with enhanced spacing */}
+        {/* Projects grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-6 lg:gap-7 xl:gap-8">
           {filteredProjects.map((project, index) => (
             <ProjectCard
@@ -135,8 +169,11 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = React.memo(({ onClose
         </div>
 
         {/* Bottom decoration */}
-        <div className="mt-28 mb-12 text-center opacity-0 animate-fade-in delay-[800ms]">
+        <div className="mt-20 mb-8 text-center">
           <div className="h-px w-24 bg-gradient-to-r from-transparent via-gold/40 to-transparent mx-auto" />
+          <p className="mt-6 font-inter text-xs text-charcoal/40 tracking-wider uppercase">
+            {filteredProjects.length} {filteredProjects.length === 1 ? 'Project' : 'Projects'}
+          </p>
         </div>
       </div>
     </div>
