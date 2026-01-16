@@ -12,7 +12,7 @@ async function applySunsetLook() {
   try {
     const files = await fs.readdir(TARGET_DIR);
     // Filter for pool-design images (Ultra Luxe Pool project)
-    const poolImages = files.filter(f => f.startsWith('pool-design-') && f.endsWith('.webp'));
+    const poolImages = files.filter(f => (f.startsWith('pool-design-') || f === 'pool-sunset-lights.webp' || f === 'pool-cabana-sunset.webp') && f.endsWith('.webp'));
 
     console.log(`Found ${poolImages.length} images to process.`);
 
