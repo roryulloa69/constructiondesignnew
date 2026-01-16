@@ -63,6 +63,13 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
         return;
       }
 
+      if (itemName === "About") {
+        if (location.pathname !== "/") {
+          navigate("/", { state: { scrollTo: "about" } });
+          return;
+        }
+      }
+
       const targetId = href.replace("#", "");
       const element = document.getElementById(targetId);
       if (element) {
