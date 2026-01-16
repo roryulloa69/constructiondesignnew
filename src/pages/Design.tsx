@@ -6,18 +6,26 @@ import { useParallax, useMouseParallax, useScrollTransform } from "@/hooks/usePa
 import { FooterNew } from "@/components/FooterNew";
 import { useEffect, useRef, useState } from "react";
 
-// Import images from existing assets - using confirmed cover images
-import detailOceanviewFraming from "@/assets/projects/abaco-luxe-boathouse-cover.webp";
-import detailInterior1 from "@/assets/projects/miami-beach-5.webp";
-import detailInterior2 from "@/assets/projects/carmel-knolls-8.webp";
-import detailMarbleBath from "@/assets/projects/carmel-knolls-cover.webp";
-import detailTimberBeams from "@/assets/projects/carmel-valley-cover.webp";
-import detailLimestoneFireplace from "@/assets/projects/civil-cover.webp";
-import detailVanityNiche from "@/assets/projects/cleanup-cover.webp";
-import detailProRange from "@/assets/projects/coastal-restoration-cover.webp";
-import detailSkiStorage from "@/assets/projects/development-cover.webp";
-import detailSpaVanity from "@/assets/projects/hillside-cover.webp";
-import detailLeatherCabinetry from "@/assets/projects/laguna-cover.webp";
+// Import images - matched to categories
+// Architecture - strong exterior architectural shots
+import imgArchitecture from "@/assets/projects/bigsur-cover.webp";
+// Interiors - interior design shots
+import imgInterior1 from "@/assets/projects/miami-beach-5.webp";
+import imgInterior2 from "@/assets/projects/carmel-knolls-8.webp";
+import imgInterior3 from "@/assets/projects/carmel-knolls-15.webp";
+// Reimagined - before & after transformations
+import imgReimagined1 from "@/assets/projects/carmel1-2-after.webp";
+import imgReimagined2 from "@/assets/projects/pg-5-after.webp";
+// Development - land development and construction
+import imgDevelopment from "@/assets/projects/development-aerial-after.webp";
+// Pools & Landscape
+import imgPoolsLandscape from "@/assets/projects/pool-sunset-lights.webp";
+// Concepts - planning and design concepts
+import imgConcepts from "@/assets/projects/site-map.webp";
+// Custom Furniture - fine cabinetry and furniture
+import imgCustomFurniture from "@/assets/projects/laguna-3.webp";
+// Additional feature image
+import imgFeature from "@/assets/projects/montana-cover.webp";
 
 // Category Label component
 const CategoryLabel = ({ 
@@ -300,7 +308,7 @@ const Design = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
           {/* Large Hero - Architecture */}
           <ParallaxImage 
-            src={detailOceanviewFraming}
+            src={imgArchitecture}
             alt="Architecture"
             className="lg:col-span-8 aspect-[16/10]"
             parallaxSpeed={0.2}
@@ -312,7 +320,7 @@ const Design = () => {
           {/* Vertical Triptych - Interiors */}
           <div className="lg:col-span-4 grid grid-cols-3 gap-2 min-h-[300px]">
             <ParallaxImage 
-              src={detailInterior1}
+              src={imgInterior1}
               alt="Interior 1"
               className="h-full"
               parallaxSpeed={0.4}
@@ -322,7 +330,7 @@ const Design = () => {
             />
             <div className="mt-8 lg:mt-12">
               <ParallaxImage 
-                src={detailInterior2}
+                src={imgInterior2}
                 alt="Interior 2"
                 className="h-full"
                 parallaxSpeed={0.3}
@@ -330,7 +338,7 @@ const Design = () => {
               />
             </div>
             <ParallaxImage 
-              src={detailMarbleBath}
+              src={imgInterior3}
               alt="Interior 3"
               className="h-full"
               parallaxSpeed={0.5}
@@ -363,7 +371,7 @@ const Design = () => {
           {/* Column 1: Reimagined (Before & After) */}
           <div className="space-y-4 sm:space-y-6">
             <ParallaxImage 
-              src={detailTimberBeams}
+              src={imgReimagined1}
               alt="Reimagined Before & After"
               className="aspect-[4/5]"
               parallaxSpeed={0.25}
@@ -372,7 +380,7 @@ const Design = () => {
               labelPosition="top-left"
             />
             <ParallaxImage 
-              src={detailLimestoneFireplace}
+              src={imgReimagined2}
               alt="Reimagined Detail"
               className="aspect-square"
               parallaxSpeed={0.35}
@@ -385,7 +393,7 @@ const Design = () => {
           {/* Column 2: Development */}
           <div className="relative">
             <ParallaxImage 
-              src={detailVanityNiche}
+              src={imgDevelopment}
               alt="Development"
               className="h-full min-h-[500px]"
               parallaxSpeed={0.2}
@@ -398,7 +406,7 @@ const Design = () => {
           {/* Column 3: Pools & Landscape + Concepts */}
           <div className="grid grid-cols-2 gap-4 sm:gap-6">
             <ParallaxImage 
-              src={detailProRange}
+              src={imgPoolsLandscape}
               alt="Pools & Landscape"
               className="col-span-2 aspect-video"
               parallaxSpeed={0.3}
@@ -407,7 +415,7 @@ const Design = () => {
               labelPosition="top-left"
             />
             <ParallaxImage 
-              src={detailSkiStorage}
+              src={imgConcepts}
               alt="Concepts"
               className="aspect-[3/4]"
               parallaxSpeed={0.4}
@@ -426,8 +434,8 @@ const Design = () => {
               />
             </div>
             <ParallaxImage 
-              src={detailSpaVanity}
-              alt="Spa & Wellness"
+              src={imgFeature}
+              alt="Featured Project"
               className="col-span-2 aspect-square"
               parallaxSpeed={0.25}
               delay={0.3}
@@ -450,7 +458,7 @@ const Design = () => {
             <div className="w-12 h-[1px] bg-gold/50 relative z-10" />
           </AnimatedText>
           <ParallaxImage 
-            src={detailLeatherCabinetry}
+            src={imgCustomFurniture}
             alt="Custom Furniture"
             className="lg:col-span-8 aspect-[21/9]"
             parallaxSpeed={0.15}
