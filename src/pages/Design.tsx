@@ -19,19 +19,55 @@ import detailSkiStorage from "@/assets/projects/development-cover.webp";
 import detailSpaVanity from "@/assets/projects/hillside-cover.webp";
 import detailLeatherCabinetry from "@/assets/projects/laguna-cover.webp";
 
-// Animated image component with parallax
+// Category Label component
+const CategoryLabel = ({ 
+  label, 
+  position = "bottom-left",
+  vertical = false 
+}: { 
+  label: string; 
+  position?: "bottom-left" | "bottom-right" | "top-left" | "top-right" | "center";
+  vertical?: boolean;
+}) => {
+  const positionClasses = {
+    "bottom-left": "bottom-4 left-4",
+    "bottom-right": "bottom-4 right-4",
+    "top-left": "top-4 left-4",
+    "top-right": "top-4 right-4",
+    "center": "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+  };
+
+  return (
+    <div 
+      className={`absolute ${positionClasses[position]} z-20 pointer-events-none`}
+      style={vertical ? { writingMode: 'vertical-rl', textOrientation: 'mixed' } : {}}
+    >
+      <span className="font-inter text-[10px] sm:text-xs tracking-[0.3em] text-white/90 uppercase bg-black/40 backdrop-blur-sm px-3 py-1.5 border border-white/10">
+        {label}
+      </span>
+    </div>
+  );
+};
+
+// Animated image component with parallax and label
 const ParallaxImage = ({ 
   src, 
   alt, 
   className = "",
   parallaxSpeed = 0.3,
-  delay = 0
+  delay = 0,
+  label,
+  labelPosition = "bottom-left",
+  labelVertical = false
 }: { 
   src: string; 
   alt: string; 
   className?: string;
   parallaxSpeed?: number;
   delay?: number;
+  label?: string;
+  labelPosition?: "bottom-left" | "bottom-right" | "top-left" | "top-right" | "center";
+  labelVertical?: boolean;
 }) => {
   const { elementRef, offset } = useParallax({ speed: parallaxSpeed });
   const { elementRef: animRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
@@ -64,7 +100,12 @@ const ParallaxImage = ({
           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
         />
       </div>
-      <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500" />
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500" />
+      
+      {/* Category Label */}
+      {label && (
+        <CategoryLabel label={label} position={labelPosition} vertical={labelVertical} />
+      )}
     </div>
   );
 };
@@ -255,30 +296,34 @@ const Design = () => {
       {/* Main Grid Layout */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-32 space-y-8 sm:space-y-12 relative z-10">
         
-        {/* Row 1: Hero Image + Triptych */}
+        {/* Row 1: Architecture + Interiors */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
-          {/* Large Hero - Spans 8 cols */}
+          {/* Large Hero - Architecture */}
           <ParallaxImage 
             src={detailOceanviewFraming}
-            alt="Ocean View"
+            alt="Architecture"
             className="lg:col-span-8 aspect-[16/10]"
             parallaxSpeed={0.2}
             delay={0}
+            label="Architecture"
+            labelPosition="top-left"
           />
 
-          {/* Vertical Triptych - Spans 4 cols */}
+          {/* Vertical Triptych - Interiors */}
           <div className="lg:col-span-4 grid grid-cols-3 gap-2 min-h-[300px]">
             <ParallaxImage 
               src={detailBronzeBase}
-              alt="Detail 1"
+              alt="Interior 1"
               className="h-full"
               parallaxSpeed={0.4}
               delay={0.1}
+              label="Interiors"
+              labelPosition="top-left"
             />
             <div className="mt-8 lg:mt-12">
               <ParallaxImage 
                 src={detailPendantLighting}
-                alt="Detail 2"
+                alt="Interior 2"
                 className="h-full"
                 parallaxSpeed={0.3}
                 delay={0.2}
@@ -286,7 +331,7 @@ const Design = () => {
             </div>
             <ParallaxImage 
               src={detailMarbleBath}
-              alt="Detail 3"
+              alt="Interior 3"
               className="h-full"
               parallaxSpeed={0.5}
               delay={0.3}
@@ -313,63 +358,62 @@ const Design = () => {
           </AnimatedText>
         </div>
 
-        {/* Row 2: Complex Grid */}
+        {/* Row 2: Reimagined + Development + Pools & Landscape */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {/* Column 1: Stacked */}
+          {/* Column 1: Reimagined (Before & After) */}
           <div className="space-y-4 sm:space-y-6">
-            <div className="relative">
-              <ParallaxImage 
-                src={detailTimberBeams}
-                alt="Timber Beams"
-                className="aspect-[4/5]"
-                parallaxSpeed={0.25}
-                delay={0}
-              />
-              <AnimatedText 
-                delay={0.3}
-                className="absolute bottom-4 left-4 text-xs font-inter tracking-widest text-white/80 uppercase"
-              >
-                Architecture
-              </AnimatedText>
-            </div>
+            <ParallaxImage 
+              src={detailTimberBeams}
+              alt="Reimagined Before & After"
+              className="aspect-[4/5]"
+              parallaxSpeed={0.25}
+              delay={0}
+              label="Reimagined"
+              labelPosition="top-left"
+            />
             <ParallaxImage 
               src={detailLimestoneFireplace}
-              alt="Fireplace"
+              alt="Reimagined Detail"
               className="aspect-square"
               parallaxSpeed={0.35}
               delay={0.1}
+              label="Before & After"
+              labelPosition="bottom-left"
             />
           </div>
 
-          {/* Column 2: Tall Feature */}
+          {/* Column 2: Development */}
           <div className="relative">
             <ParallaxImage 
               src={detailVanityNiche}
-              alt="Modern Exterior"
+              alt="Development"
               className="h-full min-h-[500px]"
               parallaxSpeed={0.2}
               delay={0.15}
+              label="Development"
+              labelPosition="top-left"
             />
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-[1px] h-24 bg-white/30" />
-            </div>
           </div>
 
-          {/* Column 3: Grid */}
+          {/* Column 3: Pools & Landscape + Concepts */}
           <div className="grid grid-cols-2 gap-4 sm:gap-6">
             <ParallaxImage 
               src={detailProRange}
-              alt="Kitchen"
+              alt="Pools & Landscape"
               className="col-span-2 aspect-video"
               parallaxSpeed={0.3}
               delay={0.2}
+              label="Pools & Landscape"
+              labelPosition="top-left"
             />
             <ParallaxImage 
               src={detailSkiStorage}
-              alt="Storage"
+              alt="Concepts"
               className="aspect-[3/4]"
               parallaxSpeed={0.4}
               delay={0.25}
+              label="Concepts"
+              labelPosition="bottom-left"
             />
             <div className="aspect-[3/4] bg-white/5 flex items-center justify-center relative overflow-hidden group">
               <div 
@@ -383,7 +427,7 @@ const Design = () => {
             </div>
             <ParallaxImage 
               src={detailSpaVanity}
-              alt="Spa"
+              alt="Spa & Wellness"
               className="col-span-2 aspect-square"
               parallaxSpeed={0.25}
               delay={0.3}
@@ -391,7 +435,7 @@ const Design = () => {
           </div>
         </div>
 
-        {/* Row 3: Bottom Feature */}
+        {/* Row 3: Custom Furniture Feature */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
           <AnimatedText 
             delay={0}
@@ -399,18 +443,20 @@ const Design = () => {
             className="lg:col-span-4 flex flex-col justify-end p-6 sm:p-12 bg-white/5 relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <h3 className="font-playfair text-3xl sm:text-4xl mb-4 relative z-10">Curated Interiors</h3>
+            <h3 className="font-playfair text-3xl sm:text-4xl mb-4 relative z-10">Custom Furniture</h3>
             <p className="font-inter text-sm text-white/60 leading-relaxed mb-8 relative z-10">
-              Every detail is meticulously chosen to create a harmonious environment that reflects the unique character of the space and its inhabitants.
+              Bespoke pieces crafted to complement and enhance your unique space. Each piece is designed with intention and built to last generations.
             </p>
             <div className="w-12 h-[1px] bg-gold/50 relative z-10" />
           </AnimatedText>
           <ParallaxImage 
             src={detailLeatherCabinetry}
-            alt="Interior Detail"
+            alt="Custom Furniture"
             className="lg:col-span-8 aspect-[21/9]"
             parallaxSpeed={0.15}
             delay={0.2}
+            label="Custom Furniture"
+            labelPosition="top-right"
           />
         </div>
       </div>
