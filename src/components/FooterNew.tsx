@@ -65,9 +65,9 @@ export const FooterNew = React.memo(() => {
               </span>
             </Link>
             <p className="font-inter text-white/50 text-sm leading-relaxed max-w-sm">
-              37+ years of construction excellence. Delivering quality
-              craftsmanship and exceptional service for residential and
-              commercial projects across the United States.
+              Strategic Construction Executive with 37+ years of experience 
+              delivering multimillion-dollar developments. Portfolio exceeding 
+              $500M across 12 US states and 4 countries.
             </p>
           </div>
 
