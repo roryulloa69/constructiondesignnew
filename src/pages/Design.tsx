@@ -6,26 +6,18 @@ import { useParallax, useMouseParallax, useScrollTransform } from "@/hooks/usePa
 import { FooterNew } from "@/components/FooterNew";
 import { useEffect, useRef, useState } from "react";
 
-// Import images - matched to categories
-// Architecture - strong exterior architectural shots
-import imgArchitecture from "@/assets/projects/bigsur-cover.webp";
-// Interiors - interior design shots
-import imgInterior1 from "@/assets/projects/miami-beach-5.webp";
-import imgInterior2 from "@/assets/projects/carmel-knolls-8.webp";
-import imgInterior3 from "@/assets/projects/carmel-knolls-15.webp";
-// Reimagined - before & after transformations
-import imgReimagined1 from "@/assets/projects/carmel1-2-after.webp";
-import imgReimagined2 from "@/assets/projects/pg-5-after.webp";
-// Development - land development and construction
-import imgDevelopment from "@/assets/projects/development-aerial-after.webp";
-// Pools & Landscape
-import imgPoolsLandscape from "@/assets/projects/pool-sunset-lights.webp";
-// Concepts - planning and design concepts
-import imgConcepts from "@/assets/projects/site-map.webp";
-// Custom Furniture - fine cabinetry and furniture
-import imgCustomFurniture from "@/assets/projects/laguna-3.webp";
-// Additional feature image
-import imgFeature from "@/assets/projects/montana-cover.webp";
+// Import generated category images
+import imgArchitecture from "@/assets/design/architecture-hero.webp";
+import imgInterior1 from "@/assets/design/interior-1.webp";
+import imgInterior2 from "@/assets/design/interior-2.webp";
+import imgInterior3 from "@/assets/design/interior-3.webp";
+import imgReimagined1 from "@/assets/design/reimagined-1.webp";
+import imgReimagined2 from "@/assets/design/reimagined-2.webp";
+import imgDevelopment from "@/assets/design/development.webp";
+import imgPoolsLandscape from "@/assets/design/pools-landscape.webp";
+import imgConcepts from "@/assets/design/concepts.webp";
+import imgCustomFurniture from "@/assets/design/custom-furniture.webp";
+import imgFeature from "@/assets/design/feature.webp";
 
 // Category Label component
 const CategoryLabel = ({ 
