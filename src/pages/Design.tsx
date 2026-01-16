@@ -8,8 +8,8 @@ import { useEffect, useRef, useState } from "react";
 
 // Import images from existing assets - using confirmed cover images
 import detailOceanviewFraming from "@/assets/projects/abaco-luxe-boathouse-cover.webp";
-import detailBronzeBase from "@/assets/projects/alpine-ranch-cover.webp";
-import detailPendantLighting from "@/assets/projects/bigsur-cover.webp";
+import detailInterior1 from "@/assets/projects/miami-beach-5.webp";
+import detailInterior2 from "@/assets/projects/carmel-knolls-8.webp";
 import detailMarbleBath from "@/assets/projects/carmel-knolls-cover.webp";
 import detailTimberBeams from "@/assets/projects/carmel-valley-cover.webp";
 import detailLimestoneFireplace from "@/assets/projects/civil-cover.webp";
@@ -312,7 +312,7 @@ const Design = () => {
           {/* Vertical Triptych - Interiors */}
           <div className="lg:col-span-4 grid grid-cols-3 gap-2 min-h-[300px]">
             <ParallaxImage 
-              src={detailBronzeBase}
+              src={detailInterior1}
               alt="Interior 1"
               className="h-full"
               parallaxSpeed={0.4}
@@ -322,7 +322,7 @@ const Design = () => {
             />
             <div className="mt-8 lg:mt-12">
               <ParallaxImage 
-                src={detailPendantLighting}
+                src={detailInterior2}
                 alt="Interior 2"
                 className="h-full"
                 parallaxSpeed={0.3}
