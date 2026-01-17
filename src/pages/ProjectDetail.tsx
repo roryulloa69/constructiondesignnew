@@ -256,11 +256,15 @@ const ProjectDetail = () => {
                     </div>
                   )}
 
-                  {/* Area */}
+                  {/* Area/Gallons */}
                   {project.sqft && (
                     <div>
-                      <p className="font-inter text-xs uppercase tracking-widest text-accent mb-1">Area</p>
-                      <p className="font-inter text-white">{project.sqft.toLocaleString()} ft²</p>
+                      <p className="font-inter text-xs uppercase tracking-widest text-accent mb-1">
+                        {project.category === "Hospitality" ? "Gallons" : "Area"}
+                      </p>
+                      <p className="font-inter text-white">
+                        {project.sqft.toLocaleString()}{project.category !== "Hospitality" && " ft²"}
+                      </p>
                     </div>
                   )}
 
