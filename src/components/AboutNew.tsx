@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useMouseParallax } from "@/hooks/useParallax";
 import mikeProfile from "@/assets/michael-chandler.webp";
 
 const stats = [
@@ -13,13 +14,32 @@ const stats = [
 export const AboutNew = () => {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
   const { elementRef: statsRef, isVisible: statsVisible } = useScrollAnimation({ threshold: 0.2 });
+  const mousePosition = useMouseParallax(0.015);
 
   return (
     <section
       id="about"
       ref={elementRef as React.RefObject<HTMLElement>}
-      className="relative py-24 lg:py-32 bg-[#0a0a0a] text-white overflow-hidden"
+      className="relative py-24 lg:py-32 bg-black text-white overflow-hidden"
     >
+      {/* Floating Background Orbs with Mouse Parallax */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+          transition: 'transform 0.3s ease-out'
+        }}
+      >
+        <div className="absolute top-1/4 left-1/6 w-80 h-80 bg-gold/5 rounded-full blur-[120px] animate-float" />
+        <div 
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-white/5 rounded-full blur-[100px] animate-float"
+          style={{ animationDelay: '-2s' }}
+        />
+        <div 
+          className="absolute top-1/2 right-1/6 w-48 h-48 bg-gold/3 rounded-full blur-[80px] animate-float"
+          style={{ animationDelay: '-4s' }}
+        />
+      </div>
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Column - Text Content */}
