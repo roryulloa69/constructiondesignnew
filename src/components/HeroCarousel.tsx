@@ -28,6 +28,13 @@ const heroSlides = [
   },
 ];
 
+const stats = [
+  { value: "$500M+", label: "Portfolio Managed" },
+  { value: "37+", label: "Years Experience" },
+  { value: "12", label: "US States" },
+  { value: "4", label: "Countries" },
+];
+
 interface HeroCarouselProps {
   onExplorePortfolio: () => void;
 }
@@ -76,67 +83,49 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
           <img
             src={slide.image}
             alt={slide.alt}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105"
             loading={index === 0 ? "eager" : "lazy"}
           />
-          {/* Dark overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
+          {/* Darker overlay for better text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
         </div>
       ))}
 
-      {/* Main Content */}
-      <div className="relative h-full flex flex-col items-center justify-center text-center z-10">
+      {/* Main Content - Centered */}
+      <div className="relative h-full flex flex-col items-center justify-center text-center z-10 px-6">
         {/* Subtitle */}
-        <p className="font-inter text-xs sm:text-sm tracking-[0.4em] text-white/60 uppercase mb-6 animate-fade-in">
+        <p className="font-inter text-xs sm:text-sm tracking-[0.5em] text-gold uppercase mb-8 animate-fade-in">
           Strategic Construction Executive
         </p>
 
         {/* Main Name */}
-        <h1 className="mb-8">
-          <span className="block font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-light tracking-wide mb-2">
+        <h1 className="mb-6">
+          <span className="block font-playfair text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-light tracking-wider">
             Michael
           </span>
-          <span className="block font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gold italic font-light">
+          <span className="block font-playfair text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-gold italic font-light tracking-wider">
             Chandler
           </span>
         </h1>
 
-        {/* Decorative line */}
-        <div className="w-24 h-[2px] bg-gold/60 mb-10" />
-
-        {/* Stats */}
-        <div className="flex items-center gap-12 sm:gap-20 mb-12">
-          <div className="text-center">
-            <span className="block font-playfair text-4xl sm:text-5xl md:text-6xl text-gold font-light">
-              $500M+
-            </span>
-            <span className="font-inter text-[10px] sm:text-xs tracking-[0.3em] text-white/50 uppercase">
-              Portfolio Managed
-            </span>
-          </div>
-          <div className="text-center">
-            <span className="block font-playfair text-4xl sm:text-5xl md:text-6xl text-gold font-light">
-              37+
-            </span>
-            <span className="font-inter text-[10px] sm:text-xs tracking-[0.3em] text-white/50 uppercase">
-              Years Experience
-            </span>
-          </div>
-        </div>
+        {/* Tagline */}
+        <p className="font-inter text-sm sm:text-base text-white/60 tracking-wide mb-12 max-w-xl">
+          Transforming visions into architectural masterpieces with unparalleled precision and craftsmanship
+        </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mb-16">
           <Button
             onClick={onExplorePortfolio}
-            className="bg-gold hover:bg-gold/90 text-charcoal font-inter text-sm tracking-wider px-10 py-6 uppercase"
+            className="bg-gold hover:bg-gold-dark text-charcoal font-inter text-sm tracking-widest px-12 py-6 uppercase transition-all duration-300"
           >
             Explore Portfolio
           </Button>
           <Button
             asChild
             variant="outline"
-            className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 font-inter text-sm tracking-wider px-10 py-6 uppercase group"
+            className="border-white/40 text-white hover:bg-white/10 hover:border-white font-inter text-sm tracking-widest px-12 py-6 uppercase group transition-all duration-300"
           >
             <Link to="/contact">
               Start Inquiry
@@ -144,10 +133,24 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
             </Link>
           </Button>
         </div>
+
+        {/* Stats Bar */}
+        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 lg:gap-20">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center group">
+              <span className="block font-playfair text-3xl sm:text-4xl md:text-5xl text-gold font-light transition-transform group-hover:scale-105">
+                {stat.value}
+              </span>
+              <span className="font-inter text-[10px] sm:text-xs tracking-[0.25em] text-white/50 uppercase">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Slide Indicators - Left side */}
-      <div className="absolute left-6 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-6">
+      {/* Slide Indicators - Left side vertical */}
+      <div className="absolute left-6 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-4">
         {heroSlides.map((_, index) => (
           <button
             key={index}
@@ -159,26 +162,19 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
               className={`transition-all duration-300 ${
                 index === currentSlide
                   ? "w-8 h-[2px] bg-gold"
-                  : "w-4 h-[1px] bg-white/30 group-hover:bg-white/60"
+                  : "w-3 h-[1px] bg-white/30 group-hover:bg-white/60 group-hover:w-5"
               }`}
             />
-            <span
-              className={`font-inter text-xs transition-opacity duration-300 ${
-                index === currentSlide ? "text-gold opacity-100" : "text-white/40 opacity-0 group-hover:opacity-100"
-              }`}
-            >
-              0{index + 1}
-            </span>
           </button>
         ))}
       </div>
 
-      {/* Navigation Arrows - Right side */}
+      {/* Navigation Arrows - Bottom right */}
       <div className="absolute right-6 sm:right-10 bottom-10 z-20 flex items-center gap-2">
         <button
           onClick={prevSlide}
           disabled={isTransitioning}
-          className="w-12 h-12 border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/40 transition-all disabled:opacity-50"
+          className="w-12 h-12 border border-white/30 flex items-center justify-center text-white/60 hover:text-white hover:border-gold hover:bg-gold/10 transition-all disabled:opacity-50"
           aria-label="Previous slide"
         >
           <ChevronLeft className="h-5 w-5" />
@@ -186,15 +182,18 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
         <button
           onClick={nextSlide}
           disabled={isTransitioning}
-          className="w-12 h-12 border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/40 transition-all disabled:opacity-50"
+          className="w-12 h-12 border border-white/30 flex items-center justify-center text-white/60 hover:text-white hover:border-gold hover:bg-gold/10 transition-all disabled:opacity-50"
           aria-label="Next slide"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
       </div>
 
-      {/* Bottom divider line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      {/* Scroll indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-float">
+        <span className="font-inter text-[10px] tracking-[0.3em] text-white/40 uppercase">Scroll</span>
+        <div className="w-[1px] h-8 bg-gradient-to-b from-gold to-transparent" />
+      </div>
     </section>
   );
 };
