@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useMouseParallax, useScrollTransform } from "@/hooks/useParallax";
 
 // Import local hero images
 import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.webp";
@@ -42,6 +43,11 @@ interface HeroCarouselProps {
 export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const mousePosition = useMouseParallax(0.015);
+  const { scrollY, windowHeight } = useScrollTransform();
+
+  // Calculate header opacity based on scroll (like Design page)
+  const headerOpacity = Math.max(0, 1 - scrollY / (windowHeight * 0.5));
 
   const nextSlide = useCallback(() => {
     if (isTransitioning) return;
@@ -71,7 +77,22 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
   }, [nextSlide]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-charcoal">
+    <section className="relative h-screen w-full overflow-hidden bg-black selection:bg-white/20">
+      {/* Floating Background Elements (matching Design page) */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-[1]" 
+        style={{
+          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+          transition: 'transform 0.3s ease-out'
+        }}
+      >
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-[100px] animate-float" />
+        <div 
+          className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-white/5 rounded-full blur-[80px] animate-float" 
+          style={{ animationDelay: '-3s' }} 
+        />
+      </div>
+
       {/* Background Images */}
       {heroSlides.map((slide, index) => (
         <div
@@ -85,60 +106,92 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
             alt={slide.alt}
             className="w-full h-full object-cover scale-105"
             loading={index === 0 ? "eager" : "lazy"}
+            style={{
+              transform: `translateY(${scrollY * 0.3}px) scale(1.1)`,
+            }}
           />
           {/* Darker overlay for better text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
         </div>
       ))}
 
-      {/* Main Content - Centered */}
-      <div className="relative h-full flex flex-col items-center justify-center text-center z-10 px-6">
+      {/* Main Content - Centered with scroll-based opacity */}
+      <div 
+        className="relative h-full flex flex-col items-center justify-center text-center z-10 px-6"
+        style={{
+          opacity: headerOpacity,
+          transform: `translateY(${scrollY * 0.15}px)`
+        }}
+      >
+        {/* EST badge (like Design page) */}
+        <p 
+          className="font-inter text-xs tracking-[0.3em] text-gold/70 mb-4 animate-fade-left"
+          style={{ animationDelay: '0.2s' }}
+        >
+          EST. 1987
+        </p>
+
         {/* Subtitle */}
-        <p className="font-inter text-xs sm:text-sm tracking-[0.5em] text-gold uppercase mb-8 animate-fade-in">
+        <p 
+          className="font-inter text-xs sm:text-sm tracking-[0.5em] text-white/60 uppercase mb-8 animate-fade-up"
+          style={{ animationDelay: '0.3s' }}
+        >
           Strategic Construction Executive
         </p>
 
-        {/* Main Name */}
-        <h1 className="mb-6">
-          <span className="block font-playfair text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-light tracking-wider">
-            Michael
-          </span>
-          <span className="block font-playfair text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-gold italic font-light tracking-wider">
-            Chandler
-          </span>
-        </h1>
-
-        {/* Tagline */}
-        <p className="font-inter text-sm sm:text-base text-white/60 tracking-wide mb-12 max-w-xl">
-          Transforming visions into architectural masterpieces with unparalleled precision and craftsmanship
-        </p>
+        {/* Main Name with animated underline */}
+        <div className="relative mb-10">
+          <div className="overflow-hidden">
+            <h1 
+              className="font-playfair text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-[0.15em] text-white uppercase animate-fade-up"
+              style={{ animationDelay: '0.4s' }}
+            >
+              <span className="block font-light">Michael</span>
+              <span className="block text-gold italic">Chandler</span>
+            </h1>
+          </div>
+          
+          {/* Animated underline (like Design page) */}
+          <div className="absolute -bottom-4 left-0 right-0 h-[1px] bg-white/20">
+            <div 
+              className="absolute top-0 left-1/2 -translate-x-1/2 h-[1px] bg-gold animate-reveal-left" 
+              style={{ width: '40%', animationDelay: '0.8s' }} 
+            />
+          </div>
+        </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-16">
+        <div 
+          className="flex flex-col sm:flex-row items-center gap-4 mb-16 animate-fade-up"
+          style={{ animationDelay: '0.6s' }}
+        >
           <Button
             onClick={onExplorePortfolio}
-            className="bg-gold hover:bg-gold-dark text-charcoal font-inter text-sm tracking-widest px-12 py-6 uppercase transition-all duration-300"
+            className="bg-white text-black hover:bg-gold hover:text-white px-10 py-6 text-sm tracking-widest uppercase rounded-none transition-all duration-500 group"
           >
             Explore Portfolio
           </Button>
           <Button
             asChild
             variant="outline"
-            className="border-white/40 text-white hover:bg-white/10 hover:border-white font-inter text-sm tracking-widest px-12 py-6 uppercase group transition-all duration-300"
+            className="border-white/30 text-white hover:bg-white/10 hover:border-gold px-10 py-6 text-sm tracking-widest uppercase rounded-none transition-all duration-500 group"
           >
             <Link to="/contact">
               Start Inquiry
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
             </Link>
           </Button>
         </div>
 
         {/* Stats Bar */}
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 lg:gap-20">
+        <div 
+          className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 animate-fade-up"
+          style={{ animationDelay: '0.7s' }}
+        >
           {stats.map((stat, index) => (
-            <div key={index} className="text-center group">
-              <span className="block font-playfair text-3xl sm:text-4xl md:text-5xl text-gold font-light transition-transform group-hover:scale-105">
+            <div key={index} className="text-center group p-4">
+              <span className="block font-playfair text-3xl sm:text-4xl md:text-5xl text-gold font-light mb-2 transition-transform group-hover:scale-105">
                 {stat.value}
               </span>
               <span className="font-inter text-[10px] sm:text-xs tracking-[0.25em] text-white/50 uppercase">
@@ -150,7 +203,10 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
       </div>
 
       {/* Slide Indicators - Left side vertical */}
-      <div className="absolute left-6 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-4">
+      <div 
+        className="absolute left-6 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-4 mix-blend-difference"
+        style={{ opacity: headerOpacity }}
+      >
         {heroSlides.map((_, index) => (
           <button
             key={index}
@@ -170,7 +226,10 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
       </div>
 
       {/* Navigation Arrows - Bottom right */}
-      <div className="absolute right-6 sm:right-10 bottom-10 z-20 flex items-center gap-2">
+      <div 
+        className="absolute right-6 sm:right-10 bottom-10 z-20 flex items-center gap-2"
+        style={{ opacity: headerOpacity }}
+      >
         <button
           onClick={prevSlide}
           disabled={isTransitioning}
@@ -189,11 +248,29 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
         </button>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-float">
-        <span className="font-inter text-[10px] tracking-[0.3em] text-white/40 uppercase">Scroll</span>
-        <div className="w-[1px] h-8 bg-gradient-to-b from-gold to-transparent" />
+      {/* Scroll indicator (matching Design page) */}
+      <div 
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+        style={{ opacity: headerOpacity }}
+      >
+        <div className="w-[1px] h-8 bg-white/20 relative overflow-hidden">
+          <div 
+            className="absolute top-0 w-full h-4" 
+            style={{
+              background: 'linear-gradient(to bottom, transparent, hsl(var(--gold)), transparent)',
+              animation: 'moveDown 1.5s ease-in-out infinite'
+            }} 
+          />
+        </div>
       </div>
+
+      {/* Custom CSS for scroll animation */}
+      <style>{`
+        @keyframes moveDown {
+          0%, 100% { transform: translateY(-100%); }
+          50% { transform: translateY(200%); }
+        }
+      `}</style>
     </section>
   );
 };

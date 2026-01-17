@@ -103,7 +103,7 @@ const Index: React.FC = () => {
   }, [bookOpened, animating]);
 
   return (
-    <div className="min-h-screen bg-charcoal">
+    <div className="min-h-screen bg-black text-white selection:bg-white/20 overflow-x-hidden">
       {/* Book animation overlay */}
       {animating && !prefersReducedMotion && (
         <div
