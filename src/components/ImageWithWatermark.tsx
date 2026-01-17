@@ -10,16 +10,17 @@ export const ImageWithWatermark = ({ children }: ImageWithWatermarkProps) => {
     <div className="relative">
       {children}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div 
-          className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-8 p-8"
-          style={{ transform: 'rotate(-30deg) scale(1.5)' }}
+        <div
+          className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-8 p-8 mix-blend-soft-light"
+          style={{ transform: "rotate(-30deg) scale(1.5)" }}
         >
           {[...Array(9)].map((_, i) => (
             <div key={i} className="flex items-center justify-center">
-              <img 
-                src={logo} 
-                alt="" 
-                className="w-24 h-24 object-contain opacity-[0.12] select-none"
+              <img
+                src={logo}
+                alt=""
+                className="w-24 h-24 object-contain opacity-[0.06] select-none"
+                loading="lazy"
               />
             </div>
           ))}
