@@ -175,10 +175,10 @@ const ProjectDetail = () => {
           <img
             src={heroImage}
             alt={project.title}
-            className="w-full h-full object-cover hero-image"
+            className="w-full h-full object-cover hero-image saturate-110 contrast-105"
             style={{
               transform: `translateY(${scrollY * 0.3}px) scale(1.1)`,
-              transition: 'transform 0.1s ease-out'
+              transition: "transform 0.1s ease-out",
             }}
           />
           {/* Dark gradient overlay */}
@@ -385,7 +385,7 @@ const ProjectDetail = () => {
                       <img
                         src={image}
                         alt={`${project.title} - Image ${actualIndex + 1}`}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image saturate-110 contrast-105"
                       />
                       {label && (
                         <span className={`absolute top-3 right-3 px-3 py-1 text-xs font-semibold text-white rounded-sm ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>
@@ -413,7 +413,7 @@ const ProjectDetail = () => {
                         <img
                           src={image}
                           alt={`${project.title} - Image ${actualIndex + 1}`}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image saturate-110 contrast-105"
                         />
                         {label && (
                           <span className={`absolute top-3 right-3 px-3 py-1 text-xs font-semibold text-white rounded-sm ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>

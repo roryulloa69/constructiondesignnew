@@ -383,8 +383,6 @@ All colors MUST be HSL.
   .project-image {
     image-rendering: auto;
     image-rendering: high-quality;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     will-change: transform;
   }
 
