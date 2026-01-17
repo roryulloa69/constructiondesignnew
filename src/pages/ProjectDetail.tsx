@@ -169,7 +169,7 @@ const ProjectDetail = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-[hsl(var(--charcoal))]">
+      <div className="min-h-screen bg-background dark:bg-[hsl(var(--charcoal))]">
         {/* Full-bleed Hero Image */}
         <div ref={heroRef} className="relative h-[70vh] lg:h-[80vh] w-full overflow-hidden">
           <img
