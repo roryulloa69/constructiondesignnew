@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useParallax, useMouseParallax, useScrollTransform } from "@/hooks/useParallax";
 import { FooterNew } from "@/components/FooterNew";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 // Import generated category images
 import imgArchitecture from "@/assets/design/architecture-hero.webp";
@@ -78,14 +78,15 @@ const ParallaxImage = ({
   } = useScrollAnimation({
     threshold: 0.1
   });
-  const combinedRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (combinedRef.current) {
-      (elementRef as React.MutableRefObject<HTMLElement | null>).current = combinedRef.current;
-      (animRef as React.MutableRefObject<HTMLElement | null>).current = combinedRef.current;
-    }
-  }, [elementRef, animRef]);
-  return <div ref={combinedRef} className={`relative overflow-hidden group ${className}`} style={{
+  const setRefs = useCallback(
+    (node: HTMLDivElement | null) => {
+      (elementRef as React.MutableRefObject<HTMLElement | null>).current = node;
+      (animRef as React.MutableRefObject<HTMLElement | null>).current = node;
+    },
+    [elementRef, animRef]
+  );
+
+  return <div ref={setRefs} className={`relative overflow-hidden group ${className}`} style={{
     opacity: isVisible ? 1 : 0,
     transform: `translateY(${isVisible ? 0 : 60}px)`,
     transition: `opacity 0.8s ease-out ${delay}s, transform 0.8s ease-out ${delay}s`
