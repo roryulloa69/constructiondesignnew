@@ -11,7 +11,7 @@ export const ImageWithWatermark = ({ children }: ImageWithWatermarkProps) => {
       {children}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
-          className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-8 p-8 mix-blend-soft-light"
+          className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-8 p-8"
           style={{ transform: "rotate(-30deg) scale(1.5)" }}
         >
           {[...Array(9)].map((_, i) => (
