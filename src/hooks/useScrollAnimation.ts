@@ -10,6 +10,15 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
   const elementRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    // Fallback for older browsers/environments where IntersectionObserver isn't available.
+    // Without this, animated elements would stay hidden (opacity: 0).
+    if (!("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -22,7 +31,7 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
       },
       {
         threshold: options.threshold || 0.1,
-        rootMargin: options.rootMargin || '0px 0px -100px 0px',
+        rootMargin: options.rootMargin || "0px 0px -100px 0px",
       }
     );
 
