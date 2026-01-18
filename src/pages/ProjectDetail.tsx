@@ -6,7 +6,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { ImageWithWatermark } from "@/components/ImageWithWatermark";
-
+import { HeaderNew } from "@/components/HeaderNew";
 interface ProjectVideo {
   id: string;
   video_url: string;
@@ -169,6 +169,7 @@ const ProjectDetail = () => {
 
   return (
     <>
+      <HeaderNew />
       <div className="min-h-screen bg-background dark:bg-[hsl(var(--charcoal))]">
         {/* Full-bleed Hero Image */}
         <div ref={heroRef} className="relative h-[70vh] lg:h-[80vh] w-full overflow-hidden">
