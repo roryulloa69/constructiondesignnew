@@ -116,16 +116,16 @@ const ProjectDetail = () => {
   }, [dbImages]);
 
   const allImages = useMemo(() => {
-    // Prioritize database images if they exist
-    if (validDbImages.length > 0) {
-      return validDbImages.map(img => img.image_url);
-    }
-    // Fall back to static images from projects.ts
+    // Prioritize static images from projects.ts (the original source)
     if (hasStaticImages && project?.images) {
       return project.images.filter(img => img != null);
     }
+    // Fall back to database images if no static images exist
+    if (validDbImages.length > 0) {
+      return validDbImages.map(img => img.image_url);
+    }
     return [];
-  }, [validDbImages, hasStaticImages, project?.images]);
+  }, [hasStaticImages, project?.images, validDbImages]);
 
   const getImageLabel = (imageUrl: string, index: number): string | null => {
     const dbImage = validDbImages.find(img => img.image_url === imageUrl);
