@@ -19,7 +19,7 @@ export const ImageWithWatermark = ({ children }: ImageWithWatermarkProps) => {
               <img
                 src={logo}
                 alt=""
-                className="w-24 h-24 object-contain opacity-[0.06] select-none"
+                className="w-24 h-24 object-contain opacity-[0.02] grayscale select-none mix-blend-normal"
                 loading="lazy"
               />
             </div>
