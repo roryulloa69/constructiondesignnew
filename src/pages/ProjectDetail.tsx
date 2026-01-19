@@ -104,18 +104,28 @@ const ProjectDetail = () => {
 
   const hasStaticImages = project?.images && Array.isArray(project.images) && project.images.length > 0;
   
+  // Helper to validate image URLs (http, https, or relative paths starting with /)
+  const isValidImageUrl = (url: string | null | undefined): url is string => {
+    if (!url) return false;
+    return url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/');
+  };
+
+  // Filter valid database images (accepts http, https, and relative /paths)
+  const validDbImages = useMemo(() => {
+    return dbImages.filter(img => isValidImageUrl(img.image_url));
+  }, [dbImages]);
+
   const allImages = useMemo(() => {
-    if (hasStaticImages && project?.images) {
-      return project.images.filter(img => img != null);
-    }
-    const validDbImages = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
+    // Prioritize database images if they exist
     if (validDbImages.length > 0) {
       return validDbImages.map(img => img.image_url);
     }
+    // Fall back to static images from projects.ts
+    if (hasStaticImages && project?.images) {
+      return project.images.filter(img => img != null);
+    }
     return [];
-  }, [hasStaticImages, project?.images, dbImages]);
-
-  const validDbImages = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
+  }, [validDbImages, hasStaticImages, project?.images]);
 
   const getImageLabel = (imageUrl: string, index: number): string | null => {
     const dbImage = validDbImages.find(img => img.image_url === imageUrl);
@@ -176,7 +186,7 @@ const ProjectDetail = () => {
           <img
             src={heroImage}
             alt={project.title}
-            className="w-full h-full object-cover hero-image saturate-110 contrast-105"
+            className="w-full h-full object-cover hero-image"
             style={{
               transform: `translateY(${scrollY * 0.3}px) scale(1.1)`,
               transition: "transform 0.1s ease-out",
@@ -386,7 +396,7 @@ const ProjectDetail = () => {
                       <img
                         src={image}
                         alt={`${project.title} - Image ${actualIndex + 1}`}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image saturate-110 contrast-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image"
                       />
                       {label && (
                         <span className={`absolute top-3 right-3 px-3 py-1 text-xs font-semibold text-white rounded-sm ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>
@@ -414,7 +424,7 @@ const ProjectDetail = () => {
                         <img
                           src={image}
                           alt={`${project.title} - Image ${actualIndex + 1}`}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image saturate-110 contrast-105"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image"
                         />
                         {label && (
                           <span className={`absolute top-3 right-3 px-3 py-1 text-xs font-semibold text-white rounded-sm ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>
