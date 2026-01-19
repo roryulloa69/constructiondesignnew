@@ -21,6 +21,7 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,9 +32,15 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Ensure the mobile menu never stays open after navigation.
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const handleNavClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string, itemName: string) => {
       e.preventDefault();
+      setMobileMenuOpen(false);
 
       if (itemName === "Home") {
         navigate("/");
@@ -78,7 +85,7 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
         window.scrollTo({ top: offsetTop, behavior: "smooth" });
       }
     },
-    [onPortfolioClick, navigate, location]
+    [location.pathname, navigate, onPortfolioClick]
   );
 
   const isActive = (itemName: string) => {
@@ -124,7 +131,7 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
           </div>
 
           {/* Mobile Navigation */}
-          <Sheet>
+          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button
                 variant="ghost"
