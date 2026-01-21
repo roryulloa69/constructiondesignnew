@@ -99,27 +99,9 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-10">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href, item.name)}
-                className={`relative font-inter text-xs tracking-[0.15em] uppercase transition-colors duration-300 ${
-                  isActive(item.name)
-                    ? "text-white after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-gold"
-                    : "text-white/70 hover:text-white"
-                }`}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-
-          {/* Mobile Navigation */}
+          {/* Menu Trigger - visible on all screen sizes */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild>
               <Button
                 variant="ghost"
                 size="icon"
@@ -128,14 +110,18 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
                 <AlignJustify className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-charcoal border-white/10">
-              <div className="flex flex-col gap-6 mt-8">
+            <SheetContent className="bg-charcoal border-white/10 w-72">
+              <div className="flex flex-col gap-8 mt-12">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href, item.name)}
-                    className="font-inter text-sm tracking-[0.15em] uppercase text-white/80 hover:text-gold transition-colors"
+                    className={`font-inter text-lg tracking-[0.15em] uppercase transition-colors ${
+                      isActive(item.name)
+                        ? "text-gold"
+                        : "text-white/80 hover:text-gold"
+                    }`}
                   >
                     {item.name}
                   </a>
