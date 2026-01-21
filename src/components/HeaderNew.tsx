@@ -5,11 +5,9 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "/" },
   { name: "Portfolio", href: "#portfolio" },
   { name: "Design", href: "/design" },
   { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -42,11 +40,6 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
       e.preventDefault();
       setMobileMenuOpen(false);
 
-      if (itemName === "Home") {
-        navigate("/");
-        return;
-      }
-
       if (itemName === "Portfolio") {
         if (location.pathname === "/" && onPortfolioClick) {
           onPortfolioClick();
@@ -63,11 +56,6 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
 
       if (itemName === "Contact") {
         navigate("/contact");
-        return;
-      }
-
-      if (itemName === "Services" && location.pathname !== "/") {
-        navigate("/", { state: { scrollTo: "services" } });
         return;
       }
 
@@ -89,7 +77,6 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
   );
 
   const isActive = (itemName: string) => {
-    if (itemName === "Home" && location.pathname === "/") return true;
     if (itemName === "Design" && location.pathname === "/design") return true;
     if (itemName === "Contact" && location.pathname === "/contact") return true;
     return false;
