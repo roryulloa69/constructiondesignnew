@@ -112,16 +112,23 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
             </SheetTrigger>
             <SheetContent className="bg-charcoal border-white/10 w-72">
               <div className="flex flex-col gap-8 mt-12">
-                {navigation.map((item) => (
+                {navigation.map((item, index) => (
                   <a
                     key={item.name}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href, item.name)}
-                    className={`font-inter text-lg tracking-[0.15em] uppercase transition-colors ${
+                    className={`font-inter text-lg tracking-[0.15em] uppercase transition-all duration-300 transform ${
+                      mobileMenuOpen 
+                        ? "opacity-100 translate-x-0" 
+                        : "opacity-0 -translate-x-4"
+                    } ${
                       isActive(item.name)
                         ? "text-gold"
                         : "text-white/80 hover:text-gold"
                     }`}
+                    style={{ 
+                      transitionDelay: mobileMenuOpen ? `${150 + index * 75}ms` : "0ms" 
+                    }}
                   >
                     {item.name}
                   </a>
