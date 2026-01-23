@@ -314,6 +314,11 @@ import poolDesign34 from "@/assets/projects/pool-design-34.webp";
 import poolDesign35 from "@/assets/projects/pool-design-35.webp";
 import poolDesign36 from "@/assets/projects/pool-design-36.webp";
 import poolDesign37 from "@/assets/projects/pool-design-37.webp";
+import imgp1302 from "@/assets/projects/IMGP1302.webp";
+import imgp1303 from "@/assets/projects/IMGP1303.webp";
+import imgp1305 from "@/assets/projects/IMGP1305.webp";
+import imgp1307 from "@/assets/projects/IMGP1307.webp";
+import imgp1308 from "@/assets/projects/IMGP1308.webp";
 
 // Civil Engineering
 import civilCover from "@/assets/projects/civil-cover.webp";
@@ -575,7 +580,7 @@ export const projects: Project[] = [
     category: "Hospitality",
     description: "We orchestrated the creation of a 189,000 gallon ultra-luxury private club amenity, a project that demanded the coordination of over 15 specialty trades. The centerpiece is a 189,000 gallon free-form pool with a swim-up bar, complemented by two beautiful Int. Design 1,200 sq ft pool houses. The design, inspired by 1950s New York smoking clubs, features imported travertine and 10' high solid mahogany wood walls and doors. This 18-month project delivered a resort-style oasis with professional landscaping, fire pits, and an outdoor kitchen, setting a new standard for private club luxury.",
     image: poolSunsetLights,
-    images: [poolSunsetLights, poolCabanaSunset, poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
+    images: [poolSunsetLights, poolCabanaSunset, poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37, imgp1302, imgp1303, imgp1305, imgp1307, imgp1308],
     sqft: 189000,
     duration: "18 months",
     features: ["189,000 Gallon", "3-Acre Project", "Swim-up Bar", "Pool Houses", "Imported Travertine"],
