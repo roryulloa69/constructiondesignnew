@@ -182,20 +182,33 @@ export const ImageManager = ({ projectId }: ImageManagerProps) => {
               <div 
                 className="relative aspect-square mb-3 overflow-hidden rounded-md bg-muted"
                 style={{
-                  transform: `rotate(${image.rotation_angle}deg)`,
+                  transform: `rotate(${image.rotation_angle || 0}deg)`,
                 }}
               >
                 <img
                   src={image.image_url}
                   alt={image.title || "Project image"}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    // Show placeholder for broken images
+                    target.style.display = 'none';
+                    target.parentElement!.innerHTML = `
+                      <div class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground text-xs text-center p-2">
+                        Image not found<br/><span class="text-[10px] opacity-60">${image.image_url}</span>
+                      </div>
+                    `;
+                  }}
                 />
               </div>
+              <p className="text-xs text-muted-foreground truncate mb-2" title={image.image_url}>
+                {image.title || image.image_url.split('/').pop()}
+              </p>
               <div className="flex gap-2">
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => handleRotate(image.id, image.rotation_angle)}
+                  onClick={() => handleRotate(image.id, image.rotation_angle || 0)}
                   className="flex-1"
                 >
                   <RotateCw className="h-4 w-4" />

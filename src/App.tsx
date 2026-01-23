@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import RootLayout from "@/layouts/RootLayout";
 
 // Lazy load all route components for better code splitting
 const Index = lazy(() => import("./pages/Index"));
@@ -29,48 +30,56 @@ const PageLoader = () => (
 const queryClient = new QueryClient();
 
 // Create router with future flag
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      element: <RootLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Index />,
+        },
+        {
+          path: "/projects/:id",
+          element: <ProjectDetail />,
+        },
+        {
+          path: "/auth",
+          element: <Auth />,
+        },
+        {
+          path: "/admin",
+          element: <Admin />,
+        },
+        {
+          path: "/admin/users",
+          element: <AdminUsers />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "/design",
+          element: <Design />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Index />,
-  },
-  {
-    path: "/projects/:id",
-    element: <ProjectDetail />,
-  },
-  {
-    path: "/auth",
-    element: <Auth />,
-  },
-  {
-    path: "/admin",
-    element: <Admin />,
-  },
-  {
-    path: "/admin/users",
-    element: <AdminUsers />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
-  {
-    path: "/design",
-    element: <Design />,
-  },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
-], {
-  future: {
-    v7_relativeSplatPath: true,
-  },
-});
+    future: {
+      v7_relativeSplatPath: true,
+    },
+  }
+);
 
 const App: React.FC = () => {
   return (
