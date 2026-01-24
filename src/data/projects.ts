@@ -38,6 +38,7 @@ import hillsideCleanup12 from "@/assets/projects/hillside-cleanup-12.webp";
 import hillsideCleanup13 from "@/assets/projects/hillside-cleanup-13.webp";
 import hillsideCleanup14 from "@/assets/projects/hillside-cleanup-14.webp";
 import hillsideCleanup15 from "@/assets/projects/hillside-cleanup-15.webp";
+import southcoast1 from "@/assets/projects/southcoast-1.webp";
 import southcoast2 from "@/assets/projects/southcoast-2.webp";
 import southcoast3 from "@/assets/projects/southcoast-3.webp";
 import southcoast4 from "@/assets/projects/southcoast-4.webp";
@@ -128,7 +129,6 @@ import carmelValleyNew3 from "@/assets/projects/carmel-valley-new-3.webp";
 import carmelValleyNew4 from "@/assets/projects/carmel-valley-new-4.webp";
 
 // North Florida Renovation/Addition
-import veroBeachCover from "@/assets/vero-beach-cover.webp";
 import northFloridaCover from "@/assets/projects/north-florida-cover.webp";
 import northFlorida1 from "@/assets/projects/north-florida-1.webp";
 import northFlorida2 from "@/assets/projects/north-florida-2.webp";
@@ -273,7 +273,6 @@ import linksEstate3 from "@/assets/projects/links-estate-3.webp";
 import siteMap from "@/assets/projects/site-map.webp";
 
 // Hospitality Pool
-import poolTestimonialImage from "@/assets/pool-testimonial.webp";
 import poolDesignCover from "@/assets/projects/pool-design-cover.webp";
 import poolSunsetLights from "@/assets/projects/pool-sunset-lights.webp";
 import poolCabanaSunset from "@/assets/projects/pool-cabana-sunset.webp";
@@ -484,6 +483,7 @@ export interface Project {
   baths?: number;
   features?: string[];
   duration?: string;
+  completedDate?: string;
   roles?: string;
   budget?: string;
 }
@@ -600,6 +600,7 @@ export const projects: Project[] = [
     images: [southcoastCover, southcoast2, southcoast3, southcoast4, southcoast5, southcoast6, southcoast7, southcoast8, southcoast9, southcoast10, southcoast11, southcoast12, southcoast13, southcoast14, southcoast15, southcoast16, southcoast17, southcoast18, southcoast19, southcoast20, southcoast21, southcoast22, southcoast23, southcoast24, southcoast25, southcoast26, southcoast27, southcoast28, southcoast29, southcoast30, southcoast31, southcoast32, southcoast33, southcoast34, southcoast35, southcoast36, southcoast37, southcoast38, southcoast39, southcoast40, southcoast41, southcoast42, southcoast43, southcoast44, southcoast45, southcoast46, southcoast47, southcoast48, southcoast49, southcoast50, southcoast51, southcoast52, southcoast53],
     sqft: 3800,
     duration: "16 Months",
+    completedDate: "2023-08",
     features: ["Ocean Views", "Skylights", "Waterfall Counters", "Radiant Heat"],
     roles: "Owner Representative, PE Signer, Interior Designer, Builder, Project Manager, Property Manager, AD Campaign and Cinema Movie Shoots Coordination",
   },
@@ -615,6 +616,7 @@ export const projects: Project[] = [
     images: [carmelValleyNewCover, carmelValleyNew1, carmelValleyNew2, carmelValleyNew3, carmelValleyNew4],
     sqft: 4800,
     duration: "20 Months",
+    completedDate: "2024-02",
     features: ["Exposed Steel", "Glass Walls", "Native Restoration", "Oak Landscape"],
     roles: "Designer, Builder, Project Manager, Civil Engineering, Contractor",
   },
@@ -759,6 +761,7 @@ export const projects: Project[] = [
       development13,
     ],
     duration: "36 Months",
+    completedDate: "2022-11",
     features: ["45 Acres", "120+ Home Sites", "3.2 Miles Roads", "Community Amenities"],
     roles: "Project Management, Development/Civil Engineering, Project",
   },

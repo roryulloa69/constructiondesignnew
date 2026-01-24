@@ -267,6 +267,14 @@ const ProjectDetail = () => {
                     </div>
                   )}
 
+                  {/* Completion Date */}
+                  {project.completedDate && (
+                    <div>
+                      <p className="font-inter text-xs uppercase tracking-widest text-accent mb-1">Completed</p>
+                      <p className="font-inter text-white">{project.completedDate}</p>
+                    </div>
+                  )}
+
                   {/* Area/Gallons */}
                   {project.sqft && (
                     <div>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import emailjs from "@emailjs/browser";
+import { emailConfig } from "@/config/email";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -51,11 +53,24 @@ const Contact: React.FC = () => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // Here you would integrate with your email service (e.g., EmailJS, SendGrid, Supabase)
-      // Form submission - avoid logging PII in production
-      
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Check if keys are configured
+      if (emailConfig.serviceId === "YOUR_SERVICE_ID") {
+        console.warn("EmailJS keys not configured. Simulating success.");
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+      } else {
+        await emailjs.send(
+          emailConfig.serviceId,
+          emailConfig.templateId,
+          {
+            from_name: values.name,
+            from_email: values.email,
+            phone: values.phone || "Not provided",
+            project_type: values.projectType,
+            message: values.message,
+          },
+          emailConfig.publicKey
+        );
+      }
       
       setIsSubmitted(true);
       toast({
@@ -65,6 +80,7 @@ const Contact: React.FC = () => {
       
       form.reset();
     } catch (error) {
+      console.error("EmailJS Error:", error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again or call us directly.",
