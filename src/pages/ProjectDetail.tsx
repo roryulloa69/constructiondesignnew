@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { ImageWithWatermark } from "@/components/ImageWithWatermark";
 import { HeaderNew } from "@/components/HeaderNew";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 interface ProjectVideo {
   id: string;
   video_url: string;
@@ -378,6 +379,49 @@ const ProjectDetail = () => {
             </div>
           </div>
         )}
+
+        {/* Before/After Comparison Sliders */}
+        {(() => {
+          // Create before/after pairs from database images
+          const beforeImages = validDbImages.filter(img => img.is_before);
+          const afterImages = validDbImages.filter(img => img.is_after);
+          
+          // Create pairs by matching consecutive before/after images
+          const pairs: { before: string; after: string }[] = [];
+          const minPairs = Math.min(beforeImages.length, afterImages.length, 2); // Max 2 sliders
+          
+          for (let i = 0; i < minPairs; i++) {
+            pairs.push({
+              before: beforeImages[i]?.image_url,
+              after: afterImages[i]?.image_url,
+            });
+          }
+          
+          if (pairs.length === 0) return null;
+          
+          return (
+            <div className="max-w-[1440px] mx-auto px-6 lg:px-12 pb-16">
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-8 h-[2px] bg-accent" />
+                  <h2 className="font-playfair text-2xl lg:text-3xl text-white">Before & After</h2>
+                </div>
+                <p className="text-[hsl(var(--muted-foreground))] font-inter text-sm ml-11">
+                  Drag the slider to compare the transformation
+                </p>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {pairs.map((pair, index) => (
+                  <BeforeAfterSlider
+                    key={index}
+                    beforeImage={pair.before}
+                    afterImage={pair.after}
+                  />
+                ))}
+              </div>
+            </div>
+          );
+        })()}
 
         {/* Visual Narrative Gallery Section */}
         {allImages.length > 1 && (
