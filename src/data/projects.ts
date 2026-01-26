@@ -402,7 +402,7 @@ import miamiBeach44 from "@/assets/projects/miami-beach-44.webp";
 import miamiBeach45 from "@/assets/projects/miami-beach-45.webp";
 import miamiBeach46 from "@/assets/projects/miami-beach-46.webp";
 import miamiBeach47 from "@/assets/projects/miami-beach-47.webp";
-import syracuseCover from "@/assets/projects/syracuse-cover.webp";
+import syracuseCover from "@/assets/projects/syracuse-cover.png";
 import syracuse1 from "@/assets/projects/syracuse-1.webp";
 import syracuse2 from "@/assets/projects/syracuse-2.webp";
 import syracuse3 from "@/assets/projects/syracuse-3.webp";
