@@ -500,14 +500,14 @@ export const projects: Project[] = [
     location: "S. Florida",
     additionalInfo: "S. Florida",
     category: "Residential Construction",
-    description: "Over 5 months, we transformed a 4,200 sq ft condominium into a beachfront sanctuary of modern design. This custom renovation introduces a new standard of coastal living, where breathtaking ocean views are framed by floor-to-ceiling hurricane-rated windows. The always beautiful stone floors served as the foundation from which to design. The designers added color through the use of bespoke elements such as Italian marble, integrated smart home technology, and crafted bespoke millwork, culminating in a chef's kitchen equipped with professional-grade appliances. The result is a seamless blend of clean aesthetics and sophisticated comfort. All work was performed at the beginning of 2021 during the height of the pandemic, and suffered no delays because of the world events.",
+    description: "Over 14 months, we transformed a 4,200 sq ft condominium into a beachfront sanctuary of modern design. This custom renovation introduces a new standard of coastal living, where breathtaking ocean views are framed by floor-to-ceiling hurricane-rated windows. The always beautiful stone floors served as the foundation from which to design. The designers added color through the use of bespoke elements including rare South American woods, Italian marble, integrated smart home technology, and crafted bespoke millwork, culminating in a chef's kitchen equipped with professional-grade appliances. The result is a seamless blend of clean aesthetics and sophisticated comfort. Crafted by some of the most gifted millwork craftsmen, the beautiful scalloped wood paneling was sourced from a millwork company and cancelled the job during the pandemic, working with hand-picked contractors and craftsmen enabled the pre-delivery of a bespoke residence and a wood design, on point, on time, on budget. Would lighting and the superior team amassed to complete this project.",
     image: miamiBeachCover,
     images: [miamiBeachCover, miamiBeach1, miamiBeach2, miamiBeach3, miamiBeach4, miamiBeach5, miamiBeach6, miamiBeach7, miamiBeach8, miamiBeach9, miamiBeach10, miamiBeach11, miamiBeach12, miamiBeach13, miamiBeach14, miamiBeach15, miamiBeach16, miamiBeach17, miamiBeach18, miamiBeach19, miamiBeach20, miamiBeach21, miamiBeach22, miamiBeach23, miamiBeach24, miamiBeach25, miamiBeach26, miamiBeach27, miamiBeach28, miamiBeach29, miamiBeach30, miamiBeach31, miamiBeach32, miamiBeach33, miamiBeach34, miamiBeach35, miamiBeach36, miamiBeach37, miamiBeach38, miamiBeach39, miamiBeach40, miamiBeach41, miamiBeach42, miamiBeach43, miamiBeach44, miamiBeach45, miamiBeach46, miamiBeach47],
     coverRotation: 180,
     sqft: 4200,
     bedrooms: 4,
     baths: 4,
-    duration: "5 Months",
+    duration: "14 Months",
     features: ["Ocean Views", "Smart Home", "Chef's Kitchen", "Custom Millwork", "Italian Marble"],
     roles: "Owner Representation, Property Management, International Furniture/Material/Art Receiving, Vehicle/Management/Procurement/Shipping",
   },
@@ -518,7 +518,7 @@ export const projects: Project[] = [
     location: "Montana",
     additionalInfo: "Montana",
     category: "Residential Construction",
-    description: "Nestled in the high-alpine region of Montana, this 8,500 sq ft luxury ranch was brought to life over 24 months. The spread building merged modern mountain architecture with rustic charm, using exposed timber and custom stone masonry to complement the panoramic landscape. The residence features high volume vaulted ceilings and floor-to-ceiling windows that dissolve the boundary between the interior and the breathtaking mountain views. A gourmet kitchen with natural stone countertops, and custom millwork throughout ensure that comfort and elegance are felt in every corner, along with a custom forced air system to maximize all efficiencies. This home was designed and built to a new standard above all others.",
+    description: "A mix of Rodion, nestled in the high-alpine region of Montana, this 2,300 8,500 sq ft luxury ranch was brought to life over 24 months. The spread building merged modern mountain architecture with rustic charm, using exposed timber and custom stone masonry to complement the panoramic landscape. The residence features high volume vaulted ceilings and floor-to-ceiling windows that dissolve the boundary between the interior and the breathtaking mountain views. A gourmet kitchen with natural stone countertops, and custom millwork throughout ensure that comfort and elegance are felt in every corner, along with a custom forced air system to maximize all efficiencies. This home was designed and built to a new standard above all others.",
     image: alpineRanchCover,
     images: [alpineRanchCover, alpineRanch1, alpineRanch2, alpineRanch3, alpineRanch4, alpineRanch5, alpineRanch6, alpineRanch7, alpineRanch8, alpineRanch9, alpineRanch10, alpineRanch11, alpineRanch12],
     sqft: 8500,
@@ -526,7 +526,7 @@ export const projects: Project[] = [
     baths: 2,
     duration: "24 Months",
     features: ["Mountain Views", "Vaulted Ceilings", "Stone Masonry", "Gourmet Kitchen", "Custom Forced Air System"],
-    roles: "Owner Representation, PE Sign Oversight, Contractor Procurement, Contract Negotiation, Project Management, Property Management",
+    roles: "Owner Representation, PE Sign Oversight, Contractor, Procurement, Contract Negotiation, Project Management, Property Management",
   },
   // DESIGN/BUILD
   {
@@ -536,7 +536,7 @@ export const projects: Project[] = [
     location: "N. Utah",
     additionalInfo: "N. Utah",
     category: "Design/Build",
-    description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we orchestrated in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The landscape also includes a 6-car garage/workshop, and was designed for the entire renovation plan and the two homes. The still house barn and storage rounded out the perfect home/estate/equestrian property.",
+    description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we orchestrated in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The landscape also includes a 6-car garage/workshop and was designed for the entire renovation plan and the two homes. The horse barn and storage rounded out the perfect home/estate/equestrian property.",
     image: syracuseCover,
     images: [
       syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6,
@@ -561,7 +561,7 @@ export const projects: Project[] = [
     location: "Montana",
     additionalInfo: "Montana",
     category: "Residential Construction",
-    description: "In just eight months, this new 2,800 sq ft condo was completed as a sophisticated mountain retreat. The new build focused on creating a sanctuary of modern comfort, featuring spa-inspired bathrooms with heated floors and contemporary finishes throughout. The selections were of a palette of Calacatta marble and other warm refined brass fixtures to evoke a sense of understated luxury. Fine marbles, many of which were installed as full slabs for floor to ceiling wall finishes. The result is a space that perfectly balances modern living with the tranquility of a mountain setting.",
+    description: "In just eight months, this new 2,800 sq ft condo was completed as a sophisticated mountain retreat. The new build focused on creating a sanctuary of modern comfort, featuring spa-inspired bathrooms with heated floors and contemporary finishes throughout. The selections were of a palette of Calacatta marble and other warm refined brass fixtures to evoke a sense of understated luxury. Fine marbles, many of which were installed as full slabs for floor to ceiling wall finishes. The result is a space that perfectly balances modern living with the tranquility of a mountain setting. Along with warm wood accents and special hand-applied wall/ceiling finishes.",
     image: montanaCover,
     images: [montanaCover, montana1, montana2, montana3, montana4, montana5, montana6, montana7, montana8, montana9, montana10, montana11],
     coverRotation: 90,
@@ -633,7 +633,7 @@ export const projects: Project[] = [
     sqft: 3600,
     duration: "10 Months",
     features: ["1,200 sq ft Addition", "New Roof", "Impact Windows", "Estate Management"],
-    roles: "Design/Build, Estate Management",
+    roles: "All Phases, Design/Build, Estate Management",
   },
   {
     id: "bahamas-abaco-development",
@@ -648,7 +648,7 @@ export const projects: Project[] = [
     sqft: 1800,
     duration: "6 Months",
     features: ["Waterfront", "Hurricane Resistant", "Mahogany Millwork", "Covered Dock"],
-    roles: "Project Manager on & Foreign, Foreign Consult By For US Owners",
+    roles: "Project Manager on & Foreign, Foreign Country For US Owners",
   },
   {
     id: "carmel-house-2",
@@ -705,7 +705,7 @@ export const projects: Project[] = [
     images: [coastalRestorationCover, coastalRestoration1, coastalRestoration2, coastalRestoration3, coastalRestoration4, coastalRestoration5, coastalRestoration6, coastalRestoration7, coastalRestoration8, coastalRestoration9, coastalRestoration10, coastalRestoration11, coastalRestoration12, coastalRestoration13, coastalRestoration14, coastalRestoration15],
     duration: "9 Months",
     features: ["2,500 cu yds Material", "180 ln ft Retaining Walls", "Foundation Work", "Coastal Stabilization"],
-    roles: "Civil Engineering, Contractor, Builder, Permit, Procurement (Emergency Construction Permit - to save house residence)",
+    roles: "Civil Engineering, Contractor, Builder, Permit, Procurement (Emergency Construction Permit - to save house/residence)",
   },
   {
     id: "civil-engineering",
@@ -734,7 +734,7 @@ export const projects: Project[] = [
     images: [beachfront1, beachfront2, beachfront3, beachfront4, beachfront5, beachfront6, beachfront7],
     sqft: 6800,
     features: ["2.5 Acres", "180ft Beach Frontage", "Solar Power", "Infinity Pool", "Guest Cottage"],
-    roles: "Project Manager, In & Foreign, For Owners, Country For US Owners",
+    roles: "Project Manager, In & Foreign Country For US Owners",
   },
   {
     id: "development",
@@ -763,7 +763,7 @@ export const projects: Project[] = [
     duration: "36 Months",
     completedDate: "2022-11",
     features: ["45 Acres", "120+ Home Sites", "3.2 Miles Roads", "Community Amenities"],
-    roles: "Project Management, Development/Civil Engineering, Project",
+    roles: "Project Management, Development/Civil Engineering Project",
   },
   // DESIGN/BUILD
   {
