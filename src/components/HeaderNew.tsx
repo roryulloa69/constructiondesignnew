@@ -5,9 +5,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 
 const navigation = [
+  { name: "Home", href: "/" },
   { name: "Portfolio", href: "#portfolio" },
   { name: "Design", href: "/design" },
-  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -19,7 +20,6 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,15 +30,14 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Ensure the mobile menu never stays open after navigation.
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location.pathname]);
-
   const handleNavClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string, itemName: string) => {
       e.preventDefault();
-      setMobileMenuOpen(false);
+
+      if (itemName === "Home") {
+        navigate("/");
+        return;
+      }
 
       if (itemName === "Portfolio") {
         if (location.pathname === "/" && onPortfolioClick) {
@@ -59,11 +58,9 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
         return;
       }
 
-      if (itemName === "About") {
-        if (location.pathname !== "/") {
-          navigate("/", { state: { scrollTo: "about" } });
-          return;
-        }
+      if (itemName === "Services" && location.pathname !== "/") {
+        navigate("/", { state: { scrollTo: "services" } });
+        return;
       }
 
       const targetId = href.replace("#", "");
@@ -73,10 +70,11 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
         window.scrollTo({ top: offsetTop, behavior: "smooth" });
       }
     },
-    [location.pathname, navigate, onPortfolioClick]
+    [onPortfolioClick, navigate, location]
   );
 
   const isActive = (itemName: string) => {
+    if (itemName === "Home" && location.pathname === "/") return true;
     if (itemName === "Design" && location.pathname === "/design") return true;
     if (itemName === "Contact" && location.pathname === "/contact") return true;
     return false;
@@ -99,9 +97,27 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
             </span>
           </Link>
 
-          {/* Menu Trigger - visible on all screen sizes */}
-          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-10">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href, item.name)}
+                className={`relative font-inter text-xs tracking-[0.15em] uppercase transition-colors duration-300 ${
+                  isActive(item.name)
+                    ? "text-white after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-gold"
+                    : "text-white/70 hover:text-white"
+                }`}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile Navigation */}
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden">
               <Button
                 variant="ghost"
                 size="icon"
@@ -110,25 +126,14 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
                 <AlignJustify className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-charcoal border-white/10 w-72">
-              <div className="flex flex-col gap-8 mt-12">
-                {navigation.map((item, index) => (
+            <SheetContent className="bg-charcoal border-white/10">
+              <div className="flex flex-col gap-6 mt-8">
+                {navigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href, item.name)}
-                    className={`font-inter text-lg tracking-[0.15em] uppercase transition-all duration-300 transform ${
-                      mobileMenuOpen 
-                        ? "opacity-100 translate-x-0" 
-                        : "opacity-0 -translate-x-4"
-                    } ${
-                      isActive(item.name)
-                        ? "text-gold"
-                        : "text-white/80 hover:text-gold"
-                    }`}
-                    style={{ 
-                      transitionDelay: mobileMenuOpen ? `${150 + index * 75}ms` : "0ms" 
-                    }}
+                    className="font-inter text-sm tracking-[0.15em] uppercase text-white/80 hover:text-gold transition-colors"
                   >
                     {item.name}
                   </a>

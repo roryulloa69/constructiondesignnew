@@ -1,45 +1,16 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { useMouseParallax } from "@/hooks/useParallax";
 import mikeProfile from "@/assets/michael-chandler.webp";
-
-const stats = [
-  { value: "$500M+", label: "Portfolio Managed" },
-  { value: "37+", label: "Years Experience" },
-  { value: "12", label: "US States" },
-  { value: "4", label: "Countries" },
-  { value: "±2%", label: "Budget Accuracy" },
-  { value: "100%", label: "On-Time Delivery" },
-];
 
 export const AboutNew = () => {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
   const { elementRef: statsRef, isVisible: statsVisible } = useScrollAnimation({ threshold: 0.2 });
-  const mousePosition = useMouseParallax(0.015);
 
   return (
     <section
       id="about"
       ref={elementRef as React.RefObject<HTMLElement>}
-      className="relative py-24 lg:py-32 bg-black text-white overflow-hidden"
+      className="relative py-24 lg:py-32 bg-charcoal text-white overflow-hidden"
     >
-      {/* Floating Background Orbs with Mouse Parallax */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-          transition: 'transform 0.3s ease-out'
-        }}
-      >
-        <div className="absolute top-1/4 left-1/6 w-80 h-80 bg-gold/5 rounded-full blur-[120px] animate-float" />
-        <div 
-          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-white/5 rounded-full blur-[100px] animate-float"
-          style={{ animationDelay: '-2s' }}
-        />
-        <div 
-          className="absolute top-1/2 right-1/6 w-48 h-48 bg-gold/3 rounded-full blur-[80px] animate-float"
-          style={{ animationDelay: '-4s' }}
-        />
-      </div>
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Column - Text Content */}
@@ -49,8 +20,8 @@ export const AboutNew = () => {
             }`}
           >
             {/* Section Label */}
-            <p className="font-inter text-xs tracking-[0.4em] text-gold uppercase mb-4">
-              About Me
+            <p className="font-inter text-xs tracking-[0.3em] text-gold uppercase mb-4">
+              Established 1987
             </p>
 
             {/* Heading */}
@@ -60,7 +31,7 @@ export const AboutNew = () => {
             </h2>
 
             {/* Description */}
-            <div className="space-y-6 text-white/60 font-inter leading-relaxed">
+            <div className="space-y-6 text-white/70 font-inter leading-relaxed">
               <p>
                 Michael Chandler is a Strategic Construction Leader with over 37 years of experience 
                 steering multimillion-dollar developments from conception to handover. His expertise 
@@ -71,7 +42,9 @@ export const AboutNew = () => {
               <p>
                 With a Bachelor of Architecture from the University of Austin and decades of hands-on 
                 field experience, Michael possesses a rare ability to bridge high-level architectural 
-                design with rigorous P&L stewardship and construction execution.
+                design with rigorous P&L stewardship and construction execution. This dual expertise 
+                has made him the trusted advisor for clients who demand both aesthetic excellence and 
+                fiscal precision.
               </p>
               <p>
                 Michael has successfully managed portfolios exceeding $500M across 12 US states and 
@@ -89,32 +62,26 @@ export const AboutNew = () => {
             }`}
           >
             <div className="relative">
-              {/* Decorative frame */}
-              <div className="absolute -inset-4 border border-gold/20" />
-              
               {/* Main Image */}
               <div className="relative overflow-hidden">
                 <img
                   src={mikeProfile}
                   alt="Michael Chandler - Master Builder"
-                  className="w-full aspect-[3/4] object-cover"
+                  className="w-full aspect-[3/4] object-cover grayscale-[30%]"
                 />
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
               </div>
 
               {/* Name Card Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-8">
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                 <p className="font-playfair text-2xl sm:text-3xl text-white mb-1">
                   Michael Chandler
                 </p>
-                <p className="font-inter text-xs tracking-[0.3em] text-gold uppercase">
+                <p className="font-inter text-xs tracking-[0.2em] text-gold uppercase">
                   Strategic Construction Executive
                 </p>
               </div>
-
-              {/* Corner accent */}
-              <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-gold" />
             </div>
           </div>
         </div>
@@ -122,30 +89,59 @@ export const AboutNew = () => {
         {/* Stats Section */}
         <div
           ref={statsRef as React.RefObject<HTMLDivElement>}
-          className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-24 pt-16 border-t border-white/10 transition-all duration-1000 ${
+          className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-20 pt-16 border-t border-white/10 transition-all duration-1000 ${
             statsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className="text-center group"
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2 transition-transform group-hover:scale-105">
-                {stat.value}
-              </span>
-              <span className="font-inter text-[10px] sm:text-xs tracking-[0.25em] text-white/40 uppercase">
-                {stat.label}
-              </span>
-            </div>
-          ))}
+          <div className="text-center">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              $500M+
+            </span>
+            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
+              Portfolio Managed
+            </span>
+          </div>
+          <div className="text-center">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              37+
+            </span>
+            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
+              Years Experience
+            </span>
+          </div>
+          <div className="text-center">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              12
+            </span>
+            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
+              US States
+            </span>
+          </div>
+          <div className="text-center">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              4
+            </span>
+            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
+              Countries
+            </span>
+          </div>
+          <div className="text-center">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              ±2%
+            </span>
+            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
+              Budget Accuracy
+            </span>
+          </div>
+          <div className="text-center">
+            <span className="block font-playfair text-3xl sm:text-4xl lg:text-5xl text-gold font-light mb-2">
+              100%
+            </span>
+            <span className="font-inter text-xs tracking-[0.2em] text-white/50 uppercase">
+              On-Time Delivery
+            </span>
+          </div>
         </div>
-      </div>
-
-      {/* Decorative background text */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 font-playfair text-[20rem] text-gold/[0.03] font-light leading-none pointer-events-none hidden xl:block">
-        MC
       </div>
     </section>
   );

@@ -20,7 +20,7 @@ while ((match = importRegex.exec(projectsFile)) !== null) {
 const assetsDir = join(__dirname, '..', 'src', 'assets', 'projects');
 const fs = await import('fs/promises');
 const files = await fs.readdir(assetsDir);
-const imageFiles = files.filter(f => f.endsWith('.jpg') || f.endsWith('.jpeg') || f.endsWith('.png') || f.endsWith('.webp'));
+const imageFiles = files.filter(f => f.endsWith('.jpg') || f.endsWith('.jpeg') || f.endsWith('.png'));
 
 console.log(`\nChecking ${imports.length} image imports against ${imageFiles.length} actual files...\n`);
 
