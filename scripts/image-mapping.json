@@ -1,0 +1,2742 @@
+[
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/1_Before.webp",
+    "folder": "misc",
+    "fileName": "1_Before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/2_After.webp",
+    "folder": "misc",
+    "fileName": "2_After.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/3_Before.webp",
+    "folder": "misc",
+    "fileName": "3_Before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/4_After.webp",
+    "folder": "misc",
+    "fileName": "4_After.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/5_After.webp",
+    "folder": "misc",
+    "fileName": "5_After.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/abaco-development-1.webp",
+    "folder": "development",
+    "fileName": "abaco-development-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/abaco/abaco-luxe-boathouse-1.webp",
+    "folder": "abaco",
+    "fileName": "abaco-luxe-boathouse-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/abaco/abaco-luxe-boathouse-cover.webp",
+    "folder": "abaco",
+    "fileName": "abaco-luxe-boathouse-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-1.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-10.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-11.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-12.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-2.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-3.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-4.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-5.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-6.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-7.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-8.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-9.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/alpine-ranch/alpine-ranch-cover.webp",
+    "folder": "alpine-ranch",
+    "fileName": "alpine-ranch-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/bakers-bay-1.webp",
+    "folder": "misc",
+    "fileName": "bakers-bay-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/bakers-bay-2.webp",
+    "folder": "misc",
+    "fileName": "bakers-bay-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/beachfront/beachfront-1.webp",
+    "folder": "beachfront",
+    "fileName": "beachfront-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/beachfront/beachfront-2.webp",
+    "folder": "beachfront",
+    "fileName": "beachfront-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/beachfront/beachfront-3.webp",
+    "folder": "beachfront",
+    "fileName": "beachfront-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/beachfront/beachfront-4.webp",
+    "folder": "beachfront",
+    "fileName": "beachfront-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/beachfront/beachfront-5.webp",
+    "folder": "beachfront",
+    "fileName": "beachfront-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/beachfront/beachfront-6.webp",
+    "folder": "beachfront",
+    "fileName": "beachfront-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/beachfront/beachfront-7.webp",
+    "folder": "beachfront",
+    "fileName": "beachfront-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-1.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-10.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-11.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-12.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-13.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-14.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-15.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-2.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-3.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-4.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-5.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-6.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-7.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-8.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-9.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/bigsur/bigsur-cover.webp",
+    "folder": "bigsur",
+    "fileName": "bigsur-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-1-cover.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-1-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-2-1.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-2-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-2-2.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-2-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-2-3.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-2-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-2-4.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-2-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-2-5.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-2-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-2-cover.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-2-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-1.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-10.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-11.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-12.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-13.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-14.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-15.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-16.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-16.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-17.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-17.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-18.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-18.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-19.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-19.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-2.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-20.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-20.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-21.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-21.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-22.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-22.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-23.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-23.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-24.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-24.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-25.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-25.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-3.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-4.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-5.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-6.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-7.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-8.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-9.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel-3-cover-new.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel-3-cover-new.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-1.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-10.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-11.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-12.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-13.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-14.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-15.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-16.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-16.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-17.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-17.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-18.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-18.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-19.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-19.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-2.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-20.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-20.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-21.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-21.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-22.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-22.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-23.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-23.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-24.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-24.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-25.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-25.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-3.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-4.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-5.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-6.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-7.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-8.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-9.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-knolls/carmel-knolls-cover.webp",
+    "folder": "carmel-knolls",
+    "fileName": "carmel-knolls-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-1.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-2.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-3.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-4.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-cover.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-new-1.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-new-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-new-2.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-new-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-new-3.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-new-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-new-4.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-new-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-new-cover.webp",
+    "folder": "carmel-valley",
+    "fileName": "carmel-valley-new-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-1-before.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-1-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-10-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-10-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-11-before.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-11-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-12-before.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-12-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-13-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-13-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-14-before.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-14-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-15-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-15-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-16-before.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-16-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-17-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-17-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-18-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-18-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-19-before.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-19-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-2-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-2-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-20-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-20-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-3-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-3-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-4-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-4-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-5-before.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-5-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-6-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-6-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-7-before.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-7-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-8-after.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-8-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-custom/carmel1-9-before.webp",
+    "folder": "carmel-custom",
+    "fileName": "carmel1-9-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-1.webp",
+    "folder": "civil",
+    "fileName": "civil-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-10.webp",
+    "folder": "civil",
+    "fileName": "civil-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-11.webp",
+    "folder": "civil",
+    "fileName": "civil-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-12.webp",
+    "folder": "civil",
+    "fileName": "civil-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-13.webp",
+    "folder": "civil",
+    "fileName": "civil-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-14.webp",
+    "folder": "civil",
+    "fileName": "civil-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-15.webp",
+    "folder": "civil",
+    "fileName": "civil-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-16.webp",
+    "folder": "civil",
+    "fileName": "civil-16.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-17.webp",
+    "folder": "civil",
+    "fileName": "civil-17.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-18.webp",
+    "folder": "civil",
+    "fileName": "civil-18.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-19.webp",
+    "folder": "civil",
+    "fileName": "civil-19.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-2.webp",
+    "folder": "civil",
+    "fileName": "civil-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-20.webp",
+    "folder": "civil",
+    "fileName": "civil-20.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-21.webp",
+    "folder": "civil",
+    "fileName": "civil-21.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-3.webp",
+    "folder": "civil",
+    "fileName": "civil-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-4.webp",
+    "folder": "civil",
+    "fileName": "civil-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-5.webp",
+    "folder": "civil",
+    "fileName": "civil-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-6.webp",
+    "folder": "civil",
+    "fileName": "civil-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-7.webp",
+    "folder": "civil",
+    "fileName": "civil-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-8.webp",
+    "folder": "civil",
+    "fileName": "civil-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-9.webp",
+    "folder": "civil",
+    "fileName": "civil-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/civil/civil-cover.webp",
+    "folder": "civil",
+    "fileName": "civil-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-1.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-10.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-11.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-12.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-13.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-14.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-15.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-2.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-3.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-4.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-5.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-6.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-7.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-8.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-9.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/cleanup-cover.webp",
+    "folder": "cleanup",
+    "fileName": "cleanup-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-1.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-10.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-11.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-12.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-13.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-14.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-15.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-2.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-3.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-4.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-5.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-6.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-7.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-8.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-9.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/coastal-restoration-cover.webp",
+    "folder": "misc",
+    "fileName": "coastal-restoration-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-1.webp",
+    "folder": "development",
+    "fileName": "development-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-10.webp",
+    "folder": "development",
+    "fileName": "development-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-11.webp",
+    "folder": "development",
+    "fileName": "development-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-12.webp",
+    "folder": "development",
+    "fileName": "development-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-13.webp",
+    "folder": "development",
+    "fileName": "development-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-2.webp",
+    "folder": "development",
+    "fileName": "development-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-3.webp",
+    "folder": "development",
+    "fileName": "development-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-4.webp",
+    "folder": "development",
+    "fileName": "development-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-5.webp",
+    "folder": "development",
+    "fileName": "development-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-6.webp",
+    "folder": "development",
+    "fileName": "development-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-7.webp",
+    "folder": "development",
+    "fileName": "development-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-8.webp",
+    "folder": "development",
+    "fileName": "development-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-9.webp",
+    "folder": "development",
+    "fileName": "development-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-aerial-after.webp",
+    "folder": "development",
+    "fileName": "development-aerial-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-aerial-before.webp",
+    "folder": "development",
+    "fileName": "development-aerial-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-1.webp",
+    "folder": "development",
+    "fileName": "development-civil-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-10.webp",
+    "folder": "development",
+    "fileName": "development-civil-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-2.webp",
+    "folder": "development",
+    "fileName": "development-civil-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-3.webp",
+    "folder": "development",
+    "fileName": "development-civil-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-4.webp",
+    "folder": "development",
+    "fileName": "development-civil-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-5.webp",
+    "folder": "development",
+    "fileName": "development-civil-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-6.webp",
+    "folder": "development",
+    "fileName": "development-civil-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-7.webp",
+    "folder": "development",
+    "fileName": "development-civil-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-8.webp",
+    "folder": "development",
+    "fileName": "development-civil-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-civil-9.webp",
+    "folder": "development",
+    "fileName": "development-civil-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-construction-1.webp",
+    "folder": "development",
+    "fileName": "development-construction-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-construction-2.webp",
+    "folder": "development",
+    "fileName": "development-construction-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-cover.webp",
+    "folder": "development",
+    "fileName": "development-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-entrance-1.webp",
+    "folder": "development",
+    "fileName": "development-entrance-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-entrance-2.webp",
+    "folder": "development",
+    "fileName": "development-entrance-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-plan.webp",
+    "folder": "development",
+    "fileName": "development-plan.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-site.webp",
+    "folder": "development",
+    "fileName": "development-site.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/development/development-trail.webp",
+    "folder": "development",
+    "fileName": "development-trail.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/hillside-1.webp",
+    "folder": "misc",
+    "fileName": "hillside-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/hillside-2.webp",
+    "folder": "misc",
+    "fileName": "hillside-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/hillside-3.webp",
+    "folder": "misc",
+    "fileName": "hillside-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/hillside-4.webp",
+    "folder": "misc",
+    "fileName": "hillside-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/hillside-5.webp",
+    "folder": "misc",
+    "fileName": "hillside-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/hillside-6.webp",
+    "folder": "misc",
+    "fileName": "hillside-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/hillside-7.webp",
+    "folder": "misc",
+    "fileName": "hillside-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-1.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-10.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-11.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-12.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-13.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-14.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-15.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-2.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-3.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-4.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-5.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-6.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-7.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-8.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-9.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/cleanup/hillside-cleanup-cover.webp",
+    "folder": "cleanup",
+    "fileName": "hillside-cleanup-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/hillside-cover.webp",
+    "folder": "misc",
+    "fileName": "hillside-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/hospitality-pool-1.webp",
+    "folder": "hospitality-pool",
+    "fileName": "hospitality-pool-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/IMGP1302.webp",
+    "folder": "misc",
+    "fileName": "IMGP1302.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/IMGP1303.webp",
+    "folder": "misc",
+    "fileName": "IMGP1303.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/IMGP1305.webp",
+    "folder": "misc",
+    "fileName": "IMGP1305.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/IMGP1307.webp",
+    "folder": "misc",
+    "fileName": "IMGP1307.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/IMGP1308.webp",
+    "folder": "misc",
+    "fileName": "IMGP1308.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-1.webp",
+    "folder": "laguna",
+    "fileName": "laguna-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-2.webp",
+    "folder": "laguna",
+    "fileName": "laguna-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-3.webp",
+    "folder": "laguna",
+    "fileName": "laguna-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-4.webp",
+    "folder": "laguna",
+    "fileName": "laguna-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-5.webp",
+    "folder": "laguna",
+    "fileName": "laguna-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-6.webp",
+    "folder": "laguna",
+    "fileName": "laguna-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-cover.webp",
+    "folder": "laguna",
+    "fileName": "laguna-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-grande-1.webp",
+    "folder": "laguna",
+    "fileName": "laguna-grande-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-grande-2.webp",
+    "folder": "laguna",
+    "fileName": "laguna-grande-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-grande-3.webp",
+    "folder": "laguna",
+    "fileName": "laguna-grande-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-grande-4.webp",
+    "folder": "laguna",
+    "fileName": "laguna-grande-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-grande-5.webp",
+    "folder": "laguna",
+    "fileName": "laguna-grande-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-grande-6.webp",
+    "folder": "laguna",
+    "fileName": "laguna-grande-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/laguna/laguna-grande-cover.webp",
+    "folder": "laguna",
+    "fileName": "laguna-grande-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-1.webp",
+    "folder": "lds",
+    "fileName": "lds-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-10.webp",
+    "folder": "lds",
+    "fileName": "lds-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-11.webp",
+    "folder": "lds",
+    "fileName": "lds-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-12.webp",
+    "folder": "lds",
+    "fileName": "lds-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-13.webp",
+    "folder": "lds",
+    "fileName": "lds-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-14.webp",
+    "folder": "lds",
+    "fileName": "lds-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-15.webp",
+    "folder": "lds",
+    "fileName": "lds-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-16.webp",
+    "folder": "lds",
+    "fileName": "lds-16.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-17.webp",
+    "folder": "lds",
+    "fileName": "lds-17.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-18.webp",
+    "folder": "lds",
+    "fileName": "lds-18.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-19.webp",
+    "folder": "lds",
+    "fileName": "lds-19.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-2.webp",
+    "folder": "lds",
+    "fileName": "lds-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-20.webp",
+    "folder": "lds",
+    "fileName": "lds-20.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-21.webp",
+    "folder": "lds",
+    "fileName": "lds-21.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-3.webp",
+    "folder": "lds",
+    "fileName": "lds-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-4.webp",
+    "folder": "lds",
+    "fileName": "lds-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-5.webp",
+    "folder": "lds",
+    "fileName": "lds-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-6.webp",
+    "folder": "lds",
+    "fileName": "lds-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-7.webp",
+    "folder": "lds",
+    "fileName": "lds-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-8.webp",
+    "folder": "lds",
+    "fileName": "lds-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/lds/lds-9.webp",
+    "folder": "lds",
+    "fileName": "lds-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-1.webp",
+    "folder": "links",
+    "fileName": "links-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-2.webp",
+    "folder": "links",
+    "fileName": "links-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-3.webp",
+    "folder": "links",
+    "fileName": "links-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-4.webp",
+    "folder": "links",
+    "fileName": "links-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-5.webp",
+    "folder": "links",
+    "fileName": "links-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-6.webp",
+    "folder": "links",
+    "fileName": "links-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-7.webp",
+    "folder": "links",
+    "fileName": "links-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-8.webp",
+    "folder": "links",
+    "fileName": "links-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-cover.webp",
+    "folder": "links",
+    "fileName": "links-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-estate-2.webp",
+    "folder": "links",
+    "fileName": "links-estate-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-estate-3.webp",
+    "folder": "links",
+    "fileName": "links-estate-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/links/links-estate.webp",
+    "folder": "links",
+    "fileName": "links-estate.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-1.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-10.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-11.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-12.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-13.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-14.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-15.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-16.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-16.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-17.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-17.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-18.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-18.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-19.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-19.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-2.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-20.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-20.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-21.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-21.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-22.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-22.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-23.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-23.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-24.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-24.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-25.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-25.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-26.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-26.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-27.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-27.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-28.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-28.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-29.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-29.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-3.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-30.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-30.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-31.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-31.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-32.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-32.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-33.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-33.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-34.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-34.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-35.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-35.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-36.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-36.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-37.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-37.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-38.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-38.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-39.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-39.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-4.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-40.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-40.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-41.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-41.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-42.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-42.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-43.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-43.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-44.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-44.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-45.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-45.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-46.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-46.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-47.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-47.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-5.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-6.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-7.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-8.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-9.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/miami-beach/miami-beach-cover.webp",
+    "folder": "miami-beach",
+    "fileName": "miami-beach-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-1.webp",
+    "folder": "montana",
+    "fileName": "montana-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-10.webp",
+    "folder": "montana",
+    "fileName": "montana-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-11.webp",
+    "folder": "montana",
+    "fileName": "montana-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-2.webp",
+    "folder": "montana",
+    "fileName": "montana-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-3.webp",
+    "folder": "montana",
+    "fileName": "montana-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-4.webp",
+    "folder": "montana",
+    "fileName": "montana-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-5.webp",
+    "folder": "montana",
+    "fileName": "montana-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-6.webp",
+    "folder": "montana",
+    "fileName": "montana-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-7.webp",
+    "folder": "montana",
+    "fileName": "montana-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-8.webp",
+    "folder": "montana",
+    "fileName": "montana-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-9.webp",
+    "folder": "montana",
+    "fileName": "montana-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/montana/montana-cover.webp",
+    "folder": "montana",
+    "fileName": "montana-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-001-cover.webp",
+    "folder": "misc",
+    "fileName": "nfl-001-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-002.webp",
+    "folder": "misc",
+    "fileName": "nfl-002.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-003.webp",
+    "folder": "misc",
+    "fileName": "nfl-003.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-004.webp",
+    "folder": "misc",
+    "fileName": "nfl-004.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-005.webp",
+    "folder": "misc",
+    "fileName": "nfl-005.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-006.webp",
+    "folder": "misc",
+    "fileName": "nfl-006.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-007.webp",
+    "folder": "misc",
+    "fileName": "nfl-007.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-008.webp",
+    "folder": "misc",
+    "fileName": "nfl-008.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-009.webp",
+    "folder": "misc",
+    "fileName": "nfl-009.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-010.webp",
+    "folder": "misc",
+    "fileName": "nfl-010.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-011.webp",
+    "folder": "misc",
+    "fileName": "nfl-011.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-012.webp",
+    "folder": "misc",
+    "fileName": "nfl-012.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/nfl-013.webp",
+    "folder": "misc",
+    "fileName": "nfl-013.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-1.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-10.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-11.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-12.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-13.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-14.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-2.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-3.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-4.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-5.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-6.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-7.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-8.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-9.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-cover.webp",
+    "folder": "north-florida",
+    "fileName": "north-florida-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-1-before.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-1-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-1.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-10-after.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-10-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-10.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-12-after.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-12-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-13-after.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-13-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-2-before.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-2-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-2.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-3-before.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-3-before.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-3.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-4-after.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-4-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-4.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-5-after.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-5-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-5.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-6-after.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-6-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-6.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-7-after.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-7-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-7.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-8-after.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-8-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-8.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-9-after.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-9-after.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-9.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/pacific-grove/pg-cover.webp",
+    "folder": "pacific-grove",
+    "fileName": "pg-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-1.png",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-1.png"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-10.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-11.jpg",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-11.jpg"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-12.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-13.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-14.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-15.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-16.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-16.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-17.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-17.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-18.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-18.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-19.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-19.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-2.png",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-2.png"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-20.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-20.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-21.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-21.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-22.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-22.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-23.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-23.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-24.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-24.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-25.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-25.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-26.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-26.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-27.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-27.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-28.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-28.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-29.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-29.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-30.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-30.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-31.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-31.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-32.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-32.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-33.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-33.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-34.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-34.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-35.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-35.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-36.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-36.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-37.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-37.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-5.png",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-5.png"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-7.jpg",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-7.jpg"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-8.jpg",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-8.jpg"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-9.jpg",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-9.jpg"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-cover.webp",
+    "folder": "hospitality-pool",
+    "fileName": "pool-design-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/site-map.webp",
+    "folder": "misc",
+    "fileName": "site-map.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-10.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-11.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-12.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-13.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-14.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-15.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-16.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-16.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-17.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-17.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-18.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-18.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-19.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-19.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-2.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-20.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-20.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-21.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-21.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-22.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-22.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-23.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-23.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-24.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-24.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-25.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-25.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-26.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-26.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-27.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-27.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-28.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-28.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-29.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-29.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-3.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-30.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-30.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-31.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-31.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-32.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-32.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-33.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-33.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-34.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-34.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-35.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-35.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-36.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-36.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-37.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-37.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-38.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-38.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-39.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-39.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-4.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-40.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-40.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-41.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-41.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-42.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-42.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-43.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-43.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-44.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-44.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-45.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-45.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-46.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-46.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-47.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-47.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-48.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-48.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-49.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-49.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-5.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-50.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-50.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-51.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-51.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-52.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-52.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-53.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-53.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-6.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-7.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-8.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-9.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/southcoast/southcoast-cover.webp",
+    "folder": "southcoast",
+    "fileName": "southcoast-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-1.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-1.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-10.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-10.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-11.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-11.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-12.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-12.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-13.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-13.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-14.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-14.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-15.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-15.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-16.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-16.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-17.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-17.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-18.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-18.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-19.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-19.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-2.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-2.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-20.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-20.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-21.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-21.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-22.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-22.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-23.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-23.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-24.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-24.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-25.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-25.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-26.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-26.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-27.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-27.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-28.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-28.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-29.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-29.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-3.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-3.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-30.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-30.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-31.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-31.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-32.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-32.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-33.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-33.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-34.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-34.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-35.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-35.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-36.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-36.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-37.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-37.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-38.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-38.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-39.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-39.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-4.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-4.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-40.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-40.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-41.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-41.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-42.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-42.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-43.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-43.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-44.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-44.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-45.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-45.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-46.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-46.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-5.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-5.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-6.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-6.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-7.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-7.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-8.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-8.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-9.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-9.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/syracuse/syracuse-cover.webp",
+    "folder": "syracuse",
+    "fileName": "syracuse-cover.webp"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-cabana-sunset.png",
+    "folder": "hospitality-pool",
+    "fileName": "pool-cabana-sunset.png"
+  },
+  {
+    "url": "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-sunset-lights.png",
+    "folder": "hospitality-pool",
+    "fileName": "pool-sunset-lights.png"
+  }
+]
