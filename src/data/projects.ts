@@ -275,19 +275,14 @@ import siteMap from "@/assets/projects/site-map.webp";
 // Hospitality Pool
 import poolTestimonialImage from "@/assets/pool-testimonial.webp";
 import poolDesignCover from "@/assets/projects/pool-design-cover.webp";
-import poolSunsetLights from "@/assets/projects/pool-sunset-lights.webp";
-import poolCabanaSunset from "@/assets/projects/pool-cabana-sunset.webp";
-import poolDesign1 from "@/assets/projects/pool-design-1.webp";
-import poolDesign2 from "@/assets/projects/pool-design-2.webp";
-import poolDesign3 from "@/assets/projects/pool-design-3.webp";
-import poolDesign4 from "@/assets/projects/pool-design-4.webp";
-import poolDesign5 from "@/assets/projects/pool-design-5.webp";
-import poolDesign6 from "@/assets/projects/pool-design-6.webp";
-import poolDesign7 from "@/assets/projects/pool-design-7.webp";
-import poolDesign8 from "@/assets/projects/pool-design-8.webp";
-import poolDesign9 from "@/assets/projects/pool-design-9.webp";
+import poolDesign1 from "@/assets/projects/pool-design-1.png";
+import poolDesign2 from "@/assets/projects/pool-design-2.png";
+import poolDesign5 from "@/assets/projects/pool-design-5.png";
+import poolDesign7 from "@/assets/projects/pool-design-7.jpg";
+import poolDesign8 from "@/assets/projects/pool-design-8.jpg";
+import poolDesign9 from "@/assets/projects/pool-design-9.jpg";
 import poolDesign10 from "@/assets/projects/pool-design-10.webp";
-import poolDesign11 from "@/assets/projects/pool-design-11.webp";
+import poolDesign11 from "@/assets/projects/pool-design-11.jpg";
 import poolDesign12 from "@/assets/projects/pool-design-12.webp";
 import poolDesign13 from "@/assets/projects/pool-design-13.webp";
 import poolDesign14 from "@/assets/projects/pool-design-14.webp";
@@ -574,8 +569,8 @@ export const projects: Project[] = [
     additionalInfo: "SE Texas",
     category: "Hospitality",
     description: "We orchestrated the creation of a 189,000 gallon ultra-luxury private club amenity, a project that demanded the coordination of over 15 specialty trades. The centerpiece is a 189,000 gallon free-form pool with a swim-up bar, complemented by two beautiful Int. Design 1,200 sq ft pool houses. The design, inspired by 1950s New York smoking clubs, features imported travertine and 10' high solid mahogany wood walls and doors. This 18-month project delivered a resort-style oasis with professional landscaping, fire pits, and an outdoor kitchen, setting a new standard for private club luxury.",
-    image: poolSunsetLights,
-    images: [poolSunsetLights, poolCabanaSunset, poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
+    image: "/images/pool-sunset-lights.png",
+    images: ["/images/pool-sunset-lights.png", "/images/pool-cabana-sunset.png", poolDesignCover, poolDesign1, poolDesign2, poolDesign5, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
     sqft: 189000,
     duration: "18 months",
     features: ["189,000 Gallon", "3-Acre Project", "Swim-up Bar", "Pool Houses", "Imported Travertine"],
