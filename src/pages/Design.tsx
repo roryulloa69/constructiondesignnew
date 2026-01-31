@@ -4,18 +4,18 @@ import { ArrowLeft } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { FooterNew } from "@/components/FooterNew";
 
-// Import images from existing assets - using confirmed cover images
-import detailOceanviewFraming from "@/assets/projects/abaco-luxe-boathouse-cover.webp";
-import detailBronzeBase from "@/assets/projects/alpine-ranch-cover.webp";
-import detailPendantLighting from "@/assets/projects/bigsur-cover.webp";
-import detailMarbleBath from "@/assets/projects/carmel-knolls-cover.webp";
-import detailTimberBeams from "@/assets/projects/carmel-valley-cover.webp";
-import detailLimestoneFireplace from "@/assets/projects/civil-cover.webp";
-import detailVanityNiche from "@/assets/projects/cleanup-cover.webp";
-import detailProRange from "@/assets/projects/coastal-restoration-cover.webp";
-import detailSkiStorage from "@/assets/projects/development-cover.webp";
-import detailSpaVanity from "@/assets/projects/hillside-cover.webp";
-import detailLeatherCabinetry from "@/assets/projects/laguna-cover.webp";
+// Import images from existing assets
+import detailOceanviewFraming from "@/assets/project-1.webp";
+import detailBronzeBase from "@/assets/project-2.webp";
+import detailPendantLighting from "@/assets/project-3.webp";
+import detailMarbleBath from "@/assets/project-4.webp";
+import detailTimberBeams from "@/assets/project-5.webp";
+import detailLimestoneFireplace from "@/assets/project-6.webp";
+import detailVanityNiche from "@/assets/design-development-1.webp";
+import detailProRange from "@/assets/design-development-2.webp";
+import detailSkiStorage from "@/assets/design-development-3.webp";
+import detailSpaVanity from "@/assets/category-residential.webp";
+import detailLeatherCabinetry from "@/assets/category-commercial.webp";
 
 const Design = () => {
   const navigate = useNavigate();
