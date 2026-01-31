@@ -2,11 +2,11 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-// Import local images from existing assets
-import carmel1Cover from "@/assets/project-1.webp";
-import carmelValleyNewCover from "@/assets/project-2.webp";
-import coastalRestorationCover from "@/assets/project-3.webp";
-import civilCover from "@/assets/project-4.webp";
+// Import local images
+import carmel1Cover from "@/assets/projects/carmel-1-cover.webp";
+import carmelValleyNewCover from "@/assets/projects/carmel-valley-new-cover.webp";
+import coastalRestorationCover from "@/assets/projects/coastal-restoration-cover.webp";
+import civilCover from "@/assets/projects/civil-cover.webp";
 
 const featuredProjects = [
   {

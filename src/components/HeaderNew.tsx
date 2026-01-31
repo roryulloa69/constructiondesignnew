@@ -20,7 +20,6 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,89 +33,60 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
   const handleNavClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string, itemName: string) => {
       e.preventDefault();
-      setMobileMenuOpen(false); // Close mobile menu on any click
 
-      // 1. HOME
       if (itemName === "Home") {
-        if (location.pathname === "/") {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-          // Clear hash if any
-          window.history.pushState("", document.title, window.location.pathname + window.location.search);
-        } else {
-          navigate("/");
-        }
+        navigate("/");
         return;
       }
 
-      // 2. PORTFOLIO
       if (itemName === "Portfolio") {
-        if (location.pathname === "/") {
-          // If we are already home, trigger the prop directly
-          if (onPortfolioClick) onPortfolioClick();
+        if (location.pathname === "/" && onPortfolioClick) {
+          onPortfolioClick();
         } else {
-          // If elsewhere, navigate home with state
           navigate("/", { state: { openPortfolio: true } });
         }
         return;
       }
 
-      // 3. DESIGN & CONTACT (Simple pages)
-      if (itemName === "Design" || itemName === "Contact") {
-        navigate(href);
+      if (itemName === "Design") {
+        navigate("/design");
         return;
       }
 
-      // 4. SERVICES (Scroll to section)
-      if (itemName === "Services") {
-        if (location.pathname !== "/") {
-          // If not home, navigate home with scroll instruction
-          navigate("/", { state: { scrollTo: "services" } });
-        } else {
-          // If home, scroll to it
-          const element = document.getElementById("services");
-          if (element) {
-            const offsetTop = element.offsetTop - 80;
-            window.scrollTo({ top: offsetTop, behavior: "smooth" });
-            window.history.pushState(null, "", "#services");
-          }
-        }
+      if (itemName === "Contact") {
+        navigate("/contact");
         return;
       }
 
-      // Fallback for generic anchors (if any added later)
-      if (href.startsWith("#")) {
-        const targetId = href.replace("#", "");
-        const element = document.getElementById(targetId);
-        if (element) {
-          const offsetTop = element.offsetTop - 80;
-          window.scrollTo({ top: offsetTop, behavior: "smooth" });
-        }
+      if (itemName === "Services" && location.pathname !== "/") {
+        navigate("/", { state: { scrollTo: "services" } });
+        return;
+      }
+
+      const targetId = href.replace("#", "");
+      const element = document.getElementById(targetId);
+      if (element) {
+        const offsetTop = element.offsetTop - 80;
+        window.scrollTo({ top: offsetTop, behavior: "smooth" });
       }
     },
     [onPortfolioClick, navigate, location]
   );
 
-  const isActive = (item: { name: string; href: string }) => {
-    // Exact path matches
-    if (item.href === location.pathname) return true;
-
-    // Hash matches (for Services/Portfolio on Home page)
-    if (location.pathname === "/" && item.href.startsWith("#")) {
-      return location.hash === item.href;
-    }
-
-    // Home active only if no hash and at root
-    if (item.name === "Home" && location.pathname === "/" && !location.hash) return true;
-
+  const isActive = (itemName: string) => {
+    if (itemName === "Home" && location.pathname === "/") return true;
+    if (itemName === "Design" && location.pathname === "/design") return true;
+    if (itemName === "Contact" && location.pathname === "/contact") return true;
     return false;
   };
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
           ? "bg-charcoal/95 backdrop-blur-xl border-b border-white/10"
           : "bg-transparent"
-        }`}
+      }`}
     >
       <nav className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
@@ -134,10 +104,11 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href, item.name)}
-                className={`relative font-inter text-xs tracking-[0.15em] uppercase transition-colors duration-300 ${isActive(item)
+                className={`relative font-inter text-xs tracking-[0.15em] uppercase transition-colors duration-300 ${
+                  isActive(item.name)
                     ? "text-white after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[1px] after:bg-gold"
                     : "text-white/70 hover:text-white"
-                  }`}
+                }`}
               >
                 {item.name}
               </a>
@@ -145,7 +116,7 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
           </div>
 
           {/* Mobile Navigation */}
-          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+          <Sheet>
             <SheetTrigger asChild className="md:hidden">
               <Button
                 variant="ghost"
@@ -162,8 +133,7 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
                     key={item.name}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href, item.name)}
-                    className={`font-inter text-sm tracking-[0.15em] uppercase transition-colors ${isActive(item) ? "text-white font-medium" : "text-white/80 hover:text-gold"
-                      }`}
+                    className="font-inter text-sm tracking-[0.15em] uppercase text-white/80 hover:text-gold transition-colors"
                   >
                     {item.name}
                   </a>
