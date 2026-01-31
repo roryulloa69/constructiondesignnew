@@ -128,7 +128,6 @@ const carmelValleyNew3 = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/ob
 const carmelValleyNew4 = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/carmel-valley/carmel-valley-new-4.webp";
 
 // North Florida Renovation/Addition
-import veroBeachCover from "@/assets/vero-beach-cover.webp";
 const northFloridaCover = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-cover.webp";
 const northFlorida1 = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-1.webp";
 const northFlorida2 = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/north-florida/north-florida-2.webp";
@@ -273,7 +272,6 @@ const linksEstate3 = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object
 const siteMap = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/misc/site-map.webp";
 
 // Hospitality Pool
-import poolTestimonialImage from "@/assets/pool-testimonial.webp";
 const poolDesignCover = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-cover.webp";
 const poolDesign1 = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-1.png";
 const poolDesign2 = "https://lexbpckktgmebtzyzjkk.supabase.co/storage/v1/object/public/portfolio-images/hospitality-pool/pool-design-2.png";
