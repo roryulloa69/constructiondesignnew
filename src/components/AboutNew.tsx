@@ -40,11 +40,10 @@ export const AboutNew = () => {
                 exceptional results for high-net-worth individuals and institutional developers.
               </p>
               <p>
-                With a Bachelor of Architecture from the University of Austin and decades of hands-on 
-                field experience, Michael possesses a rare ability to bridge high-level architectural 
-                design with rigorous P&L stewardship and construction execution. This dual expertise 
-                has made him the trusted advisor for clients who demand both aesthetic excellence and 
-                fiscal precision.
+                With decades of hands-on field experience, Michael possesses a rare ability to bridge 
+                high-level architectural design with rigorous P&L stewardship and construction execution. 
+                This dual expertise has made him the trusted advisor for clients who demand both aesthetic 
+                excellence and fiscal precision.
               </p>
               <p>
                 Michael has successfully managed portfolios exceeding $500M across 12 US states and 
