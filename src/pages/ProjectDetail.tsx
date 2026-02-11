@@ -6,6 +6,8 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { ImageWithWatermark } from "@/components/ImageWithWatermark";
+import { useAuth } from "@/contexts/AuthContext";
+import { ReorderableGallery } from "@/components/admin/ReorderableGallery";
 interface ProjectVideo {
   id: string;
   video_url: string;
@@ -34,6 +36,7 @@ const ProjectDetail = () => {
     id
   } = useParams();
   const navigate = useNavigate();
+  const { isAdmin } = useAuth();
   const project = id ? getProjectById(id) : undefined;
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [videos, setVideos] = useState<ProjectVideo[]>([]);
@@ -297,38 +300,60 @@ const ProjectDetail = () => {
                 <span className="font-playfair text-7xl lg:text-8xl text-accent/10 font-light leading-none block -mb-4 lg:-mb-6">{videos.length > 0 ? '03' : '02'}</span>
                 <p className="font-inter text-xs tracking-[0.3em] text-muted-foreground uppercase mb-2">Photography</p>
                 <h3 className="font-playfair text-2xl lg:text-3xl text-foreground">Gallery</h3>
+                {isAdmin && <p className="font-inter text-xs text-accent mt-2">Admin: drag images to reorder</p>}
               </div>
               <div className="w-12 h-[1px] bg-accent mb-8" />
               
-              {/* Cover Photo - First Image */}
-              {allImages.length > 0 && <ImageWithWatermark key={`${allImages[0]}-cover`}>
-                  <button 
-                    onClick={() => setSelectedImageIndex(0)} 
-                    className="relative w-full aspect-[16/9] overflow-hidden rounded-lg bg-card border border-border group cursor-pointer transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/50 mb-6"
-                  >
-                    <img 
-                      src={allImages[0]} 
-                      alt={`${project.title} - Cover`} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image" 
-                    />
-                  </button>
-                </ImageWithWatermark>}
+              {/* Admin reorderable gallery */}
+              {isAdmin && validDbImages.length > 0 ? (
+                <ReorderableGallery
+                  dbImages={validDbImages.map(img => ({ id: img.id, image_url: img.image_url, display_order: img.display_order }))}
+                  projectTitle={project.title}
+                  onImageClick={(index) => setSelectedImageIndex(index)}
+                  onReorder={(newImages) => {
+                    setDbImages(prev => {
+                      const updated = [...prev];
+                      newImages.forEach((ni, i) => {
+                        const idx = updated.findIndex(img => img.id === ni.id);
+                        if (idx !== -1) updated[idx] = { ...updated[idx], display_order: i };
+                      });
+                      return updated.sort((a, b) => a.display_order - b.display_order);
+                    });
+                  }}
+                />
+              ) : (
+                <>
+                  {/* Cover Photo - First Image */}
+                  {allImages.length > 0 && <ImageWithWatermark key={`${allImages[0]}-cover`}>
+                      <button 
+                        onClick={() => setSelectedImageIndex(0)} 
+                        className="relative w-full aspect-[16/9] overflow-hidden rounded-lg bg-card border border-border group cursor-pointer transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/50 mb-6"
+                      >
+                        <img 
+                          src={allImages[0]} 
+                          alt={`${project.title} - Cover`} 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image" 
+                        />
+                      </button>
+                    </ImageWithWatermark>}
 
-              {/* Remaining Gallery Images */}
-              {allImages.length > 1 && <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-                  {allImages.slice(1).map((image, index) => {
-              const actualIndex = index + 1;
-              const label = getImageLabel(image, actualIndex);
-              return <ImageWithWatermark key={`${image}-${actualIndex}`}>
-                        <button onClick={() => setSelectedImageIndex(actualIndex)} className="relative aspect-square overflow-hidden rounded-lg bg-card border border-border group cursor-pointer transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/50 w-full">
-                          <img src={image} alt={`${project.title} - Image ${actualIndex + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image" />
-                          {label && <span className={`absolute top-2 right-2 px-2 py-1 text-xs font-semibold text-white rounded ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>
-                              {label}
-                            </span>}
-                        </button>
-                      </ImageWithWatermark>;
-            })}
-                </div>}
+                  {/* Remaining Gallery Images */}
+                  {allImages.length > 1 && <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+                      {allImages.slice(1).map((image, index) => {
+                  const actualIndex = index + 1;
+                  const label = getImageLabel(image, actualIndex);
+                  return <ImageWithWatermark key={`${image}-${actualIndex}`}>
+                            <button onClick={() => setSelectedImageIndex(actualIndex)} className="relative aspect-square overflow-hidden rounded-lg bg-card border border-border group cursor-pointer transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/50 w-full">
+                              <img src={image} alt={`${project.title} - Image ${actualIndex + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image" />
+                              {label && <span className={`absolute top-2 right-2 px-2 py-1 text-xs font-semibold text-white rounded ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>
+                                  {label}
+                                </span>}
+                            </button>
+                          </ImageWithWatermark>;
+                })}
+                    </div>}
+                </>
+              )}
             </div>}
         </div>
       </div>
