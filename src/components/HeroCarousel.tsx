@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Import local hero images from existing assets
-import alpineRanchCover from "@/assets/project-1.webp";
-import bigsurCover from "@/assets/project-2.webp";
-import developmentCover from "@/assets/project-3.webp";
-import carmelKnollsCover from "@/assets/project-4.webp";
+// Import local hero images
+import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.webp";
+import bigsurCover from "@/assets/projects/bigsur-cover.webp";
+import developmentCover from "@/assets/projects/development-cover.webp";
+import carmelKnollsCover from "@/assets/projects/carmel-knolls-cover.webp";
 
 const heroSlides = [
   {
