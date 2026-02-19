@@ -36,13 +36,20 @@ export const ExteriorSpacesLandscape = () => {
                 >
                   {project.image_url && (
                     <div className="relative aspect-[16/9] overflow-hidden">
+                      {/* Blurred background frame */}
+                      <img
+                        src={project.image_url}
+                        alt=""
+                        className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-20 scale-110"
+                        aria-hidden="true"
+                      />
                       <img
                         src={project.image_url}
                         alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        className="relative z-10 w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         style={{ transform: `rotate(${project.rotation_angle || 0}deg)` }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 z-20 bg-gradient-to-t from-charcoal/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   )}
                   <CardContent className="p-6">

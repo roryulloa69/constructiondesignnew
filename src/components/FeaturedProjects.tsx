@@ -55,9 +55,8 @@ export const FeaturedProjects = ({ onViewAllClick }: FeaturedProjectsProps) => {
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div
-          className={`flex flex-col md:flex-row md:items-end md:justify-between mb-16 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`flex flex-col md:flex-row md:items-end md:justify-between mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <div>
             <p className="font-inter text-xs tracking-[0.3em] text-gold uppercase mb-4">
@@ -82,16 +81,16 @@ export const FeaturedProjects = ({ onViewAllClick }: FeaturedProjectsProps) => {
             <Link
               key={project.id}
               to={`/projects/${project.id}`}
-              className={`group relative aspect-[3/4] overflow-hidden bg-charcoal transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`group relative aspect-[3/4] overflow-hidden bg-charcoal transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Image */}
               <img
                 src={project.image}
                 alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full transition-transform duration-700 group-hover:scale-105"
+                style={{ objectFit: 'contain' }}
                 loading="lazy"
               />
 

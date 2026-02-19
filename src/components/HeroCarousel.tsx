@@ -69,14 +69,13 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
       {heroSlides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
         >
           <img
             src={slide.image}
             alt={slide.alt}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
             loading={index === 0 ? "eager" : "lazy"}
           />
           {/* Dark overlay gradient */}
@@ -156,16 +155,14 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
             aria-label={`Go to slide ${index + 1}`}
           >
             <div
-              className={`transition-all duration-300 ${
-                index === currentSlide
+              className={`transition-all duration-300 ${index === currentSlide
                   ? "w-8 h-[2px] bg-gold"
                   : "w-4 h-[1px] bg-white/30 group-hover:bg-white/60"
-              }`}
+                }`}
             />
             <span
-              className={`font-inter text-xs transition-opacity duration-300 ${
-                index === currentSlide ? "text-gold opacity-100" : "text-white/40 opacity-0 group-hover:opacity-100"
-              }`}
+              className={`font-inter text-xs transition-opacity duration-300 ${index === currentSlide ? "text-gold opacity-100" : "text-white/40 opacity-0 group-hover:opacity-100"
+                }`}
             >
               0{index + 1}
             </span>

@@ -42,13 +42,22 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, ca
         to={`/projects/${project.id}`}
         className="block hover-scale"
       >
-        {/* Image Container */}
-        <div className="relative aspect-[4/3] overflow-hidden mb-4 bg-muted">
+        {/* Image Container with Blurred Background Frame */}
+        <div className="relative aspect-square overflow-hidden mb-4 bg-charcoal/5 rounded-lg">
+          {/* Blurred background as a subtle frame */}
+          <img
+            src={coverImage}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-20 scale-110 pointer-events-none"
+            aria-hidden="true"
+          />
+
           <ImageWithWatermark>
             <ProgressiveImage
               src={coverImage}
               alt={project.title}
-              className="w-full h-full group-hover:scale-110 transition-transform duration-700 ease-out"
+              objectFit="contain"
+              className="relative z-10 w-full h-full group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />
           </ImageWithWatermark>
 
