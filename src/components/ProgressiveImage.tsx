@@ -9,6 +9,7 @@ interface ProgressiveImageProps {
   placeholderClassName?: string;
   onLoad?: () => void;
   onError?: () => void;
+  objectFit?: "cover" | "contain";
 }
 
 /**
@@ -22,6 +23,7 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
   placeholderClassName,
   onLoad,
   onError,
+  objectFit = "cover",
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -33,7 +35,7 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
 
     const img = new Image();
     img.crossOrigin = "anonymous";
-    
+
     img.onload = () => {
       try {
         // Create tiny canvas for thumbnail (20px wide)
@@ -76,9 +78,9 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
         "flex flex-col items-center justify-center bg-gradient-to-br from-cream via-offWhite to-stone/10",
         className
       )}>
-        <img 
-          src={logo} 
-          alt="MC Design" 
+        <img
+          src={logo}
+          alt="MC Design"
           className="w-16 h-16 object-contain opacity-30 mb-2"
         />
         <span className="text-xs text-charcoal/40 font-inter uppercase tracking-wider">
@@ -115,7 +117,8 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
         src={src}
         alt={alt}
         className={cn(
-          "w-full h-full object-cover transition-all duration-700 ease-out",
+          "w-full h-full transition-all duration-700 ease-out",
+          objectFit === "contain" ? "object-contain" : "object-cover",
           isLoaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-sm scale-105"
         )}
         onLoad={handleLoad}

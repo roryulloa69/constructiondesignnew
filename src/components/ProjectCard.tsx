@@ -43,12 +43,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, ca
         className="block hover-scale"
       >
         {/* Image Container */}
-        <div className="relative aspect-[4/3] overflow-hidden mb-4 bg-muted">
+        <div className="relative aspect-[4/3] overflow-hidden mb-4 bg-black">
           <ImageWithWatermark>
             <ProgressiveImage
               src={coverImage}
               alt={project.title}
               className="w-full h-full group-hover:scale-110 transition-transform duration-700 ease-out"
+              objectFit="contain"
             />
           </ImageWithWatermark>
 
