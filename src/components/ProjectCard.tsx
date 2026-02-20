@@ -43,7 +43,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, ca
         className="block hover-scale"
       >
         {/* Image Container with Blurred Background Frame */}
-        <div className="relative aspect-square overflow-hidden mb-4 bg-charcoal/5 rounded-lg">
+        <div className="relative aspect-[4/3] overflow-hidden mb-4 bg-charcoal/5 rounded-lg">
           {/* Blurred background as a subtle frame */}
           <img
             src={coverImage}
@@ -56,7 +56,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, ca
             <ProgressiveImage
               src={coverImage}
               alt={project.title}
-              objectFit="contain"
+              objectFit="cover"
               className="relative z-10 w-full h-full group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />
           </ImageWithWatermark>
