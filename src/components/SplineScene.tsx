@@ -17,13 +17,13 @@ export default function SplineScene() {
 
     return (
         <div className="h-screen w-full relative">
-            <Spline
-                scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode"
-                onLoad={() => console.log('Spline scene loaded')}
-                onError={(e) => {
-                    console.error('Spline scene error:', e);
-                    setHasError(true);
-                }}
+            <iframe
+                src="https://my.spline.design/6Wq1Q7YGyM-iab9i/"
+                frameBorder="0"
+                width="100%"
+                height="100%"
+                title="Spline 3D Scene"
+                onError={() => setHasError(true)}
             />
         </div>
     );

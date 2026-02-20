@@ -19,9 +19,11 @@ export const SplineHero: React.FC<SplineHeroProps> = ({
         <div className={`absolute inset-0 z-10 pointer-events-none opacity-40 mix-blend-screen overflow-hidden ${className}`}>
             <Suspense fallback={<div className="w-full h-full bg-charcoal/10 animate-pulse" />}>
                 <div className="w-full h-full transform scale-125 lg:scale-110">
-                    <Spline
-                        scene={scene}
+                    <iframe
+                        src="https://my.spline.design/6Wq1Q7YGyWf8Z92N/"
                         className="w-full h-full"
+                        frameBorder="0"
+                        title="Spline 3D Hero Background"
                     />
                 </div>
             </Suspense>
