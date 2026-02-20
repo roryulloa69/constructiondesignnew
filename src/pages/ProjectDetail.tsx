@@ -339,7 +339,7 @@ const ProjectDetail = () => {
                   <img
                     src={allImages[0]}
                     alt={`${project.title} - Cover`}
-                    className="relative z-10 w-full h-full object-contain transition-transform duration-700 group-hover:scale-105 gallery-image"
+                    className="relative z-10 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image"
                   />
                 </button>
               </ImageWithWatermark>}
@@ -358,7 +358,7 @@ const ProjectDetail = () => {
                         className="absolute inset-0 w-full h-full object-cover blur-xl opacity-20 scale-110"
                         aria-hidden="true"
                       />
-                      <img src={image} alt={`${project.title} - Image ${actualIndex + 1}`} className="relative z-10 w-full h-full object-contain transition-transform duration-700 group-hover:scale-105 gallery-image" />
+                      <img src={image} alt={`${project.title} - Image ${actualIndex + 1}`} className="relative z-10 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 gallery-image" />
                       {label && <span className={`absolute top-2 right-2 px-2 py-1 text-xs font-semibold text-white rounded ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>
                         {label}
                       </span>}

@@ -76,7 +76,7 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
             {/* CTA */}
             <div className="pt-4">
               <Button asChild className="bg-foreground hover:bg-foreground/90 text-background w-full py-3">
-                <Link to="/portfolio">View My Work</Link>
+                <Link to="/" state={{ openPortfolio: true }}>View My Work</Link>
               </Button>
             </div>
           </div>
