@@ -254,6 +254,7 @@ import development10 from "@/assets/projects/development-10.webp";
 import development11 from "@/assets/projects/development-11.webp";
 import development12 from "@/assets/projects/development-12.webp";
 import development13 from "@/assets/projects/development-13.webp";
+import developmentTrail from "@/assets/projects/development-trail.webp";
 
 // Abaco Luxe Boat House
 import abacoLuxeBoathouseCover from "@/assets/projects/abaco-luxe-boathouse-cover.webp";
@@ -532,9 +533,9 @@ export const projects: Project[] = [
     additionalInfo: "N. Utah",
     category: "Design/Build",
     description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
-    image: syracuseCover,
+    image: syracuse3,
     images: [
-      syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6,
+      syracuse3, syracuse1, syracuse2, syracuseCover, syracuse4, syracuse5, syracuse6,
       syracuse7, syracuse8, syracuse9, syracuse10, syracuse11, syracuse12,
       syracuse13, syracuse14, syracuse15, syracuse16, syracuse17, syracuse18,
       syracuse19, syracuse20, syracuse21, syracuse22, syracuse23, syracuse24,
@@ -723,8 +724,8 @@ export const projects: Project[] = [
     additionalInfo: "Abaco, Bahamas",
     category: "Residential Development",
     description: "We developed a 2.5-acre beachfront estate, creating a 6,800 sq ft main residence that embodies luxury Caribbean living. This premier property features 180 feet of private beach frontage and is fortified with Category 5 hurricane-resistant construction. The estate is a self-sufficient oasis, with an infinity pool, guest cottage, dock facilities, solar power backup, and rainwater collection systems. This is more than a home; it is a legacy property on the shores of the Atlantic.",
-    image: beachfront1,
-    images: [beachfront1, beachfront2, beachfront3, beachfront4, beachfront5, beachfront6, beachfront7],
+    image: beachfront2,
+    images: [beachfront2, beachfront1, beachfront3, beachfront4, beachfront5, beachfront6, beachfront7],
     sqft: 6800,
     features: ["2.5 Acres", "180ft Beach Frontage", "Solar Power", "Infinity Pool", "Guest Cottage"],
     roles: "PROJECT MANAGER IN A FOREIGN COUNTRY FOR US OWNERS.",
@@ -737,8 +738,9 @@ export const projects: Project[] = [
     additionalInfo: "SE Texas",
     category: "Residential Development",
     description: "Over 36 months, we executed a 45-acre master-planned residential development, laying the groundwork for a new community. This comprehensive project included infrastructure for over 120 home sites, 3.2 miles of roads, and complete utility installation. We also created 2 miles of walking trails and community amenities, all while adhering to environmental compliance measures and coordinating with multiple municipal agencies. This project was about more than construction; it was about building a neighborhood.",
-    image: development1,
+    image: developmentTrail,
     images: [
+      developmentTrail,
       development1,
       development2,
       development3,
