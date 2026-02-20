@@ -56,32 +56,27 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = React.memo(({ onClose
   }, []);
 
   return (
-    <div 
-      className={`fixed inset-0 z-40 overflow-y-auto transition-all duration-700 ${
-        isClosing ? 'opacity-0' : 'opacity-100'
-      }`}
+    <div
+      className={`fixed inset-0 z-40 overflow-y-auto transition-all duration-700 ${isClosing ? 'opacity-0' : 'opacity-100'
+        }`}
     >
-      {/* Animated gradient background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-cream via-cream to-gold/5 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(218,165,32,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,69,19,0.05),transparent_50%)]" />
+      {/* Elevated Luxury Background */}
+      <div className="fixed inset-0 bg-[#FAFAFA] -z-10 overflow-hidden">
+        {/* Soft, ambient gradient orbs */}
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gold/10 blur-[120px] mix-blend-multiply opacity-60 animate-pulse-subtle" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-charcoal/5 blur-[120px] mix-blend-multiply opacity-40" />
+        <div className="absolute top-[40%] right-[20%] w-[30%] h-[30%] rounded-full bg-steelBlue/5 blur-[100px] mix-blend-multiply opacity-30 animate-pulse-subtle [animation-delay:2s]" />
+
+        {/* Premium subtle grain texture */}
+        <div className="absolute inset-0 opacity-[0.035] pointer-events-none mix-blend-normal bg-premium-noise" />
       </div>
 
-      {/* Subtle pattern overlay */}
-      <div 
-        className="fixed inset-0 opacity-[0.02] -z-10"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}
-      />
-
       {/* Sticky Header with Logo and Navigation */}
-      <header 
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled 
-            ? 'bg-white/95 backdrop-blur-xl shadow-md border-b border-charcoal/5' 
-            : 'bg-white/80 backdrop-blur-sm'
-        }`}
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white/95 backdrop-blur-xl shadow-md border-b border-charcoal/5'
+          : 'bg-white/80 backdrop-blur-sm'
+          }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top bar with logo and back button */}
@@ -118,11 +113,10 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = React.memo(({ onClose
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`relative pb-2 font-inter text-[10px] md:text-xs tracking-[0.15em] uppercase transition-all duration-300 whitespace-nowrap ${
-                      isActive
-                        ? "text-gold font-medium"
-                        : "text-charcoal/50 hover:text-charcoal/80"
-                    }`}
+                    className={`relative pb-2 font-inter text-[10px] md:text-xs tracking-[0.15em] uppercase transition-all duration-300 whitespace-nowrap ${isActive
+                      ? "text-gold font-medium"
+                      : "text-charcoal/50 hover:text-charcoal/80"
+                      }`}
                   >
                     <span>
                       {category}

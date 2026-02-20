@@ -276,7 +276,7 @@ import siteMap from "@/assets/projects/site-map.webp";
 // Hospitality Pool
 import poolTestimonialImage from "@/assets/pool-testimonial.webp";
 import poolDesignCover from "@/assets/projects/pool-design-cover.webp";
-import poolSunsetLights from "@/assets/projects/pool-sunset-lights.webp";
+// Removed poolSunsetLights
 import poolCabanaSunset from "@/assets/projects/pool-cabana-sunset.webp";
 import poolDesign1 from "@/assets/projects/pool-design-1.webp";
 import poolDesign2 from "@/assets/projects/pool-design-2.webp";
@@ -400,6 +400,7 @@ import miamiBeach45 from "@/assets/projects/miami-beach-45.webp";
 import miamiBeach46 from "@/assets/projects/miami-beach-46.webp";
 import miamiBeach47 from "@/assets/projects/miami-beach-47.webp";
 import syracuseCover from "@/assets/projects/syracuse-cover.webp";
+import syracuseNewCover from "@/assets/projects/syracuse-new-cover.webp";
 import syracuse1 from "@/assets/projects/syracuse-1.webp";
 import syracuse2 from "@/assets/projects/syracuse-2.webp";
 import syracuse3 from "@/assets/projects/syracuse-3.webp";
@@ -533,9 +534,9 @@ export const projects: Project[] = [
     additionalInfo: "N. Utah",
     category: "Design/Build",
     description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
-    image: syracuse3,
+    image: syracuseNewCover,
     images: [
-      syracuse3, syracuse1, syracuse2, syracuseCover, syracuse4, syracuse5, syracuse6,
+      syracuseNewCover, syracuse3, syracuse1, syracuse2, syracuseCover, syracuse4, syracuse5, syracuse6,
       syracuse7, syracuse8, syracuse9, syracuse10, syracuse11, syracuse12,
       syracuse13, syracuse14, syracuse15, syracuse16, syracuse17, syracuse18,
       syracuse19, syracuse20, syracuse21, syracuse22, syracuse23, syracuse24,
@@ -575,8 +576,8 @@ export const projects: Project[] = [
     additionalInfo: "SE Texas",
     category: "Hospitality",
     description: "We orchestrated the creation of a 189,000 gallon ultra-luxury private club amenity, a project that demanded the coordination of over 15 specialty trades. The centerpiece is a 189,000 gallon free-form pool with a swim-up bar, complemented by two beautiful Int. Design 1,200 sq ft pool houses. The design, inspired by 1950s New York smoking clubs, features imported travertine and 10' high solid mahogany wood walls and doors. This 18-month project delivered a resort-style oasis with professional landscaping, fire pits, and an outdoor kitchen, setting a new standard for private club luxury.",
-    image: poolSunsetLights,
-    images: [poolSunsetLights, poolCabanaSunset, poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
+    image: poolCabanaSunset,
+    images: [poolCabanaSunset, poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
     sqft: 189000,
     duration: "18 months",
     features: ["189,000 Gallon", "3-Acre Project", "Swim-up Bar", "Pool Houses", "Imported Travertine"],
