@@ -104,8 +104,7 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
           <img
             src={thumbDataUrl}
             alt=""
-            className={cn("w-full h-full blur-xl scale-110", isLoaded ? "opacity-0" : "opacity-100")}
-            style={{ objectFit }}
+            className={cn("w-full h-full blur-xl scale-110", `object-${objectFit}`, isLoaded ? "opacity-0" : "opacity-100")}
             aria-hidden="true"
           />
         ) : (
@@ -119,10 +118,9 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
         alt={alt}
         className={cn(
           "w-full h-full transition-all duration-700 ease-out",
-          objectFit === "contain" ? "object-contain" : "object-cover",
+          `object-${objectFit}`,
           isLoaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-sm scale-105"
         )}
-        style={{ objectFit }}
         onLoad={handleLoad}
         onError={handleError}
         loading="lazy"
