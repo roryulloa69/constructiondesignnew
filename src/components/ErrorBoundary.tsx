@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouteError, isRouteErrorResponse } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 interface Props {
@@ -38,7 +39,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
                 {this.state.error.toString()}
               </pre>
             )}
-            <Button 
+            <Button
               onClick={() => window.location.reload()}
               className="mt-4"
             >
@@ -51,4 +52,33 @@ export class ErrorBoundary extends React.Component<Props, State> {
 
     return this.props.children;
   }
+}
+
+export function RouteErrorElement() {
+  const error = useRouteError();
+  console.error("Route error caught by boundary:", error);
+
+  let errorMessage = "An unexpected error occurred.";
+  if (isRouteErrorResponse(error)) {
+    errorMessage = error.data?.message || error.statusText || "Route not found or failed to load.";
+  } else if (error instanceof Error) {
+    errorMessage = error.message;
+  }
+
+  return (
+    <div className="min-h-screen flex items-center justify-center p-4 bg-background text-foreground">
+      <div className="text-center max-w-md space-y-4">
+        <h1 className="text-3xl font-playfair font-bold">Oops! Something went wrong</h1>
+        <p className="text-muted-foreground font-inter">
+          {errorMessage}
+        </p>
+        <Button
+          onClick={() => window.location.href = '/'}
+          className="mt-4"
+        >
+          Return Home
+        </Button>
+      </div>
+    </div>
+  );
 }

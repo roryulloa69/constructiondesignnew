@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { ErrorBoundary, RouteErrorElement } from "@/components/ErrorBoundary";
 
 // Lazy load all route components for better code splitting
 const Index = lazy(() => import("./pages/Index"));
@@ -28,8 +28,7 @@ const PageLoader = () => (
 
 const queryClient = new QueryClient();
 
-// Create router with future flag
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
     element: <Index />,
@@ -66,11 +65,16 @@ const router = createBrowserRouter([
     path: "*",
     element: <NotFound />,
   },
-], {
-  future: {
-    v7_relativeSplatPath: true,
-  },
-});
+];
+
+// Create router with future flag
+const router = createBrowserRouter(
+  routes.map(r => ({ ...r, errorElement: <RouteErrorElement /> })),
+  {
+    future: {
+      v7_relativeSplatPath: true,
+    },
+  });
 
 const App: React.FC = () => {
   return (
