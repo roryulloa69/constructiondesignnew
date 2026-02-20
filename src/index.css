@@ -53,7 +53,7 @@ All colors MUST be HSL.
     --ring: 25 75% 47%;
 
     --radius: 0.25rem;
-    
+
     --header-bg: 0 0% 8%;
     --footer-bg: 0 0% 10%;
 
@@ -118,10 +118,10 @@ All colors MUST be HSL.
     --border: 0 0% 22%;
     --input: 0 0% 22%;
     --ring: 25 75% 47%;
-    
+
     --header-bg: 0 0% 8%;
     --footer-bg: 0 0% 10%;
-    
+
     --sidebar-background: 30 10% 15%;
     --sidebar-foreground: 35 20% 97%;
     --sidebar-primary: 42 85% 55%;
@@ -141,39 +141,42 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-inter antialiased;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-playfair;
   }
-  
+
   h1 {
     letter-spacing: 0.05em;
     line-height: 1.1;
   }
-  
+
   h2 {
     letter-spacing: 0.08em;
     line-height: 1.2;
   }
-  
+
   h3 {
     letter-spacing: 0.06em;
     line-height: 1.3;
   }
-  
+
   p {
     line-height: 1.7;
   }
-  
+
   .lead {
     line-height: 1.8;
   }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
 
   /* Smooth scroll behavior */
   html {
@@ -186,6 +189,7 @@ All colors MUST be HSL.
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -196,6 +200,7 @@ All colors MUST be HSL.
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
@@ -205,6 +210,7 @@ All colors MUST be HSL.
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
@@ -215,6 +221,7 @@ All colors MUST be HSL.
       opacity: 0;
       transform: translateX(-30px);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
@@ -226,6 +233,7 @@ All colors MUST be HSL.
       opacity: 0;
       transform: scale(0.95);
     }
+
     to {
       opacity: 1;
       transform: scale(1);
@@ -252,28 +260,36 @@ All colors MUST be HSL.
   .delay-100 {
     animation-delay: 0.1s;
   }
+
   .delay-200 {
     animation-delay: 0.2s;
   }
+
   .delay-300 {
     animation-delay: 0.3s;
   }
+
   .delay-400 {
     animation-delay: 0.4s;
   }
+
   .delay-500 {
     animation-delay: 0.5s;
   }
+
   .delay-600 {
     animation-delay: 0.6s;
   }
 
   /* Pulse subtle animation */
   @keyframes pulse-subtle {
-    0%, 100% {
+
+    0%,
+    100% {
       opacity: 1;
       transform: scale(1);
     }
+
     50% {
       opacity: 0.95;
       transform: scale(1.02);
@@ -286,9 +302,12 @@ All colors MUST be HSL.
 
   /* Logo glow animation */
   @keyframes logo-glow {
-    0%, 100% {
+
+    0%,
+    100% {
       filter: drop-shadow(0 0 8px rgba(208, 165, 102, 0.3)) brightness(110%);
     }
+
     50% {
       filter: drop-shadow(0 0 20px rgba(208, 165, 102, 0.6)) drop-shadow(0 0 30px rgba(208, 165, 102, 0.4)) brightness(120%);
     }
@@ -301,14 +320,14 @@ All colors MUST be HSL.
   /* Luxury shadows */
   .shadow-luxury {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04),
-                0 8px 24px rgba(0, 0, 0, 0.06),
-                0 16px 48px rgba(0, 0, 0, 0.08);
+      0 8px 24px rgba(0, 0, 0, 0.06),
+      0 16px 48px rgba(0, 0, 0, 0.08);
   }
-  
+
   .shadow-luxury-lg {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06),
-                0 12px 32px rgba(0, 0, 0, 0.08),
-                0 24px 64px rgba(0, 0, 0, 0.1);
+      0 12px 32px rgba(0, 0, 0, 0.08),
+      0 24px 64px rgba(0, 0, 0, 0.1);
   }
 
   /* Enhanced hover transitions */
@@ -320,11 +339,11 @@ All colors MUST be HSL.
     transform: translateY(-8px);
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
   }
-  
+
   .hover-scale {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
-  
+
   .hover-scale:hover {
     transform: scale(1.02);
   }
@@ -339,6 +358,7 @@ All colors MUST be HSL.
     0% {
       transform: rotateY(0deg);
     }
+
     100% {
       transform: rotateY(-180deg);
     }
@@ -348,6 +368,7 @@ All colors MUST be HSL.
     0% {
       transform: rotateY(0deg);
     }
+
     100% {
       transform: rotateY(180deg);
     }
@@ -364,7 +385,6 @@ All colors MUST be HSL.
   /* High-quality image rendering */
   img {
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
@@ -373,7 +393,6 @@ All colors MUST be HSL.
   /* Smooth scaling for larger images */
   img.smooth-render {
     image-rendering: auto;
-    image-rendering: smooth;
     image-rendering: high-quality;
   }
 
@@ -392,6 +411,11 @@ All colors MUST be HSL.
   .bg-premium-noise {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     transform: translateZ(0);
+  }
+
+  /* Book Cover Texture */
+  .bg-book-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
   /* Fix blurry scaled images */

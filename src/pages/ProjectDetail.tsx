@@ -44,6 +44,14 @@ const ProjectDetail = () => {
   const [documents, setDocuments] = useState<ProjectDocument[]>([]);
   const [scrollY, setScrollY] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
+  const heroImgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (heroImgRef.current) {
+      heroImgRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
+      heroImgRef.current.style.transition = 'transform 0.1s ease-out';
+    }
+  }, [scrollY]);
 
   // Parallax scroll effect
   useEffect(() => {
@@ -156,10 +164,7 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Image with Parallax */}
       <div ref={heroRef} className="relative h-[50vh] sm:h-[60vh] w-full overflow-hidden bg-black">
-        <img src={heroImage} alt={project.title} className="w-full h-full object-contain hero-image scale-110" style={{
-          transform: `translateY(${scrollY * 0.3}px)`,
-          transition: 'transform 0.1s ease-out'
-        }} />
+        <img ref={heroImgRef} src={heroImage} alt={project.title} className="w-full h-full object-contain hero-image scale-110" />
         {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
