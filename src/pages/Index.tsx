@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import { HeaderNew } from "@/components/HeaderNew";
-import { HeroCarousel } from "@/components/HeroCarousel";
-import { AboutNew } from "@/components/AboutNew";
-import { FeaturedProjects } from "@/components/FeaturedProjects";
-import { CTASection } from "@/components/CTASection";
-import { Services } from "@/components/Services";
-import { FooterNew } from "@/components/FooterNew";
+import { Hero } from "@/sections/Hero";
+import { About } from "@/sections/About";
+import { Stats } from "@/sections/Stats";
+import { FeaturedProjects } from "@/sections/FeaturedProjects";
+import { CTA } from "@/sections/CTA";
+import { Services } from "@/sections/Services";
+import { Footer } from "@/sections/Footer";
 import { PortfolioGrid } from "@/components/PortfolioGrid";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { BackgroundCollage } from "@/components/BackgroundCollage";
@@ -103,7 +104,7 @@ const Index: React.FC = () => {
   }, [bookOpened, animating]);
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-white/20 overflow-x-hidden">
+    <div className="min-h-screen bg-charcoal">
       {/* Book animation overlay */}
       {animating && !prefersReducedMotion && (
         <div
@@ -112,16 +113,14 @@ const Index: React.FC = () => {
           aria-hidden="true"
         >
           <div
-            className={`w-1/2 h-full bg-charcoal origin-right transition-transform ${
-              !bookOpened ? "animate-book-open-left" : "animate-book-close-left"
-            }`}
+            className={`w-1/2 h-full bg-charcoal origin-right transition-transform ${!bookOpened ? "animate-book-open-left" : "animate-book-close-left"
+              }`}
           />
           <div
-            className={`w-1/2 h-full bg-charcoal origin-left transition-transform ${
-              !bookOpened
-                ? "animate-book-open-right"
-                : "animate-book-close-right"
-            }`}
+            className={`w-1/2 h-full bg-charcoal origin-left transition-transform ${!bookOpened
+              ? "animate-book-open-right"
+              : "animate-book-close-right"
+              }`}
           />
         </div>
       )}
@@ -129,20 +128,19 @@ const Index: React.FC = () => {
       {!bookOpened ? (
         <>
           <HeaderNew onPortfolioClick={handleOpenBook} />
-          <HeroCarousel onExplorePortfolio={handleOpenBook} />
-          <AboutNew />
+          <Hero onExplorePortfolio={handleOpenBook} />
+          <About />
+          <Stats />
           <FeaturedProjects onViewAllClick={handleOpenBook} />
-          <section id="services">
-            <Services />
-          </section>
-          <CTASection />
-          <FooterNew />
+          <Services />
+          <CTA />
+          <Footer onPortfolioClick={handleOpenBook} />
         </>
       ) : (
         <>
           {/* Animated background collage */}
           <BackgroundCollage />
-          
+
           <PortfolioGrid onClose={handleCloseBook} />
         </>
       )}

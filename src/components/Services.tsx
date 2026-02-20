@@ -48,54 +48,45 @@ export const Services = () => {
     <section
       id="services"
       ref={elementRef as React.RefObject<HTMLElement>}
-      className="relative py-24 lg:py-32 bg-[#0a0a0a]"
+      className="relative py-20 lg:py-32 bg-foreground text-background"
     >
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="font-inter text-xs tracking-[0.4em] text-gold uppercase mb-4">
-            What I Do
-          </p>
-          <h2 className="font-playfair text-4xl sm:text-5xl lg:text-6xl text-white font-light mb-6">
-            Expert <span className="italic text-gold">Services</span>
-          </h2>
-          <p className="font-inter text-white/60 max-w-2xl mx-auto leading-relaxed">
+        <div className={`mb-16 lg:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
+          <span className="font-playfair text-8xl lg:text-[10rem] text-gold/20 font-light leading-none block -mb-6 lg:-mb-12">
+            03
+          </span>
+          <p className="font-inter text-xs tracking-[0.3em] text-background/60 uppercase mb-3">Services</p>
+          <h2 className="font-playfair text-3xl lg:text-4xl text-background mb-4">What I Do</h2>
+          <p className="font-inter text-background/70 max-w-xl">
             End-to-end expertise for residential and commercial projects of any scale or complexity.
           </p>
         </div>
 
-        {/* Services Grid - 3 columns */}
+        {/* Services Grid */}
         <div
           ref={gridRef as React.RefObject<HTMLDivElement>}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.title}
-                className={`group relative p-8 lg:p-10 bg-charcoal/50 border border-white/5 hover:border-gold/30 transition-all duration-500 ${
-                  gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                }`}
-                style={{ transitionDelay: gridVisible ? `${150 + index * 100}ms` : '0ms' }}
+                className={`group transition-all duration-700 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                  }`}
+                style={{ transitionDelay: gridVisible ? `${200 + index * 100}ms` : '0ms' }}
               >
-                {/* Icon */}
-                <div className="w-14 h-14 border border-gold/30 flex items-center justify-center mb-6 group-hover:bg-gold/10 group-hover:border-gold transition-all duration-300">
-                  <Icon className="w-6 h-6 text-gold" />
+                <div className="border-l border-gold/30 pl-6 py-2 group-hover:border-gold transition-colors duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Icon className="w-5 h-5 text-gold" />
+                    <h3 className="font-playfair text-xl text-background">{service.title}</h3>
+                  </div>
+                  <p className="font-inter text-sm text-background/60 leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-
-                {/* Title */}
-                <h3 className="font-playfair text-xl lg:text-2xl text-white mb-4 group-hover:text-gold transition-colors duration-300">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="font-inter text-sm text-white/50 leading-relaxed group-hover:text-white/70 transition-colors duration-300">
-                  {service.description}
-                </p>
-
-                {/* Decorative corner */}
-                <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-gold/20 group-hover:border-gold/50 transition-colors duration-300" />
               </div>
             );
           })}

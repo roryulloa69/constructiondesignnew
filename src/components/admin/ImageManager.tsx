@@ -1,11 +1,26 @@
 import { useState, useEffect, useCallback } from "react";
+import {
+  DndContext,
+  closestCenter,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  DragEndEvent,
+} from "@dnd-kit/core";
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  rectSortingStrategy,
+} from "@dnd-kit/sortable";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Loader2, RotateCw, Trash2, Upload } from "lucide-react";
+import { Loader2, Upload, CheckCircle2, XCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
+import { SortableImageCard } from "./SortableImageCard";
 
 interface ProjectImage {
   id: string;
@@ -16,15 +31,33 @@ interface ProjectImage {
   display_order: number;
 }
 
+interface UploadProgress {
+  fileName: string;
+  status: "pending" | "uploading" | "success" | "error";
+  error?: string;
+}
+
 interface ImageManagerProps {
   projectId: string;
 }
 
 export const ImageManager = ({ projectId }: ImageManagerProps) => {
   const [images, setImages] = useState<ProjectImage[]>([]);
+  const [uploadQueue, setUploadQueue] = useState<UploadProgress[]>([]);
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
   const { toast } = useToast();
+
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 8,
+      },
+    }),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
 
   const fetchImages = useCallback(async () => {
     try {
@@ -51,6 +84,50 @@ export const ImageManager = ({ projectId }: ImageManagerProps) => {
     fetchImages();
   }, [fetchImages]);
 
+  const handleDragEnd = async (event: DragEndEvent) => {
+    const { active, over } = event;
+
+    if (!over || active.id === over.id) return;
+
+    const oldIndex = images.findIndex((img) => img.id === active.id);
+    const newIndex = images.findIndex((img) => img.id === over.id);
+
+    const newImages = arrayMove(images, oldIndex, newIndex);
+    
+    // Optimistically update UI
+    setImages(newImages);
+
+    // Update display_order in database
+    try {
+      const updates = newImages.map((img, index) => ({
+        id: img.id,
+        display_order: index,
+      }));
+
+      for (const update of updates) {
+        const { error } = await supabase
+          .from("project_images")
+          .update({ display_order: update.display_order })
+          .eq("id", update.id);
+
+        if (error) throw error;
+      }
+
+      toast({
+        title: "Success",
+        description: "Image order updated",
+      });
+    } catch (error) {
+      // Revert on error
+      fetchImages();
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to update order",
+      });
+    }
+  };
+
   const handleRotate = async (imageId: string, currentRotation: number) => {
     const newRotation = (currentRotation + 90) % 360;
 
@@ -76,17 +153,12 @@ export const ImageManager = ({ projectId }: ImageManagerProps) => {
     }
   };
 
-  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    setUploading(true);
-
+  const uploadSingleFile = async (file: File, displayOrder: number): Promise<{ success: boolean; error?: string }> => {
     try {
       const fileExt = file.name.split(".").pop();
-      const fileName = `${projectId}/${Date.now()}.${fileExt}`;
+      const fileName = `${projectId}/${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
 
-      const { error: uploadError, data } = await supabase.storage
+      const { error: uploadError } = await supabase.storage
         .from("project-images")
         .upload(fileName, file);
 
@@ -101,25 +173,88 @@ export const ImageManager = ({ projectId }: ImageManagerProps) => {
         .insert({
           project_id: projectId,
           image_url: publicUrl,
-          display_order: images.length,
+          display_order: displayOrder,
         });
 
       if (dbError) throw dbError;
 
+      return { success: true };
+    } catch (error) {
+      return { 
+        success: false, 
+        error: error instanceof Error ? error.message : "Upload failed" 
+      };
+    }
+  };
+
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
+
+    const fileArray = Array.from(files);
+    setUploading(true);
+    
+    // Initialize upload queue
+    setUploadQueue(fileArray.map(file => ({
+      fileName: file.name,
+      status: "pending" as const,
+    })));
+
+    let successCount = 0;
+    let errorCount = 0;
+    const currentImageCount = images.length;
+
+    // Upload files sequentially to maintain order
+    for (let i = 0; i < fileArray.length; i++) {
+      const file = fileArray[i];
+      
+      // Update status to uploading
+      setUploadQueue(prev => prev.map((item, idx) => 
+        idx === i ? { ...item, status: "uploading" as const } : item
+      ));
+
+      const result = await uploadSingleFile(file, currentImageCount + i);
+
+      // Update status based on result
+      setUploadQueue(prev => prev.map((item, idx) => 
+        idx === i ? { 
+          ...item, 
+          status: result.success ? "success" as const : "error" as const,
+          error: result.error 
+        } : item
+      ));
+
+      if (result.success) {
+        successCount++;
+      } else {
+        errorCount++;
+      }
+    }
+
+    // Clear upload queue after a delay
+    setTimeout(() => {
+      setUploadQueue([]);
+    }, 3000);
+
+    // Show summary toast
+    if (errorCount === 0) {
       toast({
         title: "Success",
-        description: "Image uploaded",
+        description: `${successCount} image${successCount > 1 ? 's' : ''} uploaded successfully`,
       });
-      fetchImages();
-    } catch (error) {
+    } else {
       toast({
         variant: "destructive",
-        title: "Error",
-        description: error instanceof Error ? error.message : "An error occurred",
+        title: "Upload completed with errors",
+        description: `${successCount} succeeded, ${errorCount} failed`,
       });
-    } finally {
-      setUploading(false);
     }
+
+    fetchImages();
+    setUploading(false);
+    
+    // Reset the input
+    e.target.value = "";
   };
 
   const handleDelete = async (imageId: string) => {
@@ -155,78 +290,87 @@ export const ImageManager = ({ projectId }: ImageManagerProps) => {
     );
   }
 
+  const isUploading = uploadQueue.length > 0;
+  const uploadProgress = uploadQueue.length > 0 
+    ? (uploadQueue.filter(u => u.status === "success" || u.status === "error").length / uploadQueue.length) * 100 
+    : 0;
+
   return (
     <div className="space-y-6">
-      <div className="flex gap-4 items-center">
-        <Label htmlFor="image-upload" className="cursor-pointer">
-          <div className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90">
-            <Upload className="h-4 w-4" />
-            Upload Image
+      <div className="space-y-4">
+        <div className="flex gap-4 items-center flex-wrap">
+          <Label htmlFor="image-upload" className="cursor-pointer">
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
+              <Upload className="h-4 w-4" />
+              Upload Images
+            </div>
+            <Input
+              id="image-upload"
+              type="file"
+              accept="image/*"
+              multiple
+              onChange={handleUpload}
+              disabled={uploading}
+              className="hidden"
+            />
+          </Label>
+          {uploading && (
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              Uploading {uploadQueue.filter(u => u.status === "success").length + 1} of {uploadQueue.length}...
+            </div>
+          )}
+          <p className="text-sm text-muted-foreground">
+            Select multiple images. Drag to reorder. First image is the cover.
+          </p>
+        </div>
+
+        {/* Upload Progress */}
+        {isUploading && (
+          <div className="space-y-2 p-4 bg-muted/50 rounded-lg">
+            <div className="flex justify-between text-sm">
+              <span>Uploading {uploadQueue.length} image{uploadQueue.length > 1 ? 's' : ''}...</span>
+              <span>{Math.round(uploadProgress)}%</span>
+            </div>
+            <Progress value={uploadProgress} className="h-2" />
+            <div className="space-y-1 max-h-32 overflow-y-auto">
+              {uploadQueue.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-2 text-sm">
+                  {item.status === "pending" && <div className="h-4 w-4 rounded-full bg-muted-foreground/30" />}
+                  {item.status === "uploading" && <Loader2 className="h-4 w-4 animate-spin text-primary" />}
+                  {item.status === "success" && <CheckCircle2 className="h-4 w-4 text-primary" />}
+                  {item.status === "error" && <XCircle className="h-4 w-4 text-destructive" />}
+                  <span className={item.status === "error" ? "text-destructive" : ""}>
+                    {item.fileName}
+                    {item.error && <span className="ml-2 text-xs">({item.error})</span>}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-          <Input
-            id="image-upload"
-            type="file"
-            accept="image/*"
-            onChange={handleUpload}
-            disabled={uploading}
-            className="hidden"
-          />
-        </Label>
-        {uploading && <Loader2 className="h-4 w-4 animate-spin" />}
+        )}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {images.map((image) => (
-          <Card key={image.id}>
-            <CardContent className="p-4">
-              <div 
-                className="relative aspect-square mb-3 overflow-hidden rounded-md bg-muted"
-                style={{
-                  transform: `rotate(${image.rotation_angle || 0}deg)`,
-                }}
-              >
-                <img
-                  src={image.image_url}
-                  alt={image.title || "Project image"}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    // Show placeholder for broken images
-                    target.style.display = 'none';
-                    target.parentElement!.innerHTML = `
-                      <div class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground text-xs text-center p-2">
-                        Image not found<br/><span class="text-[10px] opacity-60">${image.image_url}</span>
-                      </div>
-                    `;
-                  }}
-                />
-              </div>
-              <p className="text-xs text-muted-foreground truncate mb-2" title={image.image_url}>
-                {image.title || image.image_url.split('/').pop()}
-              </p>
-              <div className="flex gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => handleRotate(image.id, image.rotation_angle || 0)}
-                  className="flex-1"
-                >
-                  <RotateCw className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="destructive"
-                  size="sm"
-                  onClick={() => handleDelete(image.id)}
-                >
-                  <Trash2 className="h-4 w-4" />
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <DndContext
+        sensors={sensors}
+        collisionDetection={closestCenter}
+        onDragEnd={handleDragEnd}
+      >
+        <SortableContext items={images.map((img) => img.id)} strategy={rectSortingStrategy}>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {images.map((image) => (
+              <SortableImageCard
+                key={image.id}
+                image={image}
+                onRotate={handleRotate}
+                onDelete={handleDelete}
+              />
+            ))}
+          </div>
+        </SortableContext>
+      </DndContext>
 
-      {images.length === 0 && (
+      {images.length === 0 && !isUploading && (
         <div className="text-center py-12 text-muted-foreground">
           No images uploaded yet. Upload your first image to get started.
         </div>
