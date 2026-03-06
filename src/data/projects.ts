@@ -1,5 +1,6 @@
 
 // Project imports
+import syracuseCover from "@/assets/projects/syracuse-cover.jpg";
 import carmel2Cover from "@/assets/projects/carmel-2-cover.webp";
 import carmel2_1 from "@/assets/projects/carmel-2-1.webp";
 import carmel2_2 from "@/assets/projects/carmel-2-2.webp";
@@ -486,8 +487,8 @@ export const projects: Project[] = [
     additionalInfo: "N. Utah",
     category: "Design/Build",
     description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
-    image: "",
-    images: [],
+    image: syracuseCover,
+    images: [syracuseCover],
     sqft: 6200,
     duration: "18 months",
     features: ["Craftsman Style", "2-Acre Landscape", "Water Features", "400 Tons Stone"],
