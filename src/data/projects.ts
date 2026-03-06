@@ -399,54 +399,6 @@ import miamiBeach44 from "@/assets/projects/miami-beach-44.webp";
 import miamiBeach45 from "@/assets/projects/miami-beach-45.webp";
 import miamiBeach46 from "@/assets/projects/miami-beach-46.webp";
 import miamiBeach47 from "@/assets/projects/miami-beach-47.webp";
-import syracuseCover from "@/assets/projects/syracuse-cover.webp";
-import syracuseNewCover from "@/assets/projects/syracuse-new-cover.webp";
-import syracuse1 from "@/assets/projects/syracuse-1.webp";
-import syracuse2 from "@/assets/projects/syracuse-2.webp";
-import syracuse3 from "@/assets/projects/syracuse-3.webp";
-import syracuse4 from "@/assets/projects/syracuse-4.webp";
-import syracuse5 from "@/assets/projects/syracuse-5.webp";
-import syracuse6 from "@/assets/projects/syracuse-6.webp";
-import syracuse7 from "@/assets/projects/syracuse-7.webp";
-import syracuse8 from "@/assets/projects/syracuse-8.webp";
-import syracuse9 from "@/assets/projects/syracuse-9.webp";
-import syracuse10 from "@/assets/projects/syracuse-10.webp";
-import syracuse11 from "@/assets/projects/syracuse-11.webp";
-import syracuse12 from "@/assets/projects/syracuse-12.webp";
-import syracuse13 from "@/assets/projects/syracuse-13.webp";
-import syracuse14 from "@/assets/projects/syracuse-14.webp";
-import syracuse15 from "@/assets/projects/syracuse-15.webp";
-import syracuse16 from "@/assets/projects/syracuse-16.webp";
-import syracuse17 from "@/assets/projects/syracuse-17.webp";
-import syracuse18 from "@/assets/projects/syracuse-18.webp";
-import syracuse19 from "@/assets/projects/syracuse-19.webp";
-import syracuse20 from "@/assets/projects/syracuse-20.webp";
-import syracuse21 from "@/assets/projects/syracuse-21.webp";
-import syracuse22 from "@/assets/projects/syracuse-22.webp";
-import syracuse23 from "@/assets/projects/syracuse-23.webp";
-import syracuse24 from "@/assets/projects/syracuse-24.webp";
-import syracuse25 from "@/assets/projects/syracuse-25.webp";
-import syracuse26 from "@/assets/projects/syracuse-26.webp";
-import syracuse27 from "@/assets/projects/syracuse-27.webp";
-import syracuse28 from "@/assets/projects/syracuse-28.webp";
-import syracuse29 from "@/assets/projects/syracuse-29.webp";
-import syracuse30 from "@/assets/projects/syracuse-30.webp";
-import syracuse31 from "@/assets/projects/syracuse-31.webp";
-import syracuse32 from "@/assets/projects/syracuse-32.webp";
-import syracuse33 from "@/assets/projects/syracuse-33.webp";
-import syracuse34 from "@/assets/projects/syracuse-34.webp";
-import syracuse35 from "@/assets/projects/syracuse-35.webp";
-import syracuse36 from "@/assets/projects/syracuse-36.webp";
-import syracuse37 from "@/assets/projects/syracuse-37.webp";
-import syracuse38 from "@/assets/projects/syracuse-38.webp";
-import syracuse39 from "@/assets/projects/syracuse-39.webp";
-import syracuse40 from "@/assets/projects/syracuse-40.webp";
-import syracuse41 from "@/assets/projects/syracuse-41.webp";
-import syracuse42 from "@/assets/projects/syracuse-42.webp";
-import syracuse43 from "@/assets/projects/syracuse-43.webp";
-import syracuse44 from "@/assets/projects/syracuse-44.webp";
-import syracuse45 from "@/assets/projects/syracuse-45.webp";
-import syracuse46 from "@/assets/projects/syracuse-46.webp";
 import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.webp";
 import alpineRanch1 from "@/assets/projects/alpine-ranch-1.webp";
 import alpineRanch2 from "@/assets/projects/alpine-ranch-2.webp";
@@ -534,17 +486,8 @@ export const projects: Project[] = [
     additionalInfo: "N. Utah",
     category: "Design/Build",
     description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
-    image: syracuseNewCover,
-    images: [
-      syracuseNewCover, syracuse3, syracuse1, syracuse2, syracuseCover, syracuse4, syracuse5, syracuse6,
-      syracuse7, syracuse8, syracuse9, syracuse10, syracuse11, syracuse12,
-      syracuse13, syracuse14, syracuse15, syracuse16, syracuse17, syracuse18,
-      syracuse19, syracuse20, syracuse21, syracuse22, syracuse23, syracuse24,
-      syracuse25, syracuse26, syracuse27, syracuse28, syracuse29, syracuse30,
-      syracuse31, syracuse32, syracuse33, syracuse34, syracuse35, syracuse36,
-      syracuse37, syracuse38, syracuse39, syracuse40, syracuse41, syracuse42,
-      syracuse43, syracuse44, syracuse45, syracuse46
-    ],
+    image: "",
+    images: [],
     sqft: 6200,
     duration: "18 months",
     features: ["Craftsman Style", "2-Acre Landscape", "Water Features", "400 Tons Stone"],
