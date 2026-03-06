@@ -77,7 +77,7 @@ async function findImageFiles(searchPath) {
         
         // Check if it's a Syracuse image (handles various naming patterns)
         if (fileName.includes('syracuse') && 
-            (ext === '.jpg' || ext === '.jpeg' || ext === '.png')) {
+            (ext === '.jpg' || ext === '.jpeg' || ext === '.png' || ext === '.webp')) {
           imageFiles.push({
             path: join(searchPath, file.name),
             name: file.name,

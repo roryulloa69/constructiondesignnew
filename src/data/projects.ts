@@ -534,16 +534,77 @@ export const projects: Project[] = [
     additionalInfo: "N. Utah",
     category: "Design/Build",
     description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
-    image: syracuseNewCover,
+    image: syracuseCover,
     images: [
-      syracuseNewCover, syracuse3, syracuse1, syracuse2, syracuseCover, syracuse4, syracuse5, syracuse6,
-      syracuse7, syracuse8, syracuse9, syracuse10, syracuse11, syracuse12,
-      syracuse13, syracuse14, syracuse15, syracuse16, syracuse17, syracuse18,
-      syracuse19, syracuse20, syracuse21, syracuse22, syracuse23, syracuse24,
-      syracuse25, syracuse26, syracuse27, syracuse28, syracuse29, syracuse30,
-      syracuse31, syracuse32, syracuse33, syracuse34, syracuse35, syracuse36,
-      syracuse37, syracuse38, syracuse39, syracuse40, syracuse41, syracuse42,
-      syracuse43, syracuse44, syracuse45, syracuse46
+      // HERO COVER SHOTS - Dramatic first impressions
+      syracuseCover,
+      // syracuseNewCover, // Temporarily disabled - file is corrupted HTML
+      
+      // ARRIVAL & EXTERIOR ARCHITECTURE - Approach and full facade views
+      syracuse1,
+      syracuse2,
+      syracuse3,
+      syracuse4,
+      syracuse5,
+      
+      // MAIN EXTERIOR & STONEWORK - Showcasing the 400 tons of stone
+      syracuse6,
+      syracuse7,
+      syracuse8,
+      syracuse9,
+      syracuse10,
+      
+      // LANDSCAPING & WATER FEATURES - The 2-acre landscape
+      syracuse11,
+      syracuse12,
+      syracuse13,
+      syracuse14,
+      syracuse15,
+      
+      // MAIN LIVING SPACES - Living, dining, kitchen areas
+      syracuse16,
+      syracuse17,
+      syracuse18,
+      syracuse19,
+      syracuse20,
+      syracuse21,
+      syracuse22,
+      
+      // INTERIOR DETAILS & CRAFTSMAN FEATURES
+      syracuse23,
+      syracuse24,
+      syracuse25,
+      syracuse26,
+      syracuse27,
+      
+      // PRIVATE SPACES - Bedrooms and bathrooms
+      syracuse28,
+      syracuse29,
+      syracuse30,
+      syracuse31,
+      syracuse32,
+      
+      // SPECIAL FEATURES - 6-car garage/workshop and details
+      syracuse33,
+      syracuse34,
+      syracuse35,
+      syracuse36,
+      syracuse37,
+      
+      // EQUESTRIAN FACILITIES - Horse barn and stalls
+      syracuse38,
+      syracuse39,
+      syracuse40,
+      
+      // OUTDOOR LIVING & HARDSCAPING
+      syracuse41,
+      syracuse42,
+      syracuse43,
+      
+      // EVENING/TWILIGHT SHOTS - Low-voltage lighting displays
+      syracuse44,
+      syracuse45,
+      syracuse46
     ],
     sqft: 6200,
     duration: "18 months",
