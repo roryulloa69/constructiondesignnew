@@ -1,6 +1,16 @@
 
 // Project imports
 import syracuseCover from "@/assets/projects/syracuse-cover.jpg";
+import syracuse1 from "@/assets/projects/syracuse-1.webp";
+import syracuse2 from "@/assets/projects/syracuse-2.webp";
+import syracuse3 from "@/assets/projects/syracuse-3.webp";
+import syracuse4 from "@/assets/projects/syracuse-4.webp";
+import syracuse5 from "@/assets/projects/syracuse-5.webp";
+import syracuse6 from "@/assets/projects/syracuse-6.webp";
+import syracuse7 from "@/assets/projects/syracuse-7.webp";
+import syracuse8 from "@/assets/projects/syracuse-8.webp";
+import syracuse9 from "@/assets/projects/syracuse-9.webp";
+import syracuse10 from "@/assets/projects/syracuse-10.webp";
 import carmel2Cover from "@/assets/projects/carmel-2-cover.webp";
 import carmel2_1 from "@/assets/projects/carmel-2-1.webp";
 import carmel2_2 from "@/assets/projects/carmel-2-2.webp";
