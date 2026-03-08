@@ -1,6 +1,16 @@
 
 // Project imports
 import syracuseCover from "@/assets/projects/syracuse-cover.jpg";
+import syracuse1 from "@/assets/projects/syracuse-1.webp";
+import syracuse2 from "@/assets/projects/syracuse-2.webp";
+import syracuse3 from "@/assets/projects/syracuse-3.webp";
+import syracuse4 from "@/assets/projects/syracuse-4.webp";
+import syracuse5 from "@/assets/projects/syracuse-5.webp";
+import syracuse6 from "@/assets/projects/syracuse-6.webp";
+import syracuse7 from "@/assets/projects/syracuse-7.webp";
+import syracuse8 from "@/assets/projects/syracuse-8.webp";
+import syracuse9 from "@/assets/projects/syracuse-9.webp";
+import syracuse10 from "@/assets/projects/syracuse-10.webp";
 import carmel2Cover from "@/assets/projects/carmel-2-cover.webp";
 import carmel2_1 from "@/assets/projects/carmel-2-1.webp";
 import carmel2_2 from "@/assets/projects/carmel-2-2.webp";
@@ -487,8 +497,8 @@ export const projects: Project[] = [
     additionalInfo: "N. Utah",
     category: "Design/Build",
     description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
-    image: syracuseCover,
-    images: [syracuseCover],
+    image: syracuse1,
+    images: [syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6, syracuse7, syracuse8, syracuse9, syracuse10],
     sqft: 6200,
     duration: "18 months",
     features: ["Craftsman Style", "2-Acre Landscape", "Water Features", "400 Tons Stone"],
