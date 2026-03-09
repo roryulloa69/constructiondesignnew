@@ -34,6 +34,14 @@ const Index: React.FC = () => {
   }, [location]);
 
   useEffect(() => {
+    document.title = "Michael Chandler - Strategic Construction Executive | 37+ Years, $500M+ Portfolio";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute("content", "Michael Chandler is a Strategic Construction Executive with 37+ years delivering multimillion-dollar developments. Portfolio exceeding $500M across 12 US states and 4 countries.");
+    }
+  }, []);
+
+  useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     setPrefersReducedMotion(mediaQuery.matches);
     const handleChange = (e: MediaQueryListEvent) => {
