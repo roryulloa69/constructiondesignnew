@@ -19,6 +19,16 @@ import syracuse41 from "@/assets/projects/syracuse-41.webp";
 import syracuse44 from "@/assets/projects/syracuse-44.webp";
 import syracuse45 from "@/assets/projects/syracuse-45.webp";
 import syracuse46 from "@/assets/projects/syracuse-46.webp";
+import syracuse14 from "@/assets/projects/syracuse-14.webp";
+import syracuse15 from "@/assets/projects/syracuse-15.webp";
+import syracuse21 from "@/assets/projects/syracuse-21.webp";
+import syracuse22 from "@/assets/projects/syracuse-22.webp";
+import syracuse23 from "@/assets/projects/syracuse-23.webp";
+import syracuse24 from "@/assets/projects/syracuse-24.webp";
+import syracuse25 from "@/assets/projects/syracuse-25.webp";
+import syracuse26 from "@/assets/projects/syracuse-26.webp";
+import syracuse27 from "@/assets/projects/syracuse-27.webp";
+import syracuse28 from "@/assets/projects/syracuse-28.webp";
 import carmel2Cover from "@/assets/projects/carmel-2-cover.webp";
 import carmel2_1 from "@/assets/projects/carmel-2-1.webp";
 import carmel2_2 from "@/assets/projects/carmel-2-2.webp";
@@ -506,7 +516,7 @@ export const projects: Project[] = [
     category: "Design/Build",
     description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
     image: syracuseCover,
-    images: [syracuseCover, syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6, syracuse7, syracuse8, syracuse9, syracuse10, syracuse37, syracuse38, syracuse39, syracuse40, syracuse41, syracuse44, syracuse45, syracuse46],
+    images: [syracuseCover, syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6, syracuse7, syracuse8, syracuse9, syracuse10, syracuse14, syracuse15, syracuse21, syracuse22, syracuse23, syracuse24, syracuse25, syracuse26, syracuse27, syracuse28, syracuse37, syracuse38, syracuse39, syracuse40, syracuse41, syracuse44, syracuse45, syracuse46],
     sqft: 6200,
     duration: "18 months",
     features: ["Craftsman Style", "2-Acre Landscape", "Water Features", "400 Tons Stone"],
