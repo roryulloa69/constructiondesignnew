@@ -24,6 +24,8 @@ export const useProjectsByCategory = (category: string | string[]) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
+  const categoryKey = JSON.stringify(category);
+
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -57,9 +59,10 @@ export const useProjectsByCategory = (category: string | string[]) => {
 
         // Transform data
         const projectsWithImages = (data || []).map((project) => {
-          // Sort images by display_order locally as we can't easily order nested relation in Supabase JS client v2 in all cases, 
-          // though we could try. But local sort is safe.
-          const sortedImages = (project.project_images || []).sort((a: any, b: any) => (a.display_order || 0) - (b.display_order || 0));
+          // Sort images by display_order locally
+          const sortedImages = (project.project_images as ProjectImage[] || []).sort(
+            (a: ProjectImage, b: ProjectImage) => (a.display_order || 0) - (b.display_order || 0)
+          );
 
           return {
             ...project,
@@ -83,7 +86,7 @@ export const useProjectsByCategory = (category: string | string[]) => {
     if (category) {
       fetchProjects();
     }
-  }, [JSON.stringify(category)]);
+  }, [categoryKey]);
 
   return { projects, loading, error };
 };
