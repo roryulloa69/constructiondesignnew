@@ -1,80 +1,110 @@
-# Welcome to your Lovable project
+# Michael E. Chandler — Construction & Design Portfolio
 
-## Project info
+A professional portfolio website for **Michael E. Chandler**, a construction executive with 37+ years of experience and a $500M+ project portfolio. The site showcases high-end residential, civil engineering, hospitality, and design/build projects across the United States and internationally.
 
-**URL**: https://lovable.dev/projects/8d70aad7-b565-42e6-bddf-8ea85bfd9f37
+## 🌐 Live Site
 
-## How can I edit this code?
+Deployed via [Lovable](https://lovable.dev).
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## ✨ Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8d70aad7-b565-42e6-bddf-8ea85bfd9f37) and start prompting.
+- **Animated Portfolio Grid** — Signature "book opening" page-flip animation for project reveals
+- **Project Detail Pages** — Full image galleries, project stats (sq ft, duration, features), and descriptions
+- **Category Filtering** — Browse projects by: Residential Construction, Design/Build, Civil, Hospitality, Residential Development
+- **Contact Page** — Business hours, address, and contact form
+- **Admin Panel** — Supabase-backed auth with admin dashboard and user management
+- **Dark/Light Theme** — Persistent theme toggle
+- **Fully Responsive** — Mobile-first design
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🗂️ Pages
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Route | Description |
+|---|---|
+| `/` | Home — hero, portfolio grid, stats, testimonials, CTA |
+| `/projects/:id` | Project detail page with full image gallery |
+| `/contact` | Contact form and business info |
+| `/design` | Design services page |
+| `/login` | Admin login |
+| `/signup` | Admin account creation |
+| `/admin` | Admin dashboard (protected) |
+| `/admin/users` | User management (protected) |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛠️ Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Framework:** React 18 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS + shadcn/ui components
+- **Routing:** React Router v6 (lazy-loaded routes)
+- **Auth & Backend:** Supabase
+- **State:** TanStack Query (React Query)
+- **Fonts:** Playfair Display, Inter
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Getting Started
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Prerequisites
+- Node.js 18+
+- npm or bun
+
+### Install & Run
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🔐 Environment Variables
 
-This project is built with:
+This project uses Supabase for authentication and backend services. The Supabase config is in `src/integrations/supabase/client.ts`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+For local development, create a `.env` file:
 
-## Security Features
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-This project includes Node.js security hardening:
+---
 
-- **Prototype Pollution Protection**: All npm scripts run with `--disable-proto=delete` flag, which removes the `Object.prototype.__proto__` property to prevent prototype pollution attacks.
-- The flag is configured using `cross-env` for cross-platform compatibility (Windows, macOS, Linux).
+## 📁 Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── assets/          # Project images (.webp)
+├── components/      # Reusable UI components
+├── contexts/        # Auth context (Supabase)
+├── data/
+│   └── projects.ts  # All project data and image imports
+├── integrations/    # Supabase client
+├── pages/           # Route-level page components
+└── App.tsx          # Router and app providers
+```
 
-Simply open [Lovable](https://lovable.dev/projects/8d70aad7-b565-42e6-bddf-8ea85bfd9f37) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 📞 Contact
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Michael E. Chandler**  
+8215 Winding Hills Ln, Spring, Texas 77379  
+Cellular: (435) 237-7373  
+Email: mike.rcccon@yahoo.com
