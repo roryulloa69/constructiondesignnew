@@ -801,3 +801,5 @@ export const getProjectsByCategory = (category: ProjectCategory | "All"): Projec
   if (category === "All") return projects;
   return projects.filter(project => project.category === category);
 };
+
+export const categories = ["All", "Residential Construction", "Residential Development", "Civil", "Hospitality", "Design/Build"] as const;
