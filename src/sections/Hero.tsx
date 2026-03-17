@@ -69,13 +69,13 @@ export const Hero = ({ onExplorePortfolio }: HeroProps) => {
             {heroSlides.map((slide, index) => (
                 <div
                     key={index}
-                    className={`absolute inset-0 transition-opacity [transition-duration:1500ms] ease-in-out ${index === currentSlide ? "opacity-100 z-0" : "opacity-0 -z-10"
+                    className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${index === currentSlide ? "opacity-100 z-0" : "opacity-0 -z-10"
                         }`}
                 >
                     <img
                         src={slide.image}
                         alt={slide.alt}
-                        className={`w-full h-full object-cover transition-transform [transition-duration:12000ms] ease-linear ${index === currentSlide ? "scale-110" : "scale-100"
+                        className={`w-full h-full object-cover transition-transform duration-[12000ms] ease-linear ${index === currentSlide ? "scale-110" : "scale-100"
                             }`}
                         loading={index === 0 ? "eager" : "lazy"}
                     />
@@ -194,7 +194,7 @@ export const Hero = ({ onExplorePortfolio }: HeroProps) => {
             </div>
 
             {/* Scroll indicator */}
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 hidden md:flex flex-col items-center gap-3 animate-in fade-in duration-1000 [animation-delay:2000ms] fill-mode-both">
+            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 hidden md:flex flex-col items-center gap-3 animate-in fade-in duration-1000 delay-[2000ms] fill-mode-both">
                 <span className="font-inter text-[9px] tracking-[0.4em] text-white/30 uppercase">Scroll</span>
                 <div className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent animate-pulse" />
             </div>

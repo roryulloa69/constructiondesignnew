@@ -78,7 +78,7 @@ export const About = () => {
                                 <img
                                     src={mikeProfile}
                                     alt="Michael Chandler - Master Builder"
-                                    className="w-full aspect-[4/5] object-cover grayscale-[15%] transition-all [transition-duration:2000ms] group-hover:scale-[1.03] group-hover:grayscale-0"
+                                    className="w-full aspect-[4/5] object-cover grayscale-[15%] transition-all duration-[2000ms] group-hover:scale-[1.03] group-hover:grayscale-0"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
                             </div>

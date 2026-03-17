@@ -1,6 +1,6 @@
 
 // Project imports
-import syracuseCover from "@/assets/projects/syracuse-cover.jpg";
+import syracuseCover from "@/assets/projects/syracuse-cover-new.webp";
 import syracuse1 from "@/assets/projects/syracuse-1.webp";
 import syracuse2 from "@/assets/projects/syracuse-2.webp";
 import syracuse3 from "@/assets/projects/syracuse-3.webp";
@@ -11,16 +11,16 @@ import syracuse7 from "@/assets/projects/syracuse-7.webp";
 import syracuse8 from "@/assets/projects/syracuse-8.webp";
 import syracuse9 from "@/assets/projects/syracuse-9.webp";
 import syracuse10 from "@/assets/projects/syracuse-10.webp";
-import syracuse11 from "@/assets/projects/syracuse-11.webp";
-import syracuse12 from "@/assets/projects/syracuse-12.webp";
-import syracuse13 from "@/assets/projects/syracuse-13.webp";
+import syracuse37 from "@/assets/projects/syracuse-37.webp";
+import syracuse38 from "@/assets/projects/syracuse-38.webp";
+import syracuse39 from "@/assets/projects/syracuse-39.webp";
+import syracuse40 from "@/assets/projects/syracuse-40.webp";
+import syracuse41 from "@/assets/projects/syracuse-41.webp";
+import syracuse44 from "@/assets/projects/syracuse-44.webp";
+import syracuse45 from "@/assets/projects/syracuse-45.webp";
+import syracuse46 from "@/assets/projects/syracuse-46.webp";
 import syracuse14 from "@/assets/projects/syracuse-14.webp";
 import syracuse15 from "@/assets/projects/syracuse-15.webp";
-import syracuse16 from "@/assets/projects/syracuse-16.webp";
-import syracuse17 from "@/assets/projects/syracuse-17.webp";
-import syracuse18 from "@/assets/projects/syracuse-18.webp";
-import syracuse19 from "@/assets/projects/syracuse-19.webp";
-import syracuse20 from "@/assets/projects/syracuse-20.webp";
 import syracuse21 from "@/assets/projects/syracuse-21.webp";
 import syracuse22 from "@/assets/projects/syracuse-22.webp";
 import syracuse23 from "@/assets/projects/syracuse-23.webp";
@@ -29,24 +29,6 @@ import syracuse25 from "@/assets/projects/syracuse-25.webp";
 import syracuse26 from "@/assets/projects/syracuse-26.webp";
 import syracuse27 from "@/assets/projects/syracuse-27.webp";
 import syracuse28 from "@/assets/projects/syracuse-28.webp";
-import syracuse29 from "@/assets/projects/syracuse-29.webp";
-import syracuse30 from "@/assets/projects/syracuse-30.webp";
-import syracuse31 from "@/assets/projects/syracuse-31.webp";
-import syracuse32 from "@/assets/projects/syracuse-32.webp";
-import syracuse33 from "@/assets/projects/syracuse-33.webp";
-import syracuse34 from "@/assets/projects/syracuse-34.webp";
-import syracuse35 from "@/assets/projects/syracuse-35.webp";
-import syracuse36 from "@/assets/projects/syracuse-36.webp";
-import syracuse37 from "@/assets/projects/syracuse-37.webp";
-import syracuse38 from "@/assets/projects/syracuse-38.webp";
-import syracuse39 from "@/assets/projects/syracuse-39.webp";
-import syracuse40 from "@/assets/projects/syracuse-40.webp";
-import syracuse41 from "@/assets/projects/syracuse-41.webp";
-import syracuse42 from "@/assets/projects/syracuse-42.webp";
-import syracuse43 from "@/assets/projects/syracuse-43.webp";
-import syracuse44 from "@/assets/projects/syracuse-44.webp";
-import syracuse45 from "@/assets/projects/syracuse-45.webp";
-import syracuse46 from "@/assets/projects/syracuse-46.webp";
 import carmel2Cover from "@/assets/projects/carmel-2-cover.webp";
 import carmel2_1 from "@/assets/projects/carmel-2-1.webp";
 import carmel2_2 from "@/assets/projects/carmel-2-2.webp";
@@ -323,7 +305,7 @@ import siteMap from "@/assets/projects/site-map.webp";
 // Hospitality Pool
 import poolTestimonialImage from "@/assets/pool-testimonial.webp";
 import poolDesignCover from "@/assets/projects/pool-design-cover.webp";
-import poolSunsetLights from "@/assets/projects/pool-sunset-lights.webp";
+// Removed poolSunsetLights
 import poolCabanaSunset from "@/assets/projects/pool-cabana-sunset.webp";
 import poolDesign1 from "@/assets/projects/pool-design-1.webp";
 import poolDesign2 from "@/assets/projects/pool-design-2.webp";
@@ -534,77 +516,7 @@ export const projects: Project[] = [
     category: "Design/Build",
     description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
     image: syracuseCover,
-    images: [
-      // HERO COVER SHOTS - Dramatic first impressions
-      syracuseCover,
-      // syracuseNewCover, // Temporarily disabled - file is corrupted HTML
-      
-      // ARRIVAL & EXTERIOR ARCHITECTURE - Approach and full facade views
-      syracuse1,
-      syracuse2,
-      syracuse3,
-      syracuse4,
-      syracuse5,
-      
-      // MAIN EXTERIOR & STONEWORK - Showcasing the 400 tons of stone
-      syracuse6,
-      syracuse7,
-      syracuse8,
-      syracuse9,
-      syracuse10,
-      
-      // LANDSCAPING & WATER FEATURES - The 2-acre landscape
-      syracuse11,
-      syracuse12,
-      syracuse13,
-      syracuse14,
-      syracuse15,
-      
-      // MAIN LIVING SPACES - Living, dining, kitchen areas
-      syracuse16,
-      syracuse17,
-      syracuse18,
-      syracuse19,
-      syracuse20,
-      syracuse21,
-      syracuse22,
-      
-      // INTERIOR DETAILS & CRAFTSMAN FEATURES
-      syracuse23,
-      syracuse24,
-      syracuse25,
-      syracuse26,
-      syracuse27,
-      
-      // PRIVATE SPACES - Bedrooms and bathrooms
-      syracuse28,
-      syracuse29,
-      syracuse30,
-      syracuse31,
-      syracuse32,
-      
-      // SPECIAL FEATURES - 6-car garage/workshop and details
-      syracuse33,
-      syracuse34,
-      syracuse35,
-      syracuse36,
-      syracuse37,
-      
-      // EQUESTRIAN FACILITIES - Horse barn and stalls
-      syracuse38,
-      syracuse39,
-      syracuse40,
-      
-      // OUTDOOR LIVING & HARDSCAPING
-      syracuse41,
-      syracuse42,
-      syracuse43,
-      
-      // EVENING/TWILIGHT SHOTS - Low-voltage lighting displays
-      syracuse44,
-      syracuse45,
-      syracuse46
-    ],
+    images: [syracuseCover, syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6, syracuse7, syracuse8, syracuse9, syracuse10, syracuse14, syracuse15, syracuse21, syracuse22, syracuse23, syracuse24, syracuse25, syracuse26, syracuse27, syracuse28, syracuse37, syracuse38, syracuse39, syracuse40, syracuse41, syracuse44, syracuse45, syracuse46],
     sqft: 6200,
     duration: "18 months",
     features: ["Craftsman Style", "2-Acre Landscape", "Water Features", "400 Tons Stone"],
@@ -636,48 +548,8 @@ export const projects: Project[] = [
     additionalInfo: "SE Texas",
     category: "Hospitality",
     description: "We orchestrated the creation of a 189,000 gallon ultra-luxury private club amenity, a project that demanded the coordination of over 15 specialty trades. The centerpiece is a 189,000 gallon free-form pool with a swim-up bar, complemented by two beautiful Int. Design 1,200 sq ft pool houses. The design, inspired by 1950s New York smoking clubs, features imported travertine and 10' high solid mahogany wood walls and doors. This 18-month project delivered a resort-style oasis with professional landscaping, fire pits, and an outdoor kitchen, setting a new standard for private club luxury.",
-    image: poolDesignCover,
-    images: [
-      poolDesignCover,
-      poolDesign11,
-      poolDesign12,
-      poolDesign10,
-      poolDesign3,
-      poolDesign2,
-      poolDesign4,
-      poolDesign5,
-      poolDesign6,
-      poolDesign7,
-      poolDesign8,
-      poolDesign9,
-      poolDesign13,
-      poolDesign14,
-      poolDesign15,
-      poolDesign16,
-      poolDesign17,
-      poolDesign18,
-      poolDesign19,
-      poolDesign20,
-      poolDesign21,
-      poolDesign22,
-      poolDesign23,
-      poolDesign24,
-      poolDesign25,
-      poolDesign26,
-      poolDesign27,
-      poolDesign28,
-      poolDesign29,
-      poolDesign30,
-      poolDesign31,
-      poolDesign32,
-      poolDesign33,
-      poolDesign34,
-      poolDesign35,
-      poolDesign36,
-      poolDesign37,
-      poolCabanaSunset,
-      poolSunsetLights,
-    ],
+    image: poolCabanaSunset,
+    images: [poolCabanaSunset, poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
     sqft: 189000,
     duration: "18 months",
     features: ["189,000 Gallon", "3-Acre Project", "Swim-up Bar", "Pool Houses", "Imported Travertine"],
@@ -921,15 +793,6 @@ export const projects: Project[] = [
   },
 ];
 
-export const categories = [
-  "All",
-  "Residential Construction",
-  "Residential Development",
-  "Civil",
-  "Hospitality",
-  "Design/Build",
-] as const;
-
 export const getProjectById = (id: string): Project | undefined => {
   return projects.find(project => project.id === id);
 };
@@ -938,3 +801,5 @@ export const getProjectsByCategory = (category: ProjectCategory | "All"): Projec
   if (category === "All") return projects;
   return projects.filter(project => project.category === category);
 };
+
+export const categories = ["All", "Residential Construction", "Residential Development", "Civil", "Hospitality", "Design/Build"] as const;
