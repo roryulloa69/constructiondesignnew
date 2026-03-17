@@ -68,7 +68,7 @@ export const SortableImageCard = ({ image, onRotate, onDelete }: SortableImageCa
           <Button
             variant="outline"
             size="sm"
-            onClick={() => onRotate(image.id, image.rotation_angle)}
+            onClick={() => onRotate(image.id, image.rotation_angle ?? 0)}
             className="flex-1"
           >
             <RotateCw className="h-4 w-4" />
