@@ -369,7 +369,7 @@ export const ImageGalleryManager = () => {
                     </div>
                     <div className="flex items-center gap-1.5">
                       <Checkbox
-                        checked={image.is_after}
+                        checked={image.is_after ?? false}
                         onCheckedChange={() => toggleBeforeAfter(image, 'is_after')}
                       />
                       <Label className="text-xs cursor-pointer">After</Label>

@@ -9,7 +9,7 @@ interface ProjectImage {
   image_url: string;
   title: string | null;
   description: string | null;
-  rotation_angle: number;
+  rotation_angle: number | null;
   display_order: number;
 }
 
