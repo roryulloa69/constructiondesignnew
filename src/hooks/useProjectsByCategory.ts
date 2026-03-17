@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 interface ProjectImage {
   id: string;
   image_url: string;
-  rotation_angle: number;
+  rotation_angle: number | null;
   display_order: number;
 }
 
@@ -13,7 +13,7 @@ interface Project {
   title: string;
   description: string | null;
   category: string;
-  display_order: number;
+  display_order: number | null;
   image_url?: string;
   rotation_angle?: number;
   images?: ProjectImage[];
@@ -23,8 +23,6 @@ export const useProjectsByCategory = (category: string | string[]) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
-
-  const categoryKey = JSON.stringify(category);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -59,10 +57,9 @@ export const useProjectsByCategory = (category: string | string[]) => {
 
         // Transform data
         const projectsWithImages = (data || []).map((project) => {
-          // Sort images by display_order locally
-          const sortedImages = (project.project_images as ProjectImage[] || []).sort(
-            (a: ProjectImage, b: ProjectImage) => (a.display_order || 0) - (b.display_order || 0)
-          );
+          // Sort images by display_order locally as we can't easily order nested relation in Supabase JS client v2 in all cases, 
+          // though we could try. But local sort is safe.
+          const sortedImages = (project.project_images || []).sort((a: any, b: any) => (a.display_order || 0) - (b.display_order || 0));
 
           return {
             ...project,
@@ -86,7 +83,7 @@ export const useProjectsByCategory = (category: string | string[]) => {
     if (category) {
       fetchProjects();
     }
-  }, [categoryKey]);
+  }, [JSON.stringify(category)]);
 
   return { projects, loading, error };
 };

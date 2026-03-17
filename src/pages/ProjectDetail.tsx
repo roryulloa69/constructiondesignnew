@@ -13,7 +13,7 @@ interface ProjectVideo {
   video_url: string;
   title: string | null;
   description: string | null;
-  display_order: number;
+  display_order: number | null;
 }
 interface ProjectImage {
   id: string;
@@ -22,8 +22,8 @@ interface ProjectImage {
   title: string | null;
   description: string | null;
   display_order: number;
-  is_before: boolean;
-  is_after: boolean;
+  is_before: boolean | null;
+  is_after: boolean | null;
 }
 interface ProjectDocument {
   id: string;
