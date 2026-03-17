@@ -17,8 +17,8 @@ interface ProjectImage {
   title: string | null;
   description: string | null;
   display_order: number;
-  is_before: boolean;
-  is_after: boolean;
+  is_before: boolean | null;
+  is_after: boolean | null;
 }
 
 export const ImageGalleryManager = () => {

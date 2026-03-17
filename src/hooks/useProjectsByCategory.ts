@@ -13,7 +13,7 @@ interface Project {
   title: string;
   description: string | null;
   category: string;
-  display_order: number;
+  display_order: number | null;
   image_url?: string;
   rotation_angle?: number;
   images?: ProjectImage[];

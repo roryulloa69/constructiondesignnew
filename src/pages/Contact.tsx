@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const { error } = await supabase.from("contact_submissions").insert({
+      const { error } = await supabase.from("client_leads").insert({
         name: values.name,
         email: values.email,
         phone: values.phone || null,
