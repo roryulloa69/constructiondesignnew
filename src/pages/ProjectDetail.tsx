@@ -339,6 +339,14 @@ const ProjectDetail = () => {
                 });
               }}
             />
+          ) : isAdmin && hasStaticImages && project?.images ? (
+            <ReorderableStaticGallery
+              projectId={id!}
+              images={project.images.filter(img => img != null)}
+              projectTitle={project.title}
+              onImageClick={(index) => setSelectedImageIndex(index)}
+              onReorderedImages={setReorderedStaticImages}
+            />
           ) : (
             <>
               {/* Cover Photo - First Image */}
