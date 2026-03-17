@@ -8,6 +8,7 @@ import { VideoPlayer } from "@/components/VideoPlayer";
 import { ImageWithWatermark } from "@/components/ImageWithWatermark";
 import { useAuth } from "@/contexts/AuthContext";
 import { ReorderableGallery } from "@/components/admin/ReorderableGallery";
+import { ReorderableStaticGallery } from "@/components/admin/ReorderableStaticGallery";
 interface ProjectVideo {
   id: string;
   video_url: string;
