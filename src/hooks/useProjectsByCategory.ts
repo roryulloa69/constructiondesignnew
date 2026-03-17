@@ -19,6 +19,10 @@ interface Project {
   images?: ProjectImage[];
 }
 
+interface ProjectWithImages extends Project {
+  project_images?: ProjectImage[];
+}
+
 export const useProjectsByCategory = (category: string | string[]) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
@@ -56,10 +60,12 @@ export const useProjectsByCategory = (category: string | string[]) => {
         if (queryError) throw queryError;
 
         // Transform data
-        const projectsWithImages = (data || []).map((project) => {
+        const projectsWithImages = ((data || []) as ProjectWithImages[]).map((project) => {
           // Sort images by display_order locally as we can't easily order nested relation in Supabase JS client v2 in all cases, 
           // though we could try. But local sort is safe.
-          const sortedImages = (project.project_images || []).sort((a: any, b: any) => (a.display_order || 0) - (b.display_order || 0));
+          const sortedImages = (project.project_images || []).sort(
+            (a, b) => (a.display_order || 0) - (b.display_order || 0)
+          );
 
           return {
             ...project,
@@ -83,7 +89,7 @@ export const useProjectsByCategory = (category: string | string[]) => {
     if (category) {
       fetchProjects();
     }
-  }, [JSON.stringify(category)]);
+  }, [category]);
 
   return { projects, loading, error };
 };

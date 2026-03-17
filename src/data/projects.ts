@@ -921,6 +921,15 @@ export const projects: Project[] = [
   },
 ];
 
+export const categories = [
+  "All",
+  "Residential Construction",
+  "Residential Development",
+  "Civil",
+  "Hospitality",
+  "Design/Build",
+] as const;
+
 export const getProjectById = (id: string): Project | undefined => {
   return projects.find(project => project.id === id);
 };

@@ -49,7 +49,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, ca
               src={coverImage}
               alt={project.title}
               objectFit="cover"
-              className="relative z-10 w-full h-full group-hover:scale-105 transition-transform duration-[800ms] ease-out"
+              className="relative z-10 w-full h-full group-hover:scale-105 transition-transform [transition-duration:800ms] ease-out"
             />
           </ImageWithWatermark>
 

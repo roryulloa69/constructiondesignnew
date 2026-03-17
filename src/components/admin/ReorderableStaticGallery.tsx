@@ -163,7 +163,7 @@ export const ReorderableStaticGallery = ({
   // Notify parent of current order
   useEffect(() => {
     onReorderedImages(localImages.map(img => img.url));
-  }, [localImages]);
+  }, [localImages, onReorderedImages]);
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;

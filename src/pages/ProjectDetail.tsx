@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, X, ChevronLeft, ChevronRight, Square, Bed, Droplets, Check, CalendarDays, Award, Wallet, Download, Maximize2, Filter, FileText } from "lucide-react";
 import { getProjectById } from "@/data/projects";
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { ImageWithWatermark } from "@/components/ImageWithWatermark";
@@ -122,8 +122,12 @@ const ProjectDetail = () => {
     }
     return [];
   }, [hasStaticImages, project?.images, dbImages]);
-  const validDbImages = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
-  const getImageLabel = (imageUrl: string, index: number): string | null => {
+  const validDbImages = useMemo(
+    () => dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://'))),
+    [dbImages]
+  );
+
+  const getImageLabel = useCallback((imageUrl: string, _index: number): string | null => {
     const dbImage = validDbImages.find(img => img.image_url === imageUrl);
     if (dbImage?.is_before) return "Before";
     if (dbImage?.is_after) return "After";
@@ -131,13 +135,13 @@ const ProjectDetail = () => {
     if (fileName.includes("before")) return "Before";
     if (fileName.includes("after")) return "After";
     return null;
-  };
+  }, [validDbImages]);
 
   // Filter gallery images based on selected filter
   const filteredImages = useMemo(() => {
     if (galleryFilter === 'all') return allImages;
     return allImages.filter((img, idx) => getImageLabel(img, idx) !== null);
-  }, [allImages, galleryFilter]);
+  }, [allImages, galleryFilter, getImageLabel]);
 
   // Download image helper
   const downloadImage = (imageUrl: string, fileName: string) => {
@@ -365,8 +369,8 @@ const ProjectDetail = () => {
               <Wallet className="h-5 w-5 text-accent mx-auto mb-2" />
               <p className="font-playfair text-lg text-foreground">{project.budget}</p>
               <p className="font-inter text-xs text-muted-foreground uppercase tracking-wider">Budget</p>
-            </div>
-          </div>}
+            </div>}
+          </div>
           </div>}
 
           {/* My Role Section */}
