@@ -120,16 +120,18 @@ const ProjectDetail = () => {
     fetchDocuments();
   }, [id]);
   const hasStaticImages = project?.images && Array.isArray(project.images) && project.images.length > 0;
+  const [reorderedStaticImages, setReorderedStaticImages] = useState<string[] | null>(null);
   const allImages = useMemo(() => {
     if (hasStaticImages && project?.images) {
-      return project.images.filter(img => img != null);
+      const staticImgs = project.images.filter(img => img != null);
+      return reorderedStaticImages ?? staticImgs;
     }
-    const validDbImages = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
-    if (validDbImages.length > 0) {
-      return validDbImages.map(img => img.image_url);
+    const validDbImgs = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
+    if (validDbImgs.length > 0) {
+      return validDbImgs.map(img => img.image_url);
     }
     return [];
-  }, [hasStaticImages, project?.images, dbImages]);
+  }, [hasStaticImages, project?.images, dbImages, reorderedStaticImages]);
   const validDbImages = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
   const getImageLabel = (imageUrl: string, index: number): string | null => {
     const dbImage = validDbImages.find(img => img.image_url === imageUrl);
