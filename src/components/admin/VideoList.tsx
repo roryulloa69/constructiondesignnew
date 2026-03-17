@@ -10,8 +10,8 @@ interface Video {
   video_url: string;
   title: string | null;
   description: string | null;
-  display_order: number;
-  created_at: string;
+  display_order: number | null;
+  created_at: string | null;
 }
 
 interface VideoListProps {

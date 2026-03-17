@@ -15,7 +15,11 @@ const Auth = lazy(() => import("./pages/Auth"));
 const Admin = lazy(() => import("./pages/Admin"));
 const AdminUsers = lazy(() => import("./pages/AdminUsers"));
 const Login = lazy(() => import("./pages/Login"));
+const Signup = lazy(() => import("./pages/Signup"));
 const Design = lazy(() => import("./pages/Design"));
+const DesignDetail = lazy(() => import("./pages/DesignDetail"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -38,6 +42,14 @@ const routes = [
     element: <ProjectDetail />,
   },
   {
+    path: "/portfolio",
+    element: <Portfolio />,
+  },
+  {
+    path: "/services",
+    element: <Services />,
+  },
+  {
     path: "/auth",
     element: <Auth />,
   },
@@ -54,12 +66,20 @@ const routes = [
     element: <Login />,
   },
   {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
     path: "/contact",
     element: <Contact />,
   },
   {
     path: "/design",
     element: <Design />,
+  },
+  {
+    path: "/design/:id",
+    element: <DesignDetail />,
   },
   {
     path: "*",

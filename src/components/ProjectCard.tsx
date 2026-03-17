@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ImageWithWatermark } from "@/components/ImageWithWatermark";
 import { ProgressiveImage } from "@/components/ProgressiveImage";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { ArrowRight } from "lucide-react";
 
 interface ProjectCardProps {
   project: {
@@ -27,7 +28,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, ca
 
   const coverImage = project.images[0];
 
-  // Format category with bullet separator
   const formattedCategory = project.category
     .replace(" ", " • ")
     .replace("/", " • ");
@@ -40,56 +40,53 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, ca
     >
       <Link
         to={`/projects/${project.id}`}
-        className="block hover-scale"
+        className="block"
       >
-        {/* Image Container with Blurred Background Frame */}
-        <div className="relative aspect-[4/3] overflow-hidden mb-4 bg-charcoal/5 rounded-lg">
-          {/* Blurred background as a subtle frame */}
-          <img
-            src={coverImage}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-20 scale-110 pointer-events-none"
-            aria-hidden="true"
-          />
-
+        {/* Image Container */}
+        <div className="relative aspect-[4/3] overflow-hidden mb-5 bg-charcoal/5">
           <ImageWithWatermark>
             <ProgressiveImage
               src={coverImage}
               alt={project.title}
               objectFit="cover"
-              className="relative z-10 w-full h-full group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              className="relative z-10 w-full h-full group-hover:scale-105 transition-transform duration-[800ms] ease-out"
             />
           </ImageWithWatermark>
 
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-20 opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
 
-          {/* Category Badge - Bottom Left */}
-          <div className="absolute bottom-3 left-3 z-10">
-            <span className="bg-charcoal/80 text-white px-3 py-1.5 text-[10px] font-medium uppercase tracking-wider backdrop-blur-sm rounded-sm">
+          {/* Category Badge */}
+          <div className="absolute bottom-3 left-3 z-30">
+            <span className="bg-charcoal/80 text-white px-3 py-1.5 text-[9px] font-medium uppercase tracking-[0.15em] backdrop-blur-md">
               {formattedCategory}
             </span>
           </div>
+
+          {/* Hover arrow */}
+          <div className="absolute top-3 right-3 z-30 w-9 h-9 border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-charcoal/30 backdrop-blur-sm">
+            <ArrowRight className="h-3.5 w-3.5 text-white" />
+          </div>
         </div>
 
-        {/* Project Info - Title, Subtitle, Location */}
-        <div className="space-y-0.5">
-          <h3 className="font-inter text-base text-charcoal group-hover:text-gold transition-colors duration-300">
+        {/* Project Info */}
+        <div className="space-y-1">
+          <h3 className="font-playfair text-lg text-charcoal group-hover:text-gold transition-colors duration-500">
             {project.title}
           </h3>
           {project.subtitle && (
-            <p className="font-inter text-base text-charcoal">
+            <p className="font-inter text-sm text-charcoal/60 font-light">
               {project.subtitle}
             </p>
           )}
           {project.location && (
-            <p className="font-inter text-sm text-charcoal/50 mt-1">
+            <p className="font-inter text-xs text-charcoal/40 mt-1.5 tracking-wide">
               {project.location}
             </p>
           )}
         </div>
-      </Link >
-    </div >
+      </Link>
+    </div>
   );
 });
 
