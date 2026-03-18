@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -17,7 +17,6 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -50,32 +49,20 @@ const Contact: React.FC = () => {
     },
   });
 
-  useEffect(() => {
-    document.title = "Contact | Michael Chandler Construction & Design";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute("content", "Contact Michael Chandler Construction & Design for a consultation. 37+ years of experience in luxury residential and commercial construction.");
-    }
-  }, []);
-
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const { error } = await supabase.from("client_leads").insert({
-        name: values.name,
-        email: values.email,
-        phone: values.phone || null,
-        project_type: values.projectType,
-        message: values.message,
-      });
-
-      if (error) throw error;
-
+      // Here you would integrate with your email service (e.g., EmailJS, SendGrid, Supabase)
+      // Form submission - avoid logging PII in production
+      
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      
       setIsSubmitted(true);
       toast({
         title: "Message sent!",
         description: "Thank you for contacting us. We'll get back to you soon.",
       });
-
+      
       form.reset();
     } catch (error) {
       toast({

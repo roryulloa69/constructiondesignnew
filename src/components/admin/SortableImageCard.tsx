@@ -9,7 +9,7 @@ interface ProjectImage {
   image_url: string;
   title: string | null;
   description: string | null;
-  rotation_angle: number | null;
+  rotation_angle: number;
   display_order: number;
 }
 
@@ -68,7 +68,7 @@ export const SortableImageCard = ({ image, onRotate, onDelete }: SortableImageCa
           <Button
             variant="outline"
             size="sm"
-            onClick={() => onRotate(image.id, image.rotation_angle ?? 0)}
+            onClick={() => onRotate(image.id, image.rotation_angle)}
             className="flex-1"
           >
             <RotateCw className="h-4 w-4" />

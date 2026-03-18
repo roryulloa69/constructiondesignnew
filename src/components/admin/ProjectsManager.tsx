@@ -107,8 +107,8 @@ export const ProjectsManager = () => {
       title: project.title,
       description: project.description || "",
       category: project.category,
-      featured: project.featured ?? false,
-      display_order: project.display_order ?? 0,
+      featured: project.featured,
+      display_order: project.display_order,
     });
     setShowForm(true);
   };

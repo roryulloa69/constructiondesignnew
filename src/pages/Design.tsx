@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -20,14 +19,6 @@ import detailLeatherCabinetry from "@/assets/projects/laguna-cover.webp";
 
 const Design = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    document.title = "Design Portfolio | Michael Chandler Construction & Design";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute("content", "Explore 30+ years of curated interior and architectural design by Michael Chandler. Luxury residential and commercial projects.");
-    }
-  }, []);
 
   // Animation hooks for different sections
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.1 });
@@ -85,7 +76,7 @@ const Design = () => {
             <img 
               src={detailOceanviewFraming} 
               alt="Ocean View" 
-              loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
           </div>
@@ -96,21 +87,21 @@ const Design = () => {
               <img 
                 src={detailBronzeBase} 
                 alt="Detail 1" 
-                loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
             <div className="relative overflow-hidden group h-full mt-8 lg:mt-12">
               <img 
                 src={detailPendantLighting} 
                 alt="Detail 2" 
-                loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
             <div className="relative overflow-hidden group h-full">
               <img 
                 src={detailMarbleBath} 
                 alt="Detail 3" 
-                loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
           </div>
@@ -129,7 +120,7 @@ const Design = () => {
               <img 
                 src={detailTimberBeams} 
                 alt="Timber Beams" 
-                loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute bottom-4 left-4 text-xs font-inter tracking-widest text-white/80 uppercase">Architecture</div>
             </div>
@@ -137,7 +128,7 @@ const Design = () => {
               <img 
                 src={detailLimestoneFireplace} 
                 alt="Fireplace" 
-                loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           </div>
@@ -160,14 +151,14 @@ const Design = () => {
                <img 
                 src={detailProRange} 
                 alt="Kitchen" 
-                loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div className="aspect-[3/4] relative overflow-hidden group">
                <img 
                 src={detailSkiStorage} 
                 alt="Storage" 
-                loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div className="aspect-[3/4] relative overflow-hidden group bg-white/5 flex items-center justify-center">
@@ -180,7 +171,7 @@ const Design = () => {
                <img 
                 src={detailSpaVanity} 
                 alt="Spa" 
-                loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           </div>
@@ -204,7 +195,7 @@ const Design = () => {
             <img 
               src={detailLeatherCabinetry} 
               alt="Interior Detail" 
-              loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
           </div>
         </div>

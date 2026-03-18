@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 interface ProjectImage {
   id: string;
   image_url: string;
-  rotation_angle: number | null;
+  rotation_angle: number;
   display_order: number;
 }
 
@@ -13,7 +13,7 @@ interface Project {
   title: string;
   description: string | null;
   category: string;
-  display_order: number | null;
+  display_order: number;
   image_url?: string;
   rotation_angle?: number;
   images?: ProjectImage[];

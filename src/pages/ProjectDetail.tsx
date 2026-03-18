@@ -47,16 +47,6 @@ const ProjectDetail = () => {
   const heroImgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    if (project) {
-      document.title = `${project.title} | Michael Chandler Construction & Design`;
-      const meta = document.querySelector('meta[name="description"]');
-      if (meta) {
-        meta.setAttribute("content", `${project.title} — ${project.category} project${project.location ? ` in ${project.location}` : ""}. View details, gallery, and videos.`);
-      }
-    }
-  }, [project]);
-
-  useEffect(() => {
     if (heroImgRef.current) {
       heroImgRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
       heroImgRef.current.style.transition = 'transform 0.1s ease-out';
@@ -354,7 +344,7 @@ const ProjectDetail = () => {
                   <img
                     src={allImages[0]}
                     alt={`${project.title} - Cover`}
-                    loading="lazy" decoding="async" className="relative z-10 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image"
+                    className="relative z-10 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image"
                   />
                 </button>
               </ImageWithWatermark>}
@@ -373,7 +363,7 @@ const ProjectDetail = () => {
                         className="absolute inset-0 w-full h-full object-cover blur-xl opacity-20 scale-110"
                         aria-hidden="true"
                       />
-                      <img src={image} alt={`${project.title} - Image ${actualIndex + 1}`} loading="lazy" decoding="async" className="relative z-10 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 gallery-image" />
+                      <img src={image} alt={`${project.title} - Image ${actualIndex + 1}`} className="relative z-10 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 gallery-image" />
                       {label && <span className={`absolute top-2 right-2 px-2 py-1 text-xs font-semibold text-white rounded ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>
                         {label}
                       </span>}
