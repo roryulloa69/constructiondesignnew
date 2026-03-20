@@ -2,7 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import logo from "@/assets/mc-logo-new.png";
+
+// Text-based logo component
+const LogoText = ({ className = "" }: { className?: string }) => (
+  <span className={`font-playfair text-3xl font-semibold tracking-tight ${className}`}>
+    <span className="text-gold">MC</span>
+    <span className="text-charcoal/80 font-light ml-1">Design</span>
+  </span>
+);
 
 interface BookCoverHeroProps {
   onOpenBook: () => void;

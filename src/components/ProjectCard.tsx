@@ -5,6 +5,11 @@ import { ProgressiveImage } from "@/components/ProgressiveImage";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowRight } from "lucide-react";
 
+interface ProjectImage {
+  url: string;
+  alt: string;
+}
+
 interface ProjectCardProps {
   project: {
     id: string;
@@ -12,7 +17,8 @@ interface ProjectCardProps {
     subtitle?: string;
     category: string;
     location?: string;
-    images: string[];
+    coverImage?: string;
+    images: (string | ProjectImage)[];
   };
   categoryColor: string;
   index: number;
@@ -26,7 +32,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, ca
     threshold: 0.1
   });
 
-  const coverImage = project.images[0];
+  // Handle both coverImage and images array (with string or object format)
+  const getImageUrl = (img: string | ProjectImage): string => {
+    return typeof img === 'string' ? img : img.url;
+  };
+  
+  const coverImage = project.coverImage || (project.images[0] ? getImageUrl(project.images[0]) : '');
 
   const formattedCategory = project.category
     .replace(" ", " • ")

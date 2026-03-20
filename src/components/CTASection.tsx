@@ -2,7 +2,9 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import developmentCover from "@/assets/projects/development-cover.webp";
+import { getPlaceholderImage } from "@/lib/images";
+
+const developmentCover = getPlaceholderImage("cta-development", "construction");
 
 export const CTASection = () => {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.2 });

@@ -1,5 +1,8 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import mikeProfile from "@/assets/michael-chandler.webp";
+import { getPlaceholderImage } from "@/lib/images";
+
+// Use a professional placeholder image
+const mikeProfile = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80";
 
 export const About = () => {
     const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
