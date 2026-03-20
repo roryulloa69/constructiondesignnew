@@ -2,12 +2,12 @@ import React, { useState, useMemo, useCallback, useEffect } from "react";
 import { ArrowLeft, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { projects, getProjectsByCategory, type ProjectCategory } from "@/data/projects";
+import { projects, getProjectsByCategory, categories as projectCategories, type ProjectCategory } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
-type Category = "All" | ProjectCategory;
+type Category = ProjectCategory;
 
-const categories: Category[] = ["All", "Residential Construction", "Residential Development", "Civil", "Hospitality", "Design/Build"];
+const categories = projectCategories;
 
 const categoryColors: Record<string, string> = {
   "Residential Construction": "bg-gold text-charcoal",

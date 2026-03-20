@@ -19,7 +19,11 @@ export const BackgroundCollage = () => {
     projects.forEach((project) => {
       if (project.images && project.images.length > 0) {
         // Take up to 3 images from each project
-        allImages.push(...project.images.slice(0, 3));
+        // Handle both string and object image formats
+        const projectImages = project.images.slice(0, 3).map(img => 
+          typeof img === 'string' ? img : img.url
+        );
+        allImages.push(...projectImages);
       }
     });
 

@@ -1,5 +1,11 @@
 import { ReactNode } from "react";
-import logo from "@/assets/mc-logo.png";
+
+// Text-based watermark component
+const WatermarkLogo = () => (
+  <span className="font-playfair text-2xl font-semibold tracking-tight opacity-[0.08] select-none text-charcoal">
+    MC
+  </span>
+);
 
 interface ImageWithWatermarkProps {
   children: ReactNode;
@@ -15,11 +21,7 @@ export const ImageWithWatermark = ({ children }: ImageWithWatermarkProps) => {
         >
           {[...Array(9)].map((_, i) => (
             <div key={i} className="flex items-center justify-center">
-              <img
-                src={logo}
-                alt=""
-                className="w-24 h-24 object-contain opacity-[0.12] select-none"
-              />
+              <WatermarkLogo />
             </div>
           ))}
         </div>

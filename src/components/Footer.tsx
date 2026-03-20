@@ -1,7 +1,14 @@
 import React, { useMemo, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AtSign, Smartphone, Navigation } from "lucide-react";
-import logo from "@/assets/mc-logo-new.png";
+
+// Text-based logo component
+const LogoText = ({ className = "" }: { className?: string }) => (
+  <span className={`font-playfair text-2xl font-semibold tracking-tight ${className}`}>
+    <span className="text-gold">MC</span>
+    <span className="text-cream/80 font-light ml-1">Design</span>
+  </span>
+);
 
 export const Footer = React.memo(() => {
   const currentYear = useMemo(() => new Date().getFullYear(), []);
@@ -31,8 +38,7 @@ export const Footer = React.memo(() => {
           {/* Left Column - Brand */}
           <div>
             <div className="mb-4 sm:mb-5">
-              <img src={logo} alt="Michael Chandler Logo" className="h-12 w-auto mb-3" />
-
+              <LogoText className="block mb-3" />
               <p className="text-cream/80 text-sm sm:text-base font-inter mb-4 leading-relaxed">
                 Fine Construction & Design
               </p>

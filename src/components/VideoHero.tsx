@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/mc-logo.png";
-import heroVideo from "@/assets/hero-video.mp4";
+import { getPlaceholderImage } from "@/lib/images";
+
+// Text-based logo component
+const LogoText = ({ className = "" }: { className?: string }) => (
+  <span className={`font-playfair text-3xl font-semibold tracking-tight ${className}`}>
+    <span className="text-gold">MC</span>
+    <span className="text-white/80 font-light ml-1">Design</span>
+  </span>
+);
+
+// Placeholder - video not available
+const heroVideo = "";
 
 interface VideoHeroProps {
   onOpenPortfolio: () => void;

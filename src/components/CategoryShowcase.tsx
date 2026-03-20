@@ -1,34 +1,31 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import residentialImg from "@/assets/category-residential.webp";
-import commercialImg from "@/assets/category-commercial.webp";
-import hospitalityImg from "@/assets/category-hospitality.webp";
-import designBuildImg from "@/assets/category-design-build.webp";
-import pacificGroveImg from "@/assets/category-pacific-grove.webp";
+import { getPlaceholderImage } from "@/lib/images";
+
 const categories = [{
   id: "residential",
   title: "Residential Construction",
   description: "Luxury homes and sophisticated living spaces designed for modern lifestyles",
-  image: residentialImg,
+  image: getPlaceholderImage("category-residential", "architecture"),
   color: "gold"
 }, {
   id: "civil",
   title: "Civil",
   description: "Infrastructure and civil engineering projects that build communities",
-  image: commercialImg,
+  image: getPlaceholderImage("category-commercial", "construction"),
   color: "steelBlue"
 }, {
   id: "hospitality",
   title: "Hospitality",
   description: "Elegant dining and entertainment venues that create memorable experiences",
-  image: hospitalityImg,
+  image: getPlaceholderImage("category-hospitality", "interior"),
   color: "burgundy"
 }, {
   id: "design-build",
   title: "Design Build",
   description: "Comprehensive design-build solutions combining creative vision with expert construction",
-  image: designBuildImg,
+  image: getPlaceholderImage("category-design-build", "architecture"),
   color: "gold"
 }];
 interface CategoryShowcaseProps {
