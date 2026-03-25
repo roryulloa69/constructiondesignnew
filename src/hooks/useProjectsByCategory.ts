@@ -59,7 +59,9 @@ export const useProjectsByCategory = (category: string | string[]) => {
         const projectsWithImages = (data || []).map((project) => {
           // Sort images by display_order locally as we can't easily order nested relation in Supabase JS client v2 in all cases, 
           // though we could try. But local sort is safe.
-          const sortedImages = (project.project_images || []).sort((a: any, b: any) => (a.display_order || 0) - (b.display_order || 0));
+          const sortedImages = (project.project_images || []).sort(
+            (a: ProjectImage, b: ProjectImage) => (a.display_order || 0) - (b.display_order || 0)
+          );
 
           return {
             ...project,
@@ -83,6 +85,7 @@ export const useProjectsByCategory = (category: string | string[]) => {
     if (category) {
       fetchProjects();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- category is serialized to prevent object/array reference re-triggers
   }, [JSON.stringify(category)]);
 
   return { projects, loading, error };
