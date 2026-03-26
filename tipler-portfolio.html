@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC Design | Michael Chandler Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Google Fonts: Premium Serif and Sans-Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: '#D4AF37',
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        light: '#f4f4f5'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #f4f4f5;
+        }
+        
+        /* Custom Scrollbar for a polished feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+        .project-card { 
+            position: relative;
+            display: block; 
+            overflow: hidden;
+            border-radius: 4px; /* subtle softening over stark corners */
+        }
+        
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Premium slow zoom & dim on hover */
+        .img-container img { 
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease; 
+            will-change: transform;
+            filter: brightness(0.8);
+            object-fit: cover;
+        }
+        
+        .project-card:hover img { 
+            transform: scale(1.08); 
+            filter: brightness(0.4);
+        }
+
+        /* Elegant dark bottom-to-top gradient for legibility */
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 65%);
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            pointer-events: none;
+        }
+
+        .project-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        /* Text reveal sliding up with the line expanding */
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2.5rem;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+        }
+
+        .project-card:hover .card-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Animated Filter Tabs */
+        .filter-btn {
+            position: relative;
+            padding-bottom: 6px;
+        }
+        
+        .filter-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #D4AF37;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .filter-btn.active::after, .filter-btn:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .filter-btn.active {
+            color: #fff;
+        }
+        
+        /* Frosted Glass Navigation */
+        .nav-blur {
+            background: rgba(5, 5, 5, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        /* Text Masking Utility for GSAP */
+        .reveal-text {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        .reveal-text span {
+            display: inline-block;
+            transform: translateY(110%);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-light selection:bg-gold selection:text-dark">
+
+    <nav class="fixed top-0 left-0 w-full px-8 lg:px-16 py-6 nav-blur z-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 nav-container opacity-0">
+        <div>
+            <h1 class="font-serif text-3xl font-normal tracking-[0.1em] text-white">MC DESIGN</h1>
+            <p class="text-[9px] text-zinc-400 tracking-[0.4em] mt-2 uppercase">Michael Chandler</p>
+        </div>
+        
+        <div class="flex flex-wrap gap-x-8 gap-y-4 text-[11px] uppercase tracking-[0.2em] font-medium text-zinc-400">
+            <button class="filter-btn active transition-colors hover:text-white" onclick="filterProjects('all')">All Works</button>
+            <button class="filter-btn transition-colors hover:text-white" onclick="filterProjects('residential')">Residential</button>
+            <button class="filter-btn transition-colors hover:text-white" onclick="filterProjects('civil')">Civil & Commercial</button>
+            <button class="filter-btn transition-colors hover:text-white" onclick="filterProjects('mountain')">Mountain & Coastal</button>
+        </div>
+    </nav>
+
+    <header class="pt-48 pb-24 px-8 lg:px-16 max-w-[1600px] mx-auto hero-container">
+        <h2 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-light leading-tight text-white mb-8 reveal-text">
+            <span>Crafting <i class="text-gold">extraordinary</i></span><br/>
+            <span>spaces that redefine</span><br/>
+            <span>modern luxury.</span>
+        </h2>
+        <p class="text-zinc-400 max-w-xl text-lg lg:text-xl font-light leading-relaxed hero-desc opacity-0 transform translate-y-4">
+            An exclusive exhibition of 19 projects spanning elite residential estates, high alpine ranches, and expansive coastal developments.
+        </p>
+    </header>
+
+    <main class="px-8 lg:px-16 pb-32 max-w-[1600px] mx-auto">
+        <!-- Using CSS Grid with explicit row sizing to build a masonry-style feel via spans -->
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px] md:auto-rows-[450px]">
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 py-16 px-8 lg:px-16 text-center lg:text-left flex flex-col lg:flex-row justify-between items-center gap-8">
+        <div>
+            <h2 class="font-serif text-3xl tracking-widest text-white mb-2">MC DESIGN</h2>
+            <p class="text-[10px] text-zinc-500 tracking-[0.3em] uppercase">Architecture & Interiors</p>
+        </div>
+        <p class="text-[10px] text-zinc-600 tracking-widest uppercase">&copy; 2026 Michael Chandler. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const projects = [
+            // Added span properties for a richer, asymmetric "editorial" grid rhythm
+            { name: "Ultra Luxe Private Pool", img: "Ultra Luxe Private Pool/001.jpg", cat: "residential", span: "md:col-span-2 md:row-span-2" },
+            { name: "Abaco Luxe Boat House", img: "Abaco Luxe Boat House/bahamas1.png", cat: "residential", span: "md:col-span-1 md:row-span-1" },
+            { name: "Development Civil", img: "development-civil/development (1).jpg", cat: "civil", span: "md:col-span-1 md:row-span-1" },
+            { name: "New Residential Construction", img: "New Residential Construction/Pacific001 COVER.JPG", cat: "residential", span: "md:col-span-1 md:row-span-2" },
+            { name: "Hillside Cleanup", img: "hillside-cleanup/001 COVER.jpg", cat: "civil", span: "md:col-span-2 md:row-span-1" },
+            { name: "Carmel Forest to Ocean View", img: "Carmel Forest to Ocean View/Carmel001 COVER.JPG", cat: "mountain", span: "md:col-span-1 md:row-span-1" },
+            { name: "Laguna Grande", img: "laguna-grande/6.0 Laguna Grande Design Build_001_COVER.png", cat: "civil", span: "md:col-span-1 md:row-span-1" },
+            { name: "Coastal Mountain Residence", img: "Coastal_Mountain_Residence/001 COVER.JPG", cat: "mountain", span: "md:col-span-1 md:row-span-1" },
+            { name: "Syracuse House", img: "Syracuse House/syracuse-cover.png", cat: "residential", span: "md:col-span-2 md:row-span-2" },
+            { name: "Coastal Restoration", img: "coastal-restoration/001 COVER.JPG", cat: "mountain", span: "md:col-span-1 md:row-span-1" },
+            { name: "Pacific Grove", img: "pacific-grove/001 COVER.JPG", cat: "mountain", span: "md:col-span-1 md:row-span-1" },
+            { name: "Mtn. Mid-Rise Luxe Condo", img: "Mtn. Mid-Rise Luxe Condo/Montana001 COVER.jpg", cat: "mountain", span: "md:col-span-1 md:row-span-1" },
+            { name: "S. Florida High Rise Luxe", img: "S. Florida High Rise Luxe/Miami001 COVER.jpg", cat: "residential", span: "md:col-span-1 md:row-span-2" },
+            { name: "North Florida", img: "north-florida/NIMG_9178.jpg", cat: "residential", span: "md:col-span-2 md:row-span-1" },
+            { name: "Carmel Knolls", img: "carmel-knolls/001.10 COVER.jpg", cat: "mountain", span: "md:col-span-1 md:row-span-1" },
+            { name: "Beachfront Estate", img: "beachfront_estate/beachfront-1.jpg", cat: "residential", span: "md:col-span-1 md:row-span-1" },
+            { name: "Civil Engineering", img: "Civil Engineering/Civil001 COVER.jpg", cat: "civil", span: "md:col-span-1 md:row-span-1" },
+            { name: "High Alpine Mtn. Ranch", img: "High Alpine Mtn. Ranch/High001 COVER.JPG", cat: "mountain", span: "md:col-span-2 md:row-span-2" },
+            { name: "Carmel Valley New", img: "carmel-valley-new/carmel_valley_new1 cover.png", cat: "mountain", span: "md:col-span-1 md:row-span-1" }
+        ];
+
+        const grid = document.getElementById('project-grid');
+
+        // High-end placeholder images for when local paths are missing during prototyping
+        const placeholderImages = [
+            "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1600607687931-570f86a4bc24?q=80&w=2070&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=2070&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+        ];
+
+        function renderProjects() {
+            projects.forEach((p, i) => {
+                const card = document.createElement('div');
+                card.className = `project-card group cursor-pointer filter-${p.cat} bg-[#0a0a0a] ${p.span || ''}`;
+                
+                // Fallback architecture img on error
+                const fallbackImg = placeholderImages[i % placeholderImages.length];
+                
+                card.innerHTML = `
+                    <div class="img-container">
+                        <img src="./projects/${p.img}" alt="${p.name}" class="w-full h-full object-cover" onerror="this.src='${fallbackImg}'; this.onerror=null;">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="text-[9px] text-gold tracking-[0.2em] uppercase font-bold mb-3 block">${p.cat.replace('-', ' ')}</span>
+                        <h2 class="text-2xl md:text-3xl font-serif text-white font-normal leading-tight">${p.name}</h2>
+                        <div class="mt-6 w-8 h-[1px] bg-gold opacity-40 group-hover:w-16 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"></div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            
+            initAnimations();
+        }
+
+        // Initialize GSAP sequence
+        function initAnimations() {
+            const tl = gsap.timeline();
+
+            // Nav reveal
+            tl.to(".nav-container", { opacity: 1, duration: 1.2, ease: "power2.out" })
+            
+            // Hero text mask slide-up reveal
+            .to(".reveal-text span", {
+                y: 0,
+                opacity: 1,
+                duration: 1.4,
+                stagger: 0.1,
+                ease: "power4.out"
+            }, "-=0.6")
+            
+            // Hero description fade-up
+            .to(".hero-desc", {
+                y: 0,
+                opacity: 1,
+                duration: 1.2,
+                ease: "power3.out"
+            }, "-=1")
+
+            // Grid cards elegant fade-up
+            .fromTo(".project-card", 
+                { y: 80, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    stagger: 0.05,
+                    ease: "power3.out",
+                    clearProps: "all"
+                }, "-=1"
+            );
+        }
+
+        // Filter Functionality
+        function filterProjects(category) {
+            // Update active state on nav buttons
+            // Handle space in text like 'Civil & Commercial' by mapping slightly manually
+            const catMap = { 'all': 'all', 'residential': 'residential', 'civil': 'civil', 'mountain': 'mountain' };
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(catMap[category])) {
+                    btn.classList.add('active');
+                }
+            });
+
+            const cards = document.querySelectorAll('.project-card');
+            
+            // Hide all cards
+            gsap.to(cards, {
+                opacity: 0,
+                scale: 0.95,
+                duration: 0.4,
+                ease: "power2.in",
+                onComplete: () => {
+                    // Filter matching cards
+                    cards.forEach(card => {
+                        if (category === 'all' || card.classList.contains(`filter-${category}`)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    // Reveal matching cards
+                    gsap.fromTo(".project-card:not([style*='display: none'])",
+                        { opacity: 0, scale: 0.95, y: 30 },
+                        {
+                            opacity: 1,
+                            scale: 1,
+                            y: 0,
+                            duration: 0.8,
+                            stagger: 0.05,
+                            ease: "power3.out"
+                        }
+                    );
+                }
+            });
+        }
+
+        // Boot
+        document.addEventListener('DOMContentLoaded', renderProjects);
+    </script>
+</body>
+</html>
