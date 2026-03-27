@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: Lint, Test & Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    env:
+      NODE_OPTIONS: --disable-proto=delete
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: |
+          if [ "$(npm pkg get scripts.lint 2>/dev/null)" != '{}' ]; then
+            npm run lint
+          else
+            echo "No 'lint' script found in package.json — skipping."
+          fi
+
+      - name: Test
+        run: |
+          if [ "$(npm pkg get scripts.test 2>/dev/null)" != '{}' ]; then
+            npm test
+          else
+            echo "No 'test' script found in package.json — skipping."
+          fi
+
+      - name: Build
+        run: |
+          if [ "$(npm pkg get scripts.build 2>/dev/null)" != '{}' ]; then
+            npm run build
+          else
+            echo "No 'build' script found in package.json — skipping."
+          fi
