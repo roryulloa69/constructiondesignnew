@@ -3,20 +3,20 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { FooterNew } from "@/components/FooterNew";
-import { getPlaceholderImage } from "@/lib/images";
+
 
 // Use placeholder images
-const detailOceanviewFraming = getPlaceholderImage("oceanview", "architecture");
-const detailBronzeBase = getPlaceholderImage("bronze", "interior");
-const detailPendantLighting = getPlaceholderImage("pendant", "interior");
-const detailMarbleBath = getPlaceholderImage("marble", "interior");
-const detailTimberBeams = getPlaceholderImage("timber", "architecture");
-const detailLimestoneFireplace = getPlaceholderImage("fireplace", "interior");
-const detailVanityNiche = getPlaceholderImage("vanity", "interior");
-const detailProRange = getPlaceholderImage("range", "interior");
-const detailSkiStorage = getPlaceholderImage("storage", "interior");
-const detailSpaVanity = getPlaceholderImage("spa", "interior");
-const detailLeatherCabinetry = getPlaceholderImage("leather", "interior");
+const detailOceanviewFraming = "";
+const detailBronzeBase = "";
+const detailPendantLighting = "";
+const detailMarbleBath = "";
+const detailTimberBeams = "";
+const detailLimestoneFireplace = "";
+const detailVanityNiche = "";
+const detailProRange = "";
+const detailSkiStorage = "";
+const detailSpaVanity = "";
+const detailLeatherCabinetry = "";
 
 const Design = () => {
   const navigate = useNavigate();
