@@ -1,4 +1,19 @@
 import { useState, useEffect, useCallback } from "react";
+import {
+  DndContext,
+  closestCenter,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  DragEndEvent,
+} from "@dnd-kit/core";
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  verticalListSortingStrategy,
+} from "@dnd-kit/sortable";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -7,8 +22,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader2, Plus, Pencil, Trash2 } from "lucide-react";
+import { Loader2, Plus } from "lucide-react";
 import { Tables } from "@/integrations/supabase/types";
+import { SortableProjectCard } from "./SortableProjectCard";
 
 type Project = Tables<"projects">;
 
@@ -26,6 +42,11 @@ export const ProjectsManager = () => {
   });
   const { toast } = useToast();
 
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 8 } }),
+    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
+  );
+
   const fetchProjects = useCallback(async () => {
     try {
       const { data, error } = await supabase
@@ -36,12 +57,8 @@ export const ProjectsManager = () => {
       if (error) throw error;
       setProjects(data || []);
     } catch (error: unknown) {
-      const message = error instanceof Error ? error.message : 'An error occurred';
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: message,
-      });
+      const message = error instanceof Error ? error.message : "An error occurred";
+      toast({ variant: "destructive", title: "Error", description: message });
     } finally {
       setLoading(false);
     }
@@ -51,53 +68,55 @@ export const ProjectsManager = () => {
     fetchProjects();
   }, [fetchProjects]);
 
+  const handleDragEnd = async (event: DragEndEvent) => {
+    const { active, over } = event;
+    if (!over || active.id === over.id) return;
+
+    const oldIndex = projects.findIndex((p) => p.id === active.id);
+    const newIndex = projects.findIndex((p) => p.id === over.id);
+    const reordered = arrayMove(projects, oldIndex, newIndex);
+
+    // Optimistic update
+    setProjects(reordered);
+
+    try {
+      for (let i = 0; i < reordered.length; i++) {
+        const { error } = await supabase
+          .from("projects")
+          .update({ display_order: i })
+          .eq("id", reordered[i].id);
+        if (error) throw error;
+      }
+      toast({ title: "Success", description: "Project order updated" });
+    } catch (error) {
+      fetchProjects(); // revert
+      toast({ variant: "destructive", title: "Error", description: "Failed to update order" });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     try {
       if (editingProject) {
         const { error } = await supabase
           .from("projects")
           .update(formData)
           .eq("id", editingProject.id);
-
         if (error) throw error;
-
-        toast({
-          title: "Success",
-          description: "Project updated successfully",
-        });
+        toast({ title: "Success", description: "Project updated successfully" });
       } else {
         const id = `project-${Date.now()}`;
         const { error } = await supabase
           .from("projects")
           .insert([{ ...formData, id }]);
-
         if (error) throw error;
-
-        toast({
-          title: "Success",
-          description: "Project created successfully",
-        });
+        toast({ title: "Success", description: "Project created successfully" });
       }
-
-      setShowForm(false);
-      setEditingProject(null);
-      setFormData({
-        title: "",
-        description: "",
-        category: "Interiors",
-        featured: false,
-        display_order: 0,
-      });
+      resetForm();
       fetchProjects();
     } catch (error: unknown) {
-      const message = error instanceof Error ? error.message : 'An error occurred';
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: message,
-      });
+      const message = error instanceof Error ? error.message : "An error occurred";
+      toast({ variant: "destructive", title: "Error", description: message });
     }
   };
 
@@ -107,36 +126,29 @@ export const ProjectsManager = () => {
       title: project.title,
       description: project.description || "",
       category: project.category,
-      featured: project.featured,
-      display_order: project.display_order,
+      featured: project.featured ?? false,
+      display_order: project.display_order ?? 0,
     });
     setShowForm(true);
   };
 
   const handleDelete = async (id: string) => {
     if (!confirm("Are you sure you want to delete this project?")) return;
-
     try {
-      const { error } = await supabase
-        .from("projects")
-        .delete()
-        .eq("id", id);
-
+      const { error } = await supabase.from("projects").delete().eq("id", id);
       if (error) throw error;
-
-      toast({
-        title: "Success",
-        description: "Project deleted successfully",
-      });
+      toast({ title: "Success", description: "Project deleted successfully" });
       fetchProjects();
     } catch (error: unknown) {
-      const message = error instanceof Error ? error.message : 'An error occurred';
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: message,
-      });
+      const message = error instanceof Error ? error.message : "An error occurred";
+      toast({ variant: "destructive", title: "Error", description: message });
     }
+  };
+
+  const resetForm = () => {
+    setShowForm(false);
+    setEditingProject(null);
+    setFormData({ title: "", description: "", category: "Interiors", featured: false, display_order: 0 });
   };
 
   if (loading) {
@@ -173,7 +185,6 @@ export const ProjectsManager = () => {
                   required
                 />
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="description">Description</Label>
                 <Textarea
@@ -183,16 +194,13 @@ export const ProjectsManager = () => {
                   rows={4}
                 />
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="category">Category</Label>
                 <Select
                   value={formData.category}
                   onValueChange={(value) => setFormData({ ...formData, category: value })}
                 >
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="Interiors">Interiors</SelectItem>
                     <SelectItem value="Architecture">Architecture</SelectItem>
@@ -203,78 +211,31 @@ export const ProjectsManager = () => {
                   </SelectContent>
                 </Select>
               </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="display_order">Display Order</Label>
-                <Input
-                  id="display_order"
-                  type="number"
-                  value={formData.display_order}
-                  onChange={(e) => setFormData({ ...formData, display_order: parseInt(e.target.value) || 0 })}
-                />
-              </div>
-
               <div className="flex gap-2">
-                <Button type="submit">
-                  {editingProject ? "Update" : "Create"}
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={() => {
-                    setShowForm(false);
-                    setEditingProject(null);
-                    setFormData({
-                      title: "",
-                      description: "",
-                      category: "Interiors",
-                      featured: false,
-                      display_order: 0,
-                    });
-                  }}
-                >
-                  Cancel
-                </Button>
+                <Button type="submit">{editingProject ? "Update" : "Create"}</Button>
+                <Button type="button" variant="outline" onClick={resetForm}>Cancel</Button>
               </div>
             </form>
           </CardContent>
         </Card>
       )}
 
-      <div className="grid gap-4">
-        {projects.map((project) => (
-          <Card key={project.id}>
-            <CardContent className="p-6">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-xl font-playfair font-semibold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-2">{project.description}</p>
-                  <div className="flex gap-4 text-sm">
-                    <span className="text-primary">{project.category}</span>
-                    <span className="text-muted-foreground">Order: {project.display_order}</span>
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => handleEdit(project)}
-                  >
-                    <Pencil className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    variant="destructive"
-                    size="sm"
-                    onClick={() => handleDelete(project.id)}
-                  >
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <p className="text-sm text-muted-foreground">Drag projects to reorder them.</p>
+
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+        <SortableContext items={projects.map((p) => p.id)} strategy={verticalListSortingStrategy}>
+          <div className="grid gap-3">
+            {projects.map((project) => (
+              <SortableProjectCard
+                key={project.id}
+                project={project}
+                onEdit={handleEdit}
+                onDelete={handleDelete}
+              />
+            ))}
+          </div>
+        </SortableContext>
+      </DndContext>
     </div>
   );
 };
