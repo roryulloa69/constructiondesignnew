@@ -4,18 +4,19 @@ import { ArrowLeft } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { FooterNew } from "@/components/FooterNew";
 
-// Import images from existing assets - using confirmed cover images
-import detailOceanviewFraming from "@/assets/projects/abaco-luxe-boathouse-cover.webp";
-import detailBronzeBase from "@/assets/projects/alpine-ranch-cover.webp";
-import detailPendantLighting from "@/assets/projects/bigsur-cover.webp";
-import detailMarbleBath from "@/assets/projects/carmel-knolls-cover.webp";
-import detailTimberBeams from "@/assets/projects/carmel-valley-cover.webp";
-import detailLimestoneFireplace from "@/assets/projects/civil-cover.webp";
-import detailVanityNiche from "@/assets/projects/cleanup-cover.webp";
-import detailProRange from "@/assets/projects/coastal-restoration-cover.webp";
-import detailSkiStorage from "@/assets/projects/development-cover.webp";
-import detailSpaVanity from "@/assets/projects/hillside-cover.webp";
-import detailLeatherCabinetry from "@/assets/projects/laguna-cover.webp";
+
+// Use placeholder images
+const detailOceanviewFraming = "";
+const detailBronzeBase = "";
+const detailPendantLighting = "";
+const detailMarbleBath = "";
+const detailTimberBeams = "";
+const detailLimestoneFireplace = "";
+const detailVanityNiche = "";
+const detailProRange = "";
+const detailSkiStorage = "";
+const detailSpaVanity = "";
+const detailLeatherCabinetry = "";
 
 const Design = () => {
   const navigate = useNavigate();

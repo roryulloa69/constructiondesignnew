@@ -31,3 +31,4 @@ dist-ssr
 
 # Backup directories
 **/syracuse-backup-*/
+.env*.local

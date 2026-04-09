@@ -3,27 +3,22 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Import local hero images
-import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.webp";
-import bigsurCover from "@/assets/projects/bigsur-cover.webp";
-import developmentCover from "@/assets/projects/development-cover.webp";
-import carmelKnollsCover from "@/assets/projects/carmel-knolls-cover.webp";
 
 const heroSlides = [
     {
-        image: alpineRanchCover,
+        image: getPlaceholderImage("alpine-ranch-hero", "architecture"),
         alt: "High Alpine Mountain Ranch Montana",
     },
     {
-        image: bigsurCover,
+        image: getPlaceholderImage("bigsur-hero", "architecture"),
         alt: "Big Sur Mountain Remodel",
     },
     {
-        image: developmentCover,
+        image: getPlaceholderImage("development-hero", "construction"),
         alt: "Development Civil Project",
     },
     {
-        image: carmelKnollsCover,
+        image: getPlaceholderImage("carmel-knolls-hero", "architecture"),
         alt: "Carmel Knolls Residence",
     },
 ];

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/michael-chandler-portfolio.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
+import { getPlaceholderImage } from "@/lib/images";
+
+const heroImage = getPlaceholderImage("hero-main", "architecture");
 export const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
   const {

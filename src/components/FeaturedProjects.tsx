@@ -1,12 +1,7 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-
-// Import local images
-import carmel1Cover from "@/assets/projects/carmel-1-cover.webp";
-import carmelValleyNewCover from "@/assets/projects/carmel-valley-new-cover.webp";
-import coastalRestorationCover from "@/assets/projects/coastal-restoration-cover.webp";
-import civilCover from "@/assets/projects/civil-cover.webp";
+import { getPlaceholderImage } from "@/lib/images";
 
 const featuredProjects = [
   {
@@ -14,28 +9,28 @@ const featuredProjects = [
     title: "Carmel House Remodel",
     category: "Design/Build",
     subtitle: "Complete Remodel",
-    image: carmel1Cover,
+    image: getPlaceholderImage("carmel-1", "architecture"),
   },
   {
     id: "carmel-valley-design-build",
     title: "Carmel Valley New",
     category: "Design/Build • Civil",
     subtitle: "Custom Residence",
-    image: carmelValleyNewCover,
+    image: getPlaceholderImage("carmel-valley", "architecture"),
   },
   {
     id: "coastal-restoration",
     title: "Coastal Restoration",
     category: "Residential • Renovation",
     subtitle: "Historic Preservation",
-    image: coastalRestorationCover,
+    image: getPlaceholderImage("coastal-restoration", "landscape"),
   },
   {
     id: "development",
     title: "Civil Development",
     category: "Civil • Infrastructure",
     subtitle: "Site Development",
-    image: civilCover,
+    image: getPlaceholderImage("civil-development", "construction"),
   },
 ];
 

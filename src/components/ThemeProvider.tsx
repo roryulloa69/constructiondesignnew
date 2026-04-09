@@ -20,14 +20,22 @@ const initialState: ThemeProviderState = {
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
+// Safe localStorage getter that works during SSR
+const getStoredTheme = (storageKey: string, defaultTheme: Theme): Theme => {
+    if (typeof window === 'undefined') return defaultTheme;
+    try {
+        return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+    } catch {
+        return defaultTheme;
+    }
+};
+
 export function ThemeProvider({
     children,
     defaultTheme = "system",
     storageKey = "vite-ui-theme",
 }: ThemeProviderProps) {
-    const [theme, setTheme] = useState<Theme>(
-        () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-    )
+    const [theme, setTheme] = useState<Theme>(() => getStoredTheme(storageKey, defaultTheme))
 
     useEffect(() => {
         const root = window.document.documentElement

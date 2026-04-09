@@ -113,7 +113,10 @@ const ProjectDetail = () => {
   const hasStaticImages = project?.images && Array.isArray(project.images) && project.images.length > 0;
   const allImages = useMemo(() => {
     if (hasStaticImages && project?.images) {
-      return project.images.filter(img => img != null);
+      // Handle both string and object image formats
+      return project.images
+        .filter(img => img != null)
+        .map(img => typeof img === 'string' ? img : img.url);
     }
     const validDbImages = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
     if (validDbImages.length > 0) return validDbImages.map(img => img.image_url);
@@ -156,8 +159,7 @@ const ProjectDetail = () => {
       </div>
     );
   }
-
-  const heroImage = allImages.length > 0 ? allImages[0] : project.image;
+  const heroImage = project.coverImage || (allImages.length > 0 ? allImages[0] : '');
   const hasStats = project.sqft || project.bedrooms || project.baths || project.duration || project.budget;
   const hasFeatures = project.features && project.features.length > 0;
   const hasRole = project.roles && project.roles.trim().length > 0;
@@ -579,5 +581,4 @@ const ProjectDetail = () => {
     </>
   );
 };
-
 export default ProjectDetail;

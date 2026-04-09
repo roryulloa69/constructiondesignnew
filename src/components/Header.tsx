@@ -4,7 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import logo from "@/assets/mc-logo-new.png";
+
+// Text-based logo component
+const LogoText = ({ className = "" }: { className?: string }) => (
+  <span className={`font-playfair text-2xl font-semibold tracking-tight ${className}`}>
+    <span className="text-gold">MC</span>
+    <span className="text-white/80 font-light ml-1">Design</span>
+  </span>
+);
 
 const navigation = [
   { name: "Portfolio", href: "#portfolio" },
@@ -87,7 +94,7 @@ export const Header = React.memo(({ onPortfolioClick }: HeaderProps) => {
       <nav className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center group">
-            <img src={logo} alt="Michael Chandler logo" className="h-16 w-auto transition-all duration-300 group-hover:scale-110 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] group-hover:drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]" />
+            <LogoText className="transition-all duration-300 group-hover:scale-110" />
           </Link>
 
           {/* Desktop Navigation */}

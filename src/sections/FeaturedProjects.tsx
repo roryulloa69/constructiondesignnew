@@ -14,14 +14,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
 }) => {
     const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
-    const featuredIds = [
-        "carmel-house-remdl-23",
-        "carmel-valley-design-build",
-        "coastal-hillside-restoration-2",
-        "development"
-    ];
-
-    const featuredProjects = projects.filter((p) => featuredIds.includes(p.id));
+    // Get featured projects from the data
+    const featuredProjects = projects.filter((p) => p.featured).slice(0, 4);
 
     return (
         <section

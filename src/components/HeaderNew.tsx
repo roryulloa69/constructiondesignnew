@@ -3,7 +3,14 @@ import { AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import mcLogo from "@/assets/mc-logo.png";
+
+// Text-based logo component since the image asset is not available
+const LogoText = ({ className = "" }: { className?: string }) => (
+  <span className={`font-playfair text-xl lg:text-2xl font-semibold tracking-tight ${className}`}>
+    <span className="text-gold">MC</span>
+    <span className="text-white/80 font-light ml-1">Design</span>
+  </span>
+);
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -93,11 +100,7 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <img
-              src={mcLogo}
-              alt="Michael Chandler Construction & Design"
-              className="h-10 lg:h-12 w-auto object-contain transition-all duration-500 group-hover:brightness-110"
-            />
+            <LogoText className="transition-all duration-500 group-hover:brightness-110" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -131,11 +134,7 @@ export const HeaderNew = React.memo(({ onPortfolioClick }: HeaderNewProps) => {
             </SheetTrigger>
             <SheetContent className="bg-charcoal border-white/10">
               <div className="flex flex-col gap-8 mt-12">
-                <img
-                  src={mcLogo}
-                  alt="MC Logo"
-                  className="h-10 w-auto object-contain self-start mb-4"
-                />
+                <LogoText className="self-start mb-4" />
                 {navigation.map((item) => (
                   <a
                     key={item.name}
