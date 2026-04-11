@@ -91,12 +91,12 @@ export const ProjectCardCarousel: React.FC<ProjectCardCarouselProps> = React.mem
                     )}
                     {isVisible && (
                       <img
-                        src={image}
+                        src={typeof image === 'string' ? image : image.url}
                         alt={`${project.title} - Image ${imgIndex + 1}`}
                         className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
                           imagesLoaded.has(imgIndex) ? 'opacity-100' : 'opacity-0'
                         }`}
-                        style={imgIndex === 0 && project.coverRotation ? { transform: `rotate(${project.coverRotation}deg)` } : undefined}
+                        style={undefined}
                         loading="lazy"
                         onLoad={() => handleImageLoad(imgIndex)}
                         decoding="async"
