@@ -54,7 +54,9 @@ export const BookCoverHero: React.FC<BookCoverHeroProps> = ({ onOpenBook }) => {
               {/* Content */}
               <div className="relative h-full flex flex-col items-center justify-center p-8">
                 {/* Logo */}
-                <img src={logo} alt="MC Logo" className="h-40 sm:h-48 w-auto mb-8" />
+                <div className="h-40 sm:h-48 w-auto mb-8 flex items-center justify-center">
+                  <LogoText className="text-5xl sm:text-6xl" />
+                </div>
 
                 {/* Divider */}
                 <div className="flex items-center gap-4 mb-6">
