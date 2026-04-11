@@ -160,9 +160,9 @@ const ProjectDetail = () => {
     );
   }
   const heroImage = project.coverImage || (allImages.length > 0 ? allImages[0] : '');
-  const hasStats = project.sqft || project.bedrooms || project.baths || project.duration || project.budget;
-  const hasFeatures = project.features && project.features.length > 0;
-  const hasRole = project.roles && project.roles.trim().length > 0;
+  const hasStats = false;
+  const hasFeatures = false;
+  const hasRole = false;
 
   return (
     <>
@@ -266,10 +266,10 @@ const ProjectDetail = () => {
                 <p className="font-inter text-[10px] tracking-[0.3em] text-muted-foreground uppercase mb-2 font-medium">Category</p>
                 <p className="font-playfair text-lg text-foreground">{project.category}</p>
               </motion.div>
-              {project.subtitle && (
+              {(project as any).subtitle && (
                 <motion.div variants={fadeUp} custom={1} className="border-l-2 border-accent/40 pl-6 py-4">
                   <p className="font-inter text-[10px] tracking-[0.3em] text-muted-foreground uppercase mb-2 font-medium">Design Style</p>
-                  <p className="font-playfair text-lg text-foreground">{project.subtitle}</p>
+                  <p className="font-playfair text-lg text-foreground">{(project as any).subtitle}</p>
                 </motion.div>
               )}
               {project.location && (
@@ -289,11 +289,11 @@ const ProjectDetail = () => {
                 className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px mb-12 bg-border/20 rounded-xl overflow-hidden border border-border/30"
               >
                 {[
-                  project.duration && { icon: CalendarDays, value: project.duration, label: "Duration" },
-                  project.sqft && { icon: Square, value: project.sqft.toLocaleString(), label: "Sq Ft" },
-                  project.bedrooms && { icon: Bed, value: project.bedrooms, label: "Bedrooms" },
-                  project.baths && { icon: Droplets, value: project.baths, label: "Baths" },
-                  project.budget && { icon: Wallet, value: project.budget, label: "Budget" },
+                  (project as any).duration && { icon: CalendarDays, value: (project as any).duration, label: "Duration" },
+                  (project as any).sqft && { icon: Square, value: (project as any).sqft.toLocaleString(), label: "Sq Ft" },
+                  (project as any).bedrooms && { icon: Bed, value: (project as any).bedrooms, label: "Bedrooms" },
+                  (project as any).baths && { icon: Droplets, value: (project as any).baths, label: "Baths" },
+                  (project as any).budget && { icon: Wallet, value: (project as any).budget, label: "Budget" },
                 ].filter(Boolean).map((stat: any, i) => (
                   <motion.div
                     key={stat.label}
@@ -317,7 +317,7 @@ const ProjectDetail = () => {
                   <p className="font-inter text-[10px] tracking-[0.3em] text-muted-foreground uppercase font-medium">My Role</p>
                 </motion.div>
                 <motion.div variants={fadeUp} custom={1} className="flex flex-wrap gap-2">
-                  {project.roles!.split(',').map((role, index) => (
+                  {(project as any).roles!.split(',').map((role: string, index: number) => (
                     <span
                       key={index}
                       className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-inter bg-accent/5 text-foreground border border-accent/15 hover:border-accent/30 hover:bg-accent/10 transition-all duration-300"
@@ -341,7 +341,7 @@ const ProjectDetail = () => {
                   Feature Highlights
                 </motion.p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
-                  {project.features!.map((feature, index) => (
+                  {(project as any).features!.map((feature: string, index: number) => (
                     <motion.div key={index} variants={fadeUp} custom={index * 0.3} className="flex items-center gap-3 group">
                       <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
                         <Check className="h-3 w-3 text-accent" />

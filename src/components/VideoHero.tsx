@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { getPlaceholderImage } from "@/lib/images";
+
 
 // Text-based logo component
 const LogoText = ({ className = "" }: { className?: string }) => (
@@ -48,7 +48,7 @@ export const VideoHero: React.FC<VideoHeroProps> = ({ onOpenPortfolio }) => {
       <div className="relative h-full flex flex-col items-center justify-center px-6 lg:px-12">
         {/* Logo */}
         <div className="mb-12 opacity-0 animate-fade-in">
-          <img src={logo} alt="MC Logo" className="h-20 md:h-24 w-auto drop-shadow-2xl" />
+          <LogoText className="text-5xl" />
         </div>
 
         {/* Main title */}
